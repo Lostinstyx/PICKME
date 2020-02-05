@@ -10,15 +10,31 @@
 
     <title>PICKME</title>
 
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/flexslider/flexslider.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/flexslider/flexslider.css" type="text/css">
 
 </head>
 
 <body>
 
-
 <header>
+    <div class="wrap_header">
+
+        <div class="flexslider flex1">
+            <ul class="slides">
+                <li>
+                    <img src="assets/img/teamwork_bg.jpg"/>
+                </li>
+                <li>
+                    <img src="assets/img/teamwork_bg1.jpg"/>
+                </li>
+            </ul>
+        </div>
+
+        <nav class="nav" id="nav">
+
+        </nav>
+    </div>
 
 </header>
 

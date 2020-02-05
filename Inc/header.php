@@ -18,8 +18,8 @@
 <body>
 
 <header>
-    <div class="wrap_header">
 
+    <div class="wrap_header">
         <div class="flexslider flex1">
             <ul class="slides">
                 <li>
@@ -31,9 +31,24 @@
             </ul>
         </div>
 
-        <nav class="nav" id="nav">
 
-        </nav>
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="logo de l'entreprise">
+        </div>
+
+
+        <div class="nav_container">
+            <nav class="nav" id="nav">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Link</li>
+                    <li>Link</li>
+                    <li>Link</li>
+                </ul>
+            </nav>
+        </div>
     </div>
 
 </header>

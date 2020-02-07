@@ -44,7 +44,7 @@
             <div id="dialog-form" title="Inscription">
                 <p class="validateTips">Les champs doivent tous être remplis..</p>
 
-                <form>
+                <form class="modal_form">
                     <label class="modalLabel" for="nom">Nom :</label>
                     <input type="text" name="nom" id="nom" value="" placeholder="Nom..."
                            class="text ui-widget-content ui-corner-all"/>
@@ -77,7 +77,7 @@
             <div id="dialog-form" title="Connexion">
                 <p class="validateTips">Les champs doivent tous être remplis..</p>
 
-                <form>
+                <form class="modal_form">
 
                     <label class="modalLabel" for="email">Email :</label>
                     <input type="text" name="email" id="email" value="" placeholder="Email..."

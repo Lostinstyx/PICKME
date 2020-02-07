@@ -33,6 +33,7 @@ header .nav_container {
 .sticky {
     position: fixed !important;
     background-color: rgba(0,0,0,0.9);
+    transition: .5s;
 }
 
 
@@ -114,12 +115,12 @@ header .connect ul li a:active {
 
 /* ---------------------------------------  modals  ------------------------------- */
 
-form label, input {
+.modal_form label, input {
     display: block;
     margin-top: 10px;
 }
 
-form input.text {
+.modal_form input.text {
     margin-bottom: 12px;
     width: 95%;
     padding: .4em;
@@ -181,7 +182,7 @@ div#users-contain table td, div#users-contain table th {
 
 }
 
-input[type=radio]{
+.modal_form input[type=radio]{
     display: inline-block;
     margin-right : 10%;
     margin-bottom: 12px;
@@ -200,7 +201,7 @@ input[type=radio]{
 
 footer .wrap {
     width: 100%;
-    max-width: 960px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 10px;
 }
@@ -258,6 +259,7 @@ footer .column{
 
 footer .column-title{
     padding-bottom: 30px;
+    font-size: 1.2em;
 }
 
 footer .flickr{

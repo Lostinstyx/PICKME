@@ -116,7 +116,7 @@ header .connect ul li a:active {
 /* ---------------------------------------  modals  ------------------------------- */
 
 .modal_form label, input {
-    display: block;
+    display: inline-block;
     margin-top: 10px;
 }
 

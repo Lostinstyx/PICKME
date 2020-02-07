@@ -83,14 +83,6 @@
                     <input type="text" name="email" id="email" value="" placeholder="Email..."
                            class="text ui-widget-content ui-corner-all"/>
 
-                    <label class="radioLine" for="recruteur">Recruteur :</label>
-                    <input type="radio" id="recruteur" name="role" value="recruteur"/>
-
-
-                    <label class="radioLine" for="candidat">Candidat :</label>
-                    <input type="radio" id="candidat" name="role" value="candidat"/>
-
-
                     <label class="modalLabel" for="mdp">Mot de passe :</label>
                     <input type="password" name="mdp" id="mdp" value="" placeholder="Mot de passe..."
                            class="text ui-widget-content ui-corner-all"/>

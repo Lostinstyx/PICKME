@@ -7,11 +7,6 @@
     margin: 0 auto;
     padding: 0 10px;
 }
-body{
-    font-family: "Arvo", serif;
-}
-
-
 
 .lead{
     color : #333;
@@ -33,7 +28,7 @@ img{
 }
 
 .nav a{
-    color: #fff;
+    color: #736156;
     text-decoration: none;
 }
 
@@ -43,11 +38,11 @@ img{
     transition : opacity .2s ease-in;
 }
 img:hover{
-    opacity: .2s;
+    opacity: .7;
 }
 
 .page-footer{
-    background-color: #333;
+    background-color: #736156;
     font-size: .75em;
     padding-top: 30px;
     color : #fff;
@@ -82,16 +77,18 @@ img:hover{
     width : 30%;
     margin-left: 3%;
     margin-bottom: 3%;
+    border-radius: 3px;
 }
 
 
 
 .bottom-bar{
-    background-color: #1f1f1f;
-    color : #bebebe;
+    background-color: #D9BBA0;
+    color : #736156;
     padding-left: 10px;
     line-height: 3em;
     margin-bottom: 30px;
+    border-radius: 3px;
 
 }
 .copyright{
@@ -123,39 +120,16 @@ address{
     width: 36px;
     height: 36px;
 }
-.facebook img:hover{
-    width: 36px;
-    height: 36px;
-}
-
 .twitter img {
     width: 36px;
     height: 36px;
 }
-
-.twitter:hover img {
-    width: 36px;
-    height: 36px;
-}
-
 .insta img {
     width: 36px;
     height: 36px;
 
 }
-
-.insta img:hover{
-    width: 36px;
-    height: 36px;
-}
-
 .linkedin img {
-
-    width: 36px;
-    height: 36px;
-}
-
-.linkedin img:hover{
 
     width: 36px;
     height: 36px;
@@ -190,4 +164,11 @@ address{
 .title-focus{
     color: #ba5136;
     font-weight: bold;
+}
+
+@media screen and (max-width: 1100px) {
+    .social-icons li img {
+        width: 25px;
+        height: 25px;
+    }
 }

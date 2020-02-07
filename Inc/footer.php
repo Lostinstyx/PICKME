@@ -11,10 +11,10 @@
                     Rouen, France.<br>
                 </address>
                 <ul class="social-icons">
-                    <li><a href="#" class="facebook"><img src="assets/img/facebook-square-brands.svg" alt="logo facebook"></a></li>
-                    <li><a href="#" class="twitter"><img src="assets/img/twitter-square-brands.svg" alt="logo twitter"></a></li>
-                    <li><a href="#" class="insta"><img src="assets/img/instagram-brands.svg" alt="logo instagram"></a></li>
-                    <li><a href="#" class="linkedin"><img src="assets/img/linkedin-brands.svg" alt="logo linkedin"></a></li>
+                    <li><a href="#" class="facebook"><img src="assets/img/networks/logofb.png" alt="logo facebook"></a></li>
+                    <li><a href="#" class="twitter"><img src="assets/img/networks/logotwitter.svg" alt="logo twitter"></a></li>
+                    <li><a href="#" class="insta"><img src="assets/img/networks/logoinsta.png" alt="logo instagram"></a></li>
+                    <li><a href="#" class="linkedin"><img src="assets/img/networks/logolinkedin.svg" alt="logo linkedin"></a></li>
                 </ul>
             </div>
 
@@ -52,9 +52,8 @@
             <nav>
                 <ul class="nav">
                     <li><a href="#" title="">Accueil</a></li>&nbsp;&nbsp;|&nbsp;
-                    <li><a href="#" title="">Lien 1</a></li>&nbsp;&nbsp;|&nbsp;
-                    <li><a href="#" title="">Lien 2</a></li>&nbsp;&nbsp;|&nbsp;
-                    <li><a href="#" title="">Lien 3</a></li>&nbsp;&nbsp;|&nbsp;
+                    <li><a href="#" title="">Mentions légales</a></li>&nbsp;&nbsp;|&nbsp;
+                    <li><a href="#" title="">CGU</a></li>&nbsp;&nbsp;|&nbsp;
                     <li><a href="#" title="">Contact</a></li>
                 </ul>
 
@@ -64,3 +63,4 @@
     </div>
     <div class="clear"></div>
 </footer>
+</html>

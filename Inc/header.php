@@ -14,12 +14,13 @@
     <link rel="stylesheet" href="assets/flexslider/flexslider.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
 
+
 </head>
 
 <body>
 
 <header>
-
+  
     <div class="wrap_header">
         <div class="nav_container" id="nav_container">
             <div class="logo">
@@ -60,5 +61,3 @@
     <div class="clear"></div>
 
 </header>
-
-

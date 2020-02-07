@@ -1,4 +1,5 @@
 <?php
+
 require_once ('Inc/header.php'); ?>
 
     <div class="flexslider flex1">

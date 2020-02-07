@@ -60,7 +60,7 @@ img:hover{
 
 .column{
     float: left;
-    width: 30%;
+    width: 33.333333333333333333333333%;
     padding-bottom: 30px;
     padding-right: 5px;
 }
@@ -74,7 +74,7 @@ img:hover{
     margin-bottom: -3%;
 }
 .column img{
-    width: 34%;
+    width: 31%;
 }
 
 .flickr img{
@@ -103,7 +103,7 @@ img:hover{
 address{
     font-style: italic;
     padding-left: 5px;
-    line-height: 20px;
+    line-height: 17px;
 }
 .social-icons li{
     float: left;
@@ -170,7 +170,7 @@ address{
     padding-bottom: 10px;
     border-bottom: 1px solid white;
     color : #fff;
-    line-height: 19px;
+    line-height: 16px;
     margin-bottom: 25px;
     text-align: justify;
 

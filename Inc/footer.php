@@ -33,14 +33,14 @@
                 <h3 class="column-title">Flickr Photos</h3>
                 <ul class="flickr">
                     <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
-                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
-                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
-                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
-                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
-                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
-                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
-                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
-                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr2.jpg" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr3.jpg" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr4.jpg" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr5.png" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr6.jpg" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr7.jpg" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr8.jpg" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr9.jpg" alt="Liens vers FlickR"></a></li>
                 </ul>
             </div>
             <!--  -->

@@ -38,7 +38,7 @@ header .nav_container {
 header nav ul li {
     display: inline-block;
     color: white;
-    font-size: 1.1em;
+    font-size: 1.2em;
     padding: 30px 25px;
 }
 
@@ -49,12 +49,12 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: grey;
-    border-bottom: 1px solid lime;
+    border-bottom: 1px solid #E1C6A3;
 }
 
 header nav ul li a:active {
     color: grey;
-    border-bottom: 1px solid lime;
+    border-bottom: 1px solid #E1C6A3;
 }
 
 header .title {
@@ -78,7 +78,7 @@ header .undertitle {
 }
 
 header hr {
-    border: 2px solid lime;
+    border: 2px solid #E1C6A3;
     width: 50%;
 }
 
@@ -92,7 +92,7 @@ header .connect {
 header .connect ul li {
     display: inline-block;
     color: white;
-    font-size: 1.1em;
+    font-size: 1.2em;
     padding: 40px 25px;
 }
 
@@ -103,11 +103,11 @@ header .connect ul li a {
 
 header .connect ul li a:hover {
     color: grey;
-    border-bottom: 1px solid lime;
+    border-bottom: 1px solid #E1C6A3;
 }
 
 header .connect ul li a:active {
     color: grey;
-    border-bottom: 1px solid lime;
+    border-bottom: 1px solid #E1C6A3;
 }
 

@@ -1,7 +1,9 @@
 @import "reset.css";
 
 /*HEADER CSS*/
-
+body{
+    font-family: 'Roboto', sans-serif;
+}
 
 .wrap_header {
     max-width: 1800px;

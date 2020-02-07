@@ -2,6 +2,7 @@
 
 /*HEADER CSS*/
 
+
 .wrap_header {
     max-width: 1800px;
     width: 100%;
@@ -10,31 +11,72 @@
 
 header .logo {
     width: 5%;
-    margin-top: 5px;
-    margin-left: 1%;
-    position: absolute;
-    top: 0;
-    left: 15%;
-    z-index: 1000;
+    margin-top: 10px;
+    margin-left: 2%;
 }
 
 header .logo img {
     width: 100%;
+    position: relative;
+    float: left;
 }
 
 header .nav_container {
     position: absolute;
     top: 0;
-    right: 40%;
-    z-index: 1000;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+header .nav_container ul{
+    width: 90%;
+    float: right;
 }
 
 header nav ul li {
     display: inline-block;
     color: white;
-    font-size: 1.5em;
-    padding: 30px 15px;
+    font-size: 1.1em;
+    padding: 30px 25px;
 }
 
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
 
+header nav ul li a:hover {
+    color: grey;
+    border-bottom: 1px solid blue;
+}
 
+header nav ul li a:active {
+    color: grey;
+    border-bottom: 1px solid blue;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    line-height: 100px;
+    color: white;
+}
+
+.h2-title {
+    font-size: 2.8em;
+    text-transform: uppercase;
+}
+
+.undertitle {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+hr {
+    border: 2px solid lime;
+    width: 50%;
+}

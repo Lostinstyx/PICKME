@@ -20,36 +20,33 @@
 <header>
 
     <div class="wrap_header">
-        <div class="flexslider flex1">
-            <ul class="slides">
-                <li>
-                    <img src="assets/img/teamwork_bg.jpg"/>
-                </li>
-                <li>
-                    <img src="assets/img/teamwork_bg1.jpg"/>
-                </li>
-            </ul>
-        </div>
-
-
-        <div class="logo">
-            <img src="assets/img/logo.png" alt="logo de l'entreprise">
-        </div>
-
-
         <div class="nav_container">
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="logo de l'entreprise">
+            </div>
+
             <nav class="nav" id="nav">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Link</li>
-                    <li>Link</li>
-                    <li>Link</li>
+                    <li><a href="../home.php">Home</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
                 </ul>
             </nav>
         </div>
-    </div>
 
+        <div class="title">
+            <h2 class="h2-title">
+                Je suis un titre
+            </h2>
+            <hr/>
+            <p class="undertitle">
+                Je suis un texte
+            </p>
+        </div>
+    </div>
+    <div class="clear"></div>
 </header>
+
 

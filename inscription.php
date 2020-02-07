@@ -10,6 +10,7 @@
 
     <style>
 
+
         label, input {
             display: block;
             margin-top: 10px;
@@ -19,17 +20,6 @@
             margin-bottom: 12px;
             width: 95%;
             padding: .4em;
-        }
-
-        fieldset {
-            padding: 0;
-            border: 0;
-            margin-top: 25px;
-        }
-
-        h1 {
-            font-size: 1.2em;
-            margin: .6em 0;
         }
 
         div#users-contain {

@@ -22,10 +22,6 @@
             padding: .4em;
         }
 
-        h1 {
-            font-size: 1.2em;
-            margin: .6em 0;
-        }
 
         div#users-contain {
             width: 350px;

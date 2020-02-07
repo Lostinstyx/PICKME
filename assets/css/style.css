@@ -1,78 +1,191 @@
 @import "reset.css";
 
+body{
+    font-family: 'Roboto', sans-serif;
+}
 
-.wrap {
+.wrap_header {
+    max-width: 1800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .logo {
+    width: 5%;
+    margin-top: 10px;
+    margin-left: 2%;
+}
+
+header .logo img {
+    width: 100%;
+    position: relative;
+    float: left;
+}
+
+header .nav_container {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    position: absolute;
+}
+
+.sticky {
+    position: fixed !important;
+    background-color: rgba(0,0,0,0.9);
+}
+
+
+header nav ul li {
+    display: inline-block;
+    color: white;
+    font-size: 1.2em;
+    padding: 30px 25px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header nav ul li a:hover {
+    color: grey;
+    border-bottom: 1px solid #E1C6A3;
+}
+
+header nav ul li a:active {
+    color: grey;
+    border-bottom: 1px solid #E1C6A3;
+}
+
+header .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    line-height: 100px;
+    color: white;
+}
+
+header .h2-title {
+    font-size: 2.8em;
+    text-transform: uppercase;
+}
+
+header .undertitle {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+header hr {
+    border: 2px solid #E1C6A3;
+    width: 50%;
+}
+
+
+header .connect {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+header .connect ul li {
+    display: inline-block;
+    color: white;
+    font-size: 1.2em;
+    padding: 40px 25px;
+}
+
+header .connect ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header .connect ul li a:hover {
+    color: grey;
+    border-bottom: 1px solid #E1C6A3;
+}
+
+header .connect ul li a:active {
+    color: grey;
+    border-bottom: 1px solid #E1C6A3;
+}
+
+/* Footer treatment*/
+
+footer .wrap {
     width: 100%;
     max-width: 960px;
     margin: 0 auto;
     padding: 0 10px;
 }
 
-.lead{
+footer .lead{
     color : #333;
     font-size: 1.15em;
     text-transform: uppercase;
 }
 
-
-img{
+footer img{
     width: 100%;
 }
 
-.nav {
+footer .nav {
     list-style: none;
     padding-left: 0;
 }
-.nav li{
+footer .nav li{
     display: inline-block;
 }
 
-.nav a{
+footer .nav a{
     color: #736156;
     text-decoration: none;
 }
 
 
-img{
+footer img{
     vertical-align: middle;
     transition : opacity .2s ease-in;
 }
-img:hover{
+
+footer img:hover{
     opacity: .7;
 }
 
-.page-footer{
+footer .page-footer{
     background-color: #736156;
     font-size: .75em;
     padding-top: 30px;
     color : #fff;
 }
 
-.columns{
+footer .columns{
     max-width: 100%;
-
 }
 
-.column{
+footer .column{
     float: left;
     width: 33.333333333333333333333333%;
     padding-bottom: 30px;
     padding-right: 5px;
 }
 
-.column-title{
+footer .column-title{
     padding-bottom: 30px;
 }
 
-.flickr{
+footer .flickr{
     margin-left: -3%;
     margin-bottom: -3%;
 }
-.column img{
+
+footer .column img{
     width: 31%;
 }
 
-.flickr img{
+footer .flickr img{
     float: left;
     width : 30%;
     margin-left: 3%;
@@ -80,79 +193,72 @@ img:hover{
     border-radius: 3px;
 }
 
-
-
-.bottom-bar{
+footer .bottom-bar{
     background-color: #D9BBA0;
     color : #736156;
     padding-left: 10px;
     line-height: 3em;
     margin-bottom: 30px;
     border-radius: 3px;
-
 }
-.copyright{
+
+footer.copyright{
     float: left;
     margin-right: 35%;
 }
 
-
-address{
+footer address{
     font-style: italic;
     padding-left: 5px;
     line-height: 17px;
 }
-.social-icons li{
+
+footer .social-icons li{
     float: left;
     margin-right: 3%;
 }
 
-
-.social-icons li img {
+footer .social-icons li img {
     display: block;
     margin-top: 10px;
     width: 36px;
     height: 36px;
-
 }
 
-.facebook img {
-    width: 36px;
-    height: 36px;
-}
-.twitter img {
-    width: 36px;
-    height: 36px;
-}
-.insta img {
-    width: 36px;
-    height: 36px;
-
-}
-.linkedin img {
-
+footer .facebook img {
     width: 36px;
     height: 36px;
 }
 
-.post-list {
+footer .twitter img {
+    width: 36px;
+    height: 36px;
+}
+
+footer .insta img {
+    width: 36px;
+    height: 36px;
+}
+
+footer .linkedin img {
+    width: 36px;
+    height: 36px;
+}
+
+footer .post-list {
     padding-right : 40px;
 }
 
-.post-list li {
-
+footer .post-list li {
     padding-bottom: 10px;
     border-bottom: 1px solid white;
     color : #fff;
     line-height: 16px;
     margin-bottom: 25px;
     text-align: justify;
-
-
-
 }
 
-.title{
+footer .title{
     background-color: #333;
     color : #fff;
     margin-bottom: 30px;
@@ -161,7 +267,8 @@ address{
     line-height: 3em;
     text-transform: uppercase;
 }
-.title-focus{
+
+footer .title-focus{
     color: #ba5136;
     font-weight: bold;
 }
@@ -172,3 +279,4 @@ address{
         height: 25px;
     }
 }
+

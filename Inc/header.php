@@ -12,28 +12,52 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/flexslider/flexslider.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
+
 
 </head>
 
 <body>
 
 <header>
+  
     <div class="wrap_header">
+        <div class="nav_container" id="nav_container">
+            <div class="logo">
+                <img src="assets/img/logo.png" alt="logo de l'entreprise">
+            </div>
 
-        <div class="flexslider flex1">
-            <ul class="slides">
-                <li>
-                    <img src="assets/img/teamwork_bg.jpg"/>
-                </li>
-                <li>
-                    <img src="assets/img/teamwork_bg1.jpg"/>
-                </li>
-            </ul>
+            <nav class="nav" id="nav"">
+                <ul>
+                    <li><a href="../home.php">Home</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                    <li><a href="">Link</a></li>
+                </ul>
+            </nav>
+
+            <div class="connect">
+                <ul>
+                    <li><a href="">inscription</a></li>
+                    <li><a href="">connexion</a></li>
+                </ul>
+            </div>
+
         </div>
 
-        <nav class="nav" id="nav">
 
-        </nav>
+        <div class="title">
+            <h2 class="h2-title">
+                Je suis un titre
+            </h2>
+            <hr/>
+            <p class="undertitle">
+                Je suis un texte
+            </p>
+        </div>
     </div>
+
+    <div class="clear"></div>
 
 </header>

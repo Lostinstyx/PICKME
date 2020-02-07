@@ -4,41 +4,43 @@
         <div class="columns">
             <div class="column">
                 <h3 class="column-title">Contactez-nous</h3>
-                <img src="img/footer-logo.png" alt="Wonder" ><br><br>
+                <img src="assets/img/herilogofooter.png" alt="Logo PickMe" ><br><br>
                 <address>
                     <strong>PickMe</strong><br>
                     24 place Saint Marc, <br>
                     Rouen, France.<br>
                 </address>
                 <ul class="social-icons">
-                    <li><a href="#" class="facebook">img fb</a></li>
-                    <li><a href="#" class="twitter">img twitter</a></li>
-                    <li><a href="#" class="instagram">img insta</a></li>
-                    <li><a href="#" class="linkedin"></a>img linkedin</li>
+                    <li><a href="#" class="facebook"><img src="assets/img/facebook-square-brands.svg" alt="logo facebook"></a></li>
+                    <li><a href="#" class="twitter"><img src="assets/img/twitter-square-brands.svg" alt="logo twitter"></a></li>
+                    <li><a href="#" class="insta"><img src="assets/img/instagram-brands.svg" alt="logo instagram"></a></li>
+                    <li><a href="#" class="linkedin"><img src="assets/img/linkedin-brands.svg" alt="logo linkedin"></a></li>
                 </ul>
             </div>
 
 
 
             <div class="column">
-                <h3 class="column-title">Latest Posts</h3>
+                <h3 class="column-title">Derniers avis</h3>
                 <ul class="post-list">
-                    <li><a href="#">Example$</a></li>
-                    <li><a href="#">Example$</a></li>
-                    <li><a href="#">Example$</a></li>
-                    <li><a href="#">Example$</a></li>
+                    <li><p>J'ai été contacté par plusiseurs recruteurs et j'ai donc pu m'orienter vers l'offre qui me plaisait le plus, merci PickMe!</p></li>
+                    <li><p>Grâce à PickMe j'ai pu trouver un travail rapidement.</p></li>
+                    <li><p>PickMe m'a permit de recruter candidat compétent suite au départ d'un de mes employés</p></li>
                 </ul>
             </div>
 
             <div class="column">
                 <h3 class="column-title">Flickr Photos</h3>
                 <ul class="flickr">
-                    <li><a href="#"><img src="img/flickr/1.jpg" alt="Liens vers FlickR"></a></li>
-                    <li><a href="#"><img src="img/flickr/2.jpg" alt="Liens vers FlickR"></a></li>
-                    <li><a href="#"><img src="img/flickr/3.jpg" alt="Liens vers FlickR"></a></li>
-                    <li><a href="#"><img src="img/flickr/4.jpg" alt="Liens vers FlickR"></a></li>
-                    <li><a href="#"><img src="img/flickr/5.jpg" alt="Liens vers FlickR"></a></li>
-                    <li><a href="#"><img src="img/flickr/6.jpg" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
+                    <li><a href="#"><img src="assets/img/flickr/flickr1.jpg" alt="Liens vers FlickR"></a></li>
                 </ul>
             </div>
             <!--  -->

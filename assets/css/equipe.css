@@ -1,8 +1,150 @@
 @import "reset.css";
 
+/*couleur sur html car ne fonctionne pas sinon, cause mystérieuse*/
+html {
+    background-color: #3a281d;
+}
+/*css bloc texte du haut*/
+.txtequipe {
+    text-align: center;
+    font-family: Arial;
+    color: #ffffff;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.txtequipe h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+    color: #e1c6a3;
+}
+/*resize logo*/
+#logeq {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 15px;
+}
+/*css partie équipe*/
 .facesequipe {
     max-width: 1800px;
     width: 100%;
-    float: left;
+    font-family: Arial;
+    color: #ffffff;
+    margin-left: 5%;
+    background-color: #1c7430;
 }
 
+.faces {
+    width: 16%;
+    float: left;
+    text-align: center;
+    padding: 1%;
+    margin-bottom: 80px;
+}
+
+.faces img {
+    width: 180px;
+    height: 180px;
+    border: 5px solid #e1c6a3;
+}
+
+.faces h3 {
+    color: #e1c6a3;
+}
+
+/*responsive*/
+@media screen and (max-width: 1100px){
+    .txtequipe {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .txtequipe h1 {
+        font-size: 2em;
+    }
+
+    #logeq {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .facesequipe {
+        width: 100%;
+    }
+
+    .faces {
+        padding: 1%;
+        margin-bottom: 40px;
+        width: 30%;
+    }
+
+    .faces img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .txtequipe {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .txtequipe h1 {
+        font-size: 2em;
+    }
+
+    #logeq {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+    }
+
+    .facesequipe {
+        width: 100%;
+    }
+
+    .faces {
+        padding: 1%;
+        margin-bottom: 40px;
+        width: 40%;
+    }
+
+    .faces img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .txtequipe {
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    .txtequipe h1 {
+        font-size: 1.5em;
+    }
+
+    #logeq {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .facesequipe {
+        width: 50%;
+    }
+
+    .faces {
+        padding: 1%;
+        margin-bottom: 20px;
+        width: 50%;
+    }
+
+    .faces img {
+        width: 100px;
+        height: 100px;
+    }
+}

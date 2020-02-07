@@ -1,6 +1,7 @@
 <?php
 session_start();
 
+
 include('inc/header.php'); ?>
 
 <div class="wrappy">
@@ -8,6 +9,7 @@ include('inc/header.php'); ?>
 
         <div class="txtequipe">
             <h1>L'équipe de Pick me</h1>
+            <img id="logeq" src="assets/img/vectoheripm.png">
             <p>Chez Pick me, toute notre équipe est mobilisée pour faciliter votre route vers le succès!</p>
         </div>
 

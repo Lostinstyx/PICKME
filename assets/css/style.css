@@ -22,17 +22,18 @@ header .logo img {
 }
 
 header .nav_container {
-    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 20;
+    z-index: 50;
+    position: absolute;
 }
 
-header .nav_container ul{
-    width: 90%;
-    float: right;
+.sticky {
+    position: fixed !important;
+    background-color: rgba(0,0,0,0.9);
 }
+
 
 header nav ul li {
     display: inline-block;
@@ -48,15 +49,15 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: grey;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid lime;
 }
 
 header nav ul li a:active {
     color: grey;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid lime;
 }
 
-.title {
+header .title {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -66,17 +67,47 @@ header nav ul li a:active {
     color: white;
 }
 
-.h2-title {
+header .h2-title {
     font-size: 2.8em;
     text-transform: uppercase;
 }
 
-.undertitle {
+header .undertitle {
     font-size: 1.8em;
     text-align: center;
 }
 
-hr {
+header hr {
     border: 2px solid lime;
     width: 50%;
 }
+
+
+header .connect {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+header .connect ul li {
+    display: inline-block;
+    color: white;
+    font-size: 1.1em;
+    padding: 40px 25px;
+}
+
+header .connect ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header .connect ul li a:hover {
+    color: grey;
+    border-bottom: 1px solid lime;
+}
+
+header .connect ul li a:active {
+    color: grey;
+    border-bottom: 1px solid lime;
+}
+

@@ -20,12 +20,12 @@
 <header>
 
     <div class="wrap_header">
-        <div class="nav_container">
+        <div class="nav_container" id="nav_container">
             <div class="logo">
                 <img src="assets/img/logo.png" alt="logo de l'entreprise">
             </div>
 
-            <nav class="nav" id="nav">
+            <nav class="nav" id="nav"">
                 <ul>
                     <li><a href="../home.php">Home</a></li>
                     <li><a href="">Services</a></li>
@@ -34,7 +34,16 @@
                     <li><a href="">Link</a></li>
                 </ul>
             </nav>
+
+            <div class="connect">
+                <ul>
+                    <li><a href="">inscription</a></li>
+                    <li><a href="">connexion</a></li>
+                </ul>
+            </div>
+
         </div>
+
 
         <div class="title">
             <h2 class="h2-title">
@@ -46,7 +55,9 @@
             </p>
         </div>
     </div>
+
     <div class="clear"></div>
+
 </header>
 
 

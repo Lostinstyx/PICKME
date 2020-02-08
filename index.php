@@ -13,7 +13,7 @@ require_once ('Inc/header.php'); ?>
         </ul>
     </div>
 
-    <div class="wrap">
+    <div class="wrap_section">
         <section class="first_block">
             <div class="block_history">
                 <div class="history_title">
@@ -106,6 +106,8 @@ require_once ('Inc/header.php'); ?>
                      alt="bureau">
             </div>
         </section>
+        <div class="clear"></div>
     </div>
+
 
 <?php require_once ('Inc/footer.php');

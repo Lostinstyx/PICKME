@@ -1,8 +1,6 @@
 @import "reset.css";
 
-.wrap {
-    max-width: 1300px;
-}
+
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -173,7 +171,6 @@ div#users-contain table td, div#users-contain table th {
     width: 60%;
 }
 
-
 .validateTips {
     border: 1px solid transparent;
     padding: 0.3em;
@@ -202,6 +199,12 @@ div#users-contain table td, div#users-contain table th {
 }
 
 /* Sections */
+
+.wrap_section {
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+}
 
 .block_history {
     width: 50%;
@@ -298,7 +301,6 @@ div#users-contain table td, div#users-contain table th {
     float: right;
 }
 
-
 .desc .bold {
     font-size: 1.1em;
     font-weight: bold;
@@ -376,6 +378,7 @@ div#users-contain table td, div#users-contain table th {
     color: white;
     border: purple 1px solid;
     float: left;
+}
 
 /* Footer treatment*/
 

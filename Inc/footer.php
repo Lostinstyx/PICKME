@@ -1,5 +1,3 @@
-<footer>
-
 <footer class="page-footer">
     <div class="wrap">
 

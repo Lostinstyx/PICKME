@@ -1,8 +1,18 @@
 <?php
-//require 'Inc/pdo.php';
-//require 'Inc/functions.php;
-include_once 'Inc/header.php';
-?>
+
+require_once ('Inc/header.php'); ?>
+
+    <div class="flexslider flex1">
+        <ul class="slides">
+            <li>
+                <img src="assets/img/teamwork_bg.jpg"/>
+            </li>
+            <li>
+                <img src="assets/img/teamwork_bg1.jpg"/>
+            </li>
+        </ul>
+    </div>
+
     <div class="wrap">
         <section class="first_block">
             <div class="block_history">
@@ -98,4 +108,5 @@ include_once 'Inc/header.php';
         </section>
     </div>
 <?php
-include_once 'Inc/footer.php';
+
+<?php require_once ('Inc/footer.php');

@@ -107,6 +107,5 @@ require_once ('Inc/header.php'); ?>
             </div>
         </section>
     </div>
-<?php
 
 <?php require_once ('Inc/footer.php');

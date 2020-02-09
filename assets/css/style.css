@@ -386,7 +386,7 @@ footer .wrap {
 }
 
 .page-footer {
-    background-color: #d7d4cf;
+    background-color: rgba(215, 212, 207, 0.4) ;
 }
 
 footer .lead{
@@ -402,7 +402,9 @@ footer img{
 footer .nav {
     list-style: none;
     padding-left: 0;
+    text-align: center;
 }
+
 footer .nav li{
     display: inline-block;
 }
@@ -443,6 +445,7 @@ footer .column{
 footer .column-title{
     padding-bottom: 30px;
     font-size: 1.2em;
+    text-align: center;
 }
 
 footer .flickr{
@@ -452,11 +455,12 @@ footer .flickr{
 
 footer .column img{
     width: 31%;
+    margin-left: 35%;
 }
 
 footer .flickr img{
     float: left;
-    width : 30%;
+    width : 25%;
     margin-left: 3%;
     margin-bottom: 3%;
     border-radius: 3px;
@@ -471,7 +475,7 @@ footer .bottom-bar{
     border-radius: 3px;
 }
 
-footer.copyright{
+footer .copyright{
     float: left;
     margin-right: 35%;
 }
@@ -480,6 +484,11 @@ footer address{
     font-style: italic;
     padding-left: 5px;
     line-height: 17px;
+    text-align: center;
+}
+
+footer .social-icons {
+    margin-left: 27%;
 }
 
 footer .social-icons li{
@@ -520,8 +529,8 @@ footer .post-list {
 
 footer .post-list li {
     padding-bottom: 10px;
-    border-bottom: 1px solid white;
-    color : #fff;
+    border-bottom: 1px solid #d7d4cf ;
+    color : #000000;
     line-height: 16px;
     margin-bottom: 25px;
     text-align: justify;

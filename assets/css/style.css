@@ -343,7 +343,7 @@ div#users-contain table td, div#users-contain table th {
     margin: 20px 0;
 }
 
-.progress p {
+.progBar p {
     margin: 20px 0;
 }
 
@@ -357,27 +357,22 @@ div#users-contain table td, div#users-contain table th {
     margin: 0 10%;
 }
 
-.container_bar1 {
+.progress {
+    width: 100%;
+    height: 20px;
+}
+.progress-wrap {
+    background: #f80;
+    margin: 20px 0;
+    overflow: hidden;
     position: relative;
-    height: 30px;
-    border: 1px solid #CECECE;
-    border-radius: 3px;;
+    border-radius: 15px;
 }
-
-.progress_bar1 {
-    position: absolute;
-    height: 100%;
-    width: 70%;
-    top: 0;
+.progress-bar {
+    background: #ddd;
     left: 0;
-    border-radius: 3px;
-    background-color: #D9BBA0;
-}
-
-.progress_bar1 .per {
-    color: white;
-    border: purple 1px solid;
-    float: left;
+    position: absolute;
+    top: 0;
 }
 
 /* Footer treatment*/
@@ -387,6 +382,10 @@ footer .wrap {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 10px;
+}
+
+.page-footer {
+    background-color: #d7d4cf;
 }
 
 footer .lead{

@@ -56,7 +56,7 @@ require_once ('Inc/header.php'); ?>
             </div>
             <div class="principles_desc">
                 <div class="desc_title">
-                    <h2 class="title">Nos principes</h2>
+                    <h2 id="h2_offset"  class="title">Nos principes</h2>
                 </div>
                 <div class="trait"></div>
                 <div class="desc">
@@ -87,16 +87,22 @@ require_once ('Inc/header.php'); ?>
                 </div>
                 <div class="trait2"></div>
                 <div class="conf_desc">
-                    <div class="progress">
+                    <div class="progBar">
+
                         <p>Vestibulum semper pharetra. Curabitur cursus sapien sed porta dapibus.
                             Lorem ipsum – dolor quis ex mattis, euismod mauris eget, scelerisque sapien. Quisque semper
                             malesuada
                             ipsum!</p>
-                        <div class="container_bar1">
-                            <div class="progress_bar1"><span class="per">70%</span></div>
+
+                        <p class="bold"> Utilisateurs ayant trouvé un emploi suite à l'utilisation de PickMe :</p>
+                        <div class="progress-wrap progress" data-progress-percent="75">
+                            <div class="progress-bar progress"></div>
                         </div>
-                        <p class="bold"> Des candidats qui sont passés par notre site ont décroché un emploi. Pourquoi
-                            pas vous?</p>
+
+                        <p class="bold"> Taux de satisfaction des entreprises utilisant notre plateforme :</p>
+                        <div class="progress-wrap progress" data-progress="90">
+                            <div class="progress-bar progress" ></div>
+                        </div>
                     </div>
                 </div>
             </div>

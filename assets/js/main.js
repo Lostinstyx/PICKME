@@ -5,6 +5,7 @@ $(window).load(function () {
         controlNav: false,
         directionNav: false,
     });
+
  // Modal inscription
     var dialog, form,
 
@@ -191,6 +192,8 @@ $(window).load(function () {
         });
     } );
 
+    //progress bar
+
 
 });
 
@@ -206,7 +209,23 @@ $(window).scroll(function() {
         nav.classList.remove("sticky");
     }
 
+
+    var bar = document.getElementById("h2_offset")
+    var barPos = bar.offsetTop;
+
+    if (window.pageYOffset > barPos) {
+
+            var getPercent = ($('.progress-wrap').data('progress-percent') / 100);
+            var getProgressWrapWidth = $('.progress-wrap').width();
+            var progressTotal = getPercent * getProgressWrapWidth;
+            var animationLength = 2500;
+
+            $('.progress-bar').stop().animate({
+                left: progressTotal
+            }, animationLength);
+
+        }
+
 });
 
-// modal
 

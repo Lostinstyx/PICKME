@@ -29,7 +29,7 @@
                     <li><p>J'ai été contacté par plusieurs recruteurs et j'ai donc pu m'orienter vers l'offre qui me
                             plaisait le plus, merci PickMe!</p></li>
                     <li><p>Grâce à PickMe j'ai pu trouver un travail rapidement.</p></li>
-                    <li><p>PickMe m'a permit de recruter candidat compétent suite au départ d'un de mes employés</p>
+                    <li><p>PickMe m'a permit de recruter un candidat compétent suite au départ d'un de mes employés</p>
                     </li>
                     <li><p>L'essentiel des membres de ma société ont été recruté sur PickMe, excellent concept.</p>
                     </li>

@@ -95,13 +95,13 @@ require_once ('Inc/header.php'); ?>
                             ipsum!</p>
 
                         <p class="bold"> Utilisateurs ayant trouvé un emploi suite à l'utilisation de PickMe :</p>
-                        <div class="progress-wrap progress" data-progress-percent="75">
-                            <div class="progress-bar progress"></div>
+                        <div class="progress-wrap progress" data-progress-percent="85">
+                            <div class="progress-bar progress"></div><div class="percents" id="percents">0</div>
                         </div>
 
                         <p class="bold"> Taux de satisfaction des entreprises utilisant notre plateforme :</p>
-                        <div class="progress-wrap progress" data-progress="90">
-                            <div class="progress-bar progress" ></div>
+                        <div class="progress-wrap progress" data-progress="85">
+                            <div class="progress-bar progress" ></div><div class="percents" id="percents">85%</div>
                         </div>
                     </div>
                 </div>

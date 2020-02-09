@@ -192,7 +192,22 @@ $(window).load(function () {
         });
     } );
 
-    //progress bar
+
+    var n = 85; // Nombre final du compteur
+    var cpt = 0; // Initialisation du compteur
+    var duree = 2.5; // Durée en seconde pendant laquel le compteur ira de 0 à X
+    var delta = Math.ceil((duree * 1000) / n); // On calcule l'intervalle de temps entre chaque rafraîchissement du compteur (durée mise en milliseconde)
+    var node =  document.getElementById("percents");
+
+    function countdown() {
+        node.innerHTML = ++cpt + "%" ;
+        if( cpt <= n ) { // Si on est pas arrivé à la valeur finale, on relance notre compteur une nouvelle fois
+            setTimeout(countdown, delta);
+        } else {
+            node.innerHTML = "85%"
+        }
+    }
+    return countdown();
 
 
 });
@@ -213,19 +228,19 @@ $(window).scroll(function() {
     var bar = document.getElementById("h2_offset")
     var barPos = bar.offsetTop;
 
-    if (window.pageYOffset > barPos) {
+    if (window.pageYOffset >= barPos) {
 
-            var getPercent = ($('.progress-wrap').data('progress-percent') / 100);
-            var getProgressWrapWidth = $('.progress-wrap').width();
-            var progressTotal = getPercent * getProgressWrapWidth;
-            var animationLength = 2500;
+        var getPercent = ($('.progress-wrap').data('progress-percent') / 100);
+        var getProgressWrapWidth = $('.progress-wrap').width();
+        var progressTotal = getPercent * getProgressWrapWidth;
+        var animationLength = 2500;
 
-            $('.progress-bar').stop().animate({
-                left: progressTotal
-            }, animationLength);
-
-        }
-
+        $('.progress-bar').stop().animate({
+            left: progressTotal
+        }, animationLength);
+    }
 });
+
+
 
 

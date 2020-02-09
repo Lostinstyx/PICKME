@@ -206,6 +206,9 @@ div#users-contain table td, div#users-contain table th {
 }
 
 /* Box 1 */
+.first_block {
+    margin-top: 50px;
+}
 
 .block_history {
     width: 50%;
@@ -376,6 +379,11 @@ div#users-contain table td, div#users-contain table th {
     top: 0;
 }
 
+.percents {
+    margin-top: 1px;
+    text-align: center;
+}
+
 /* Footer treatment*/
 
 footer .wrap {
@@ -386,6 +394,7 @@ footer .wrap {
 }
 
 .page-footer {
+    margin-top: 50px;
     background-color: rgba(215, 212, 207, 0.4) ;
 }
 

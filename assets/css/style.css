@@ -29,6 +29,7 @@ header .nav_container {
     width: 100%;
     z-index: 50;
     position: absolute;
+    transition: 1s;
 }
 
 .sticky {

@@ -1,4 +1,5 @@
 @import "reset.css";
+@import "burger.css";
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -6,7 +7,6 @@ body{
 
 .wrap_header {
     max-width: 1800px;
-
     width: 100%;
     margin: 0 auto;
 }

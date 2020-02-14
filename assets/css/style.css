@@ -198,6 +198,10 @@ div#users-contain table td, div#users-contain table th {
     color: white;
 }
 
+#modalLien{
+    color: white;
+}
+
 /* Sections */
 
 .wrap_section {

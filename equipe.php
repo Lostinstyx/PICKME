@@ -4,6 +4,8 @@ session_start();
 
 include('inc/header.php'); ?>
 
+
+    <link rel="stylesheet" href="assets/css/equipe.css">
 <div class="wrappy">
     <div class="equipe">
 

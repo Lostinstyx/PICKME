@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="fr" dir="ltr">
-
 
 <head>
 
@@ -52,7 +50,7 @@
                     <li><a href="index.php">Home</a></li>
                     <li><a href="">Services</a></li>
                     <li><a href="">Link</a></li>
-                    <li><a href="">Link</a></li>
+                    <li><a href="equipe.php">Team</a></li>
                     <li><a href="">Link</a></li>
                 </ul>
             </nav>
@@ -115,19 +113,7 @@
             </div>
 
         </div>
-
-
-        <div class="title">
-            <h2 class="h2-title">
-                Je suis un titre
-            </h2>
-            <hr/>
-            <p class="undertitle">
-                Je suis un texte
-            </p>
-        </div>
-    </div>
-
-    <div class="clear"></div>
+        <div class="clear"></div>
 
 </header>
+

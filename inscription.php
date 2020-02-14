@@ -1,17 +1,6 @@
 <?php
+include('inc/header.php');
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
 
 <div id="dialog-form" title="Inscription">
     <p class="validateTips">Les champs doivent tous être remplis..</p>
@@ -45,7 +34,3 @@
 
     </form>
 </div>
-
-
-
-

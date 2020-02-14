@@ -52,8 +52,8 @@ $(window).load(function () {
         var valid = true;
         allFields.removeClass("ui-state-error");
 
-        valid = valid && checkLength(nom, "nom", 1, 30);
-        valid = valid && checkLength(prenom, "prenom", 1, 30);
+        valid = valid && checkLength(nom, "nom", 1, 50);
+        valid = valid && checkLength(prenom, "prenom", 1, 50);
         valid = valid && checkLength(email, "email", 6, 80);
         valid = valid && checkLength(mdp, "Mot de passe", 5, 25);
 

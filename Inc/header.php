@@ -64,8 +64,8 @@
                     <label class="modalLabel" for="prenom">Prenom :</label>
                     <input type="text" name="prenom" id="prenom" value="" placeholder="Prenom..."
                            class="text ui-widget-content ui-corner-all"/>
-                    <label class="modalLabel" for="email">Email :</label>
-                    <input type="text" name="email" id="email" value="" placeholder="Email..."
+                    <label class="modalLabel" for="emailI">Email :</label>
+                    <input type="text" name="emailI" id="emailI" value="" placeholder="Email..."
                            class="text ui-widget-content ui-corner-all"/>
 
                     <label class="radioLine" for="recruteur">Recruteur :</label>
@@ -76,8 +76,8 @@
                     <input type="radio" id="candidat" name="role" value="candidat"/>
 
 
-                    <label class="modalLabel" for="mdp">Mot de passe :</label>
-                    <input type="password" name="mdp" id="mdp" value="" placeholder="Mot de passe..."
+                    <label class="modalLabel" for="mdpI">Mot de passe :</label>
+                    <input type="password" name="mdpI" id="mdpI" value="" placeholder="Mot de passe..."
                            class="text ui-widget-content ui-corner-all"/>
 
                     <!-- Allow form submission with keyboard without duplicating the dialog button -->
@@ -91,13 +91,15 @@
 
                 <form class="modal_form">
 
-                    <label class="modalLabel" for="email">Email :</label>
-                    <input type="text" name="email" id="email" value="" placeholder="Email..."
+                    <label class="modalLabel" for="emailC">Email :</label>
+                    <input type="text" name="emailC" id="emailC" value="" placeholder="Email..."
                            class="text ui-widget-content ui-corner-all"/>
 
-                    <label class="modalLabel" for="mdp">Mot de passe :</label>
-                    <input type="password" name="mdp" id="mdp" value="" placeholder="Mot de passe..."
+                    <label class="modalLabel" for="mdpC">Mot de passe :</label>
+                    <input type="password" name="mdpC" id="mdpC" value="" placeholder="Mot de passe..."
                            class="text ui-widget-content ui-corner-all"/>
+
+                    <a id="modalLien" href="motDePasseOublie.php">Mot de passe oublié ? </a>
 
                     <!-- Allow form submission with keyboard without duplicating the dialog button -->
                     <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
@@ -107,8 +109,8 @@
 
             <div class="connect">
                 <ul>
-                    <li id="create-user"><a>Inscription</a></li>
-                    <li id="connect-user"><a>Connexion</a></li>
+                    <li id="create-user2"><a>Inscription</a></li>
+                    <li id="connect-user2"><a>Connexion</a></li>
                 </ul>
             </div>
 

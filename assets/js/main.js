@@ -103,6 +103,9 @@ $(window).load(function () {
     $( "#create-user" ).button().on( "click", function() {
         dialog.dialog( "open" );
     });
+    $( "#create-user2" ).button().on( "click", function() {
+        dialog.dialog( "open" );
+    });
 
     $( function() {
         var dialog, form,
@@ -188,6 +191,9 @@ $(window).load(function () {
         });
 
         $( "#connect-user" ).button().on( "click", function() {
+            dialog.dialog( "open" );
+        });
+        $( "#connect-user2" ).button().on( "click", function() {
             dialog.dialog( "open" );
         });
     } );

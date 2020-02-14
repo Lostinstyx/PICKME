@@ -1,10 +1,11 @@
 @import "reset.css";
 
-/*couleur sur html car ne fonctionne pas sinon, cause mystérieuse*/
-html {
-    background-color: #3a281d;
-}
 /*css bloc texte du haut*/
+
+body {
+padding-top: 100px;
+}
+
 .txtequipe {
     text-align: center;
     font-family: Arial;

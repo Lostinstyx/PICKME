@@ -1,6 +1,6 @@
 <?php
 
-require_once ('Inc/header.php'); ?>
+require_once('Inc/header.php'); ?>
 
     <div class="flexslider flex1">
         <ul class="slides">
@@ -13,11 +13,23 @@ require_once ('Inc/header.php'); ?>
         </ul>
     </div>
 
+
+    <div class="title">
+        <h2 class="h2-title">
+            Je suis un titre
+        </h2>
+        <hr/>
+        <p class="undertitle">
+            Je suis un texte
+        </p>
+    </div>
+    </div>
+
     <div class="wrap_section">
         <section class="first_block">
             <div class="block_history">
                 <div class="history_title">
-                    <h2 class="title">Notre Histoire</h2>
+                    <h2 class="title_block">Notre Histoire</h2>
                 </div>
                 <div class="line"></div>
                 <div class="desc">
@@ -56,7 +68,9 @@ require_once ('Inc/header.php'); ?>
             </div>
             <div class="principles_desc">
                 <div class="desc_title">
-                    <h2 class="title">Nos principes</h2>
+
+                    <h2 id="h2_offset" class="title_block">Nos principes</h2>
+
                 </div>
                 <div class="trait"></div>
                 <div class="desc">
@@ -83,20 +97,26 @@ require_once ('Inc/header.php'); ?>
         <section class="third_block">
             <div class="block_conf">
                 <div class="desc_title">
-                    <h2 class="title">Titre a trouver</h2>
+                    <h2 class="title_block">Titre a trouver</h2>
                 </div>
                 <div class="trait2"></div>
                 <div class="conf_desc">
-                    <div class="progress">
+                    <div class="progBar">
+
                         <p>Vestibulum semper pharetra. Curabitur cursus sapien sed porta dapibus.
                             Lorem ipsum – dolor quis ex mattis, euismod mauris eget, scelerisque sapien. Quisque semper
                             malesuada
                             ipsum!</p>
-                        <div class="container_bar1">
-                            <div class="progress_bar1"><span class="per">70%</span></div>
+
+                        <p class="bold"> Utilisateurs ayant trouvé un emploi suite à l'utilisation de PickMe :</p>
+                        <div class="progress-wrap progress" data-progress-percent="85">
+                            <div class="progress-bar progress"></div><div class="percents" id="percents">0</div>
                         </div>
-                        <p class="bold"> Des candidats qui sont passés par notre site ont décroché un emploi. Pourquoi
-                            pas vous?</p>
+
+                        <p class="bold"> Taux de satisfaction des entreprises utilisant notre plateforme :</p>
+                        <div class="progress-wrap progress" data-progress="85">
+                            <div class="progress-bar progress" ></div><div class="percents" id="percents">85%</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -110,4 +130,4 @@ require_once ('Inc/header.php'); ?>
     </div>
 
 
-<?php require_once ('Inc/footer.php');
+<?php require_once('Inc/footer.php');

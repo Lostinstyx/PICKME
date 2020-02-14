@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-
 <html lang="fr" dir="ltr">
-
 
 <head>
 
@@ -113,3 +111,4 @@
     <div class="clear"></div>
 
 </header>
+

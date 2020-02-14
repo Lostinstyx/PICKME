@@ -69,7 +69,7 @@ require_once('Inc/header.php'); ?>
             <div class="principles_desc">
                 <div class="desc_title">
 
-                    <h2 class="title_block">Nos principes</h2>
+                    <h2 id="h2_offset" class="title_block">Nos principes</h2>
 
                 </div>
                 <div class="trait"></div>

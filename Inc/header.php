@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 
-
 </head>
 
 <body>
@@ -22,6 +21,26 @@
 
     <div class="wrap_header">
         <div class="nav_container" id="nav_container">
+            <!--Menu burger-->
+            <nav>
+                <div class="burger-button">
+                    <span class="burger-top"></span>
+                    <span class="burger-middle"></span>
+                    <span class="burger-bottom"></span>
+                </div>
+                <div class="burger-menu">
+                    <a id="create-user">Inscription</a>
+                    <a id="connect-user">Connexion</a>
+                    <a href="index.php">Home</a>
+                    <div class="burger_active">
+                    <a class="" href="">Services</a>
+                    <a href="">Link</a>
+                    <a href="">Link</a>
+                    <a href="">Link</a>
+                    </div>
+                </div>
+            </nav>
+            <!--Menu burger-->
             <div class="logo">
                 <img src="assets/img/logo.png" alt="logo de l'entreprise">
             </div>
@@ -55,7 +74,6 @@
 
                     <label class="radioLine" for="candidat">Candidat :</label>
                     <input type="radio" id="candidat" name="role" value="candidat"/>
-
 
 
                     <label class="modalLabel" for="mdp">Mot de passe :</label>

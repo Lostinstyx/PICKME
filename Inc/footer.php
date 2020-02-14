@@ -26,10 +26,12 @@
             <div class="column">
                 <h3 class="column-title">Derniers avis</h3>
                 <ul class="post-list">
-                    <li><p>J'ai été contacté par plusiseurs recruteurs et j'ai donc pu m'orienter vers l'offre qui me
+                    <li><p>J'ai été contacté par plusieurs recruteurs et j'ai donc pu m'orienter vers l'offre qui me
                             plaisait le plus, merci PickMe!</p></li>
                     <li><p>Grâce à PickMe j'ai pu trouver un travail rapidement.</p></li>
-                    <li><p>PickMe m'a permit de recruter candidat compétent suite au départ d'un de mes employés</p>
+                    <li><p>PickMe m'a permit de recruter un candidat compétent suite au départ d'un de mes employés</p>
+                    </li>
+                    <li><p>L'essentiel des membres de ma société ont été recruté sur PickMe, excellent concept.</p>
                     </li>
                 </ul>
             </div>
@@ -51,20 +53,19 @@
             <!--  -->
             <div class="clear"></div>
         </div><!-- .columns -->
-    </div>
 
-    <div class="bottom-bar">
-        <p class="copyright">Copyright 2020 PickMe. All rights reserved.</p>
-        <nav>
-            <ul class="nav">
-                <li><a href="#" title="">Accueil</a></li>&nbsp;&nbsp;|&nbsp;
-                <li><a href="#" title="">Mentions légales</a></li>&nbsp;&nbsp;|&nbsp;
-                <li><a href="#" title="">CGU</a></li>&nbsp;&nbsp;|&nbsp;
-                <li><a href="#" title="">Contact</a></li>
-            </ul>
 
-        </nav>
-
+        <div class="bottom-bar">
+            <p class="copyright">Copyright 2020 PickMe. All rights reserved.</p>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#" title="">Accueil</a></li>&nbsp;&nbsp;|&nbsp;
+                    <li><a href="#" title="">Mentions légales</a></li>&nbsp;&nbsp;|&nbsp;
+                    <li><a href="#" title="">CGU</a></li>&nbsp;&nbsp;|&nbsp;
+                    <li><a href="#" title="">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
     <div class="clear"></div>
 </footer>
@@ -76,6 +77,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
 <script src="assets/flexslider/jquery.flexslider.js"></script>
 <script src="assets/js/main.js"></script>
 

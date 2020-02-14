@@ -200,6 +200,19 @@ div#users-contain table td, div#users-contain table th {
 #modalLien{
     color: white;
 }
+/* **************************** Formulaire Mot de passe oublié **************************** */
+
+.mdpOTitre{
+    margin-top: 50px;
+    margin-left: 40%;
+    font-size: 2em;
+}
+
+.mdpOform{
+    padding-top: 50px;
+    padding-left: 40%;
+}
+
 
 /* Sections */
 

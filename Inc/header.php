@@ -57,7 +57,7 @@
             <div id="dialog-form" title="Inscription">
                 <p class="validateTips">Les champs doivent tous être remplis..</p>
 
-                <form class="modal_form">
+                <form class="modal_form" action="../index.php" method="post">
                     <label class="modalLabel" for="nom">Nom :</label>
                     <input type="text" name="nom" id="nom" value="" placeholder="Nom..."
                            class="text ui-widget-content ui-corner-all"/>
@@ -81,7 +81,7 @@
                            class="text ui-widget-content ui-corner-all"/>
 
                     <!-- Allow form submission with keyboard without duplicating the dialog button -->
-                    <input type="submit" tabindex="-1" style="position:absolute; top:-1000px;">
+                    <input type="submit" tabindex="-1" style="position:absolute; top:-1000px;" name="submitted">
 
                 </form>
             </div>
@@ -89,7 +89,7 @@
             <div id="dialog-form" title="Connexion">
                 <p class="validateTips">Les champs doivent tous être remplis..</p>
 
-                <form class="modal_form">
+                <form class="modal_form" method="post" action="../index.php">
 
                     <label class="modalLabel" for="emailC">Email :</label>
                     <input type="text" name="emailC" id="emailC" value="" placeholder="Email..."
@@ -102,7 +102,7 @@
                     <a id="modalLien" href="motDePasseOublie.php">Mot de passe oublié ? </a>
 
                     <!-- Allow form submission with keyboard without duplicating the dialog button -->
-                    <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                    <input type="submit" tabindex="-1" style="position:absolute; top:-1000px" name="submitted">
 
                 </form>
             </div>

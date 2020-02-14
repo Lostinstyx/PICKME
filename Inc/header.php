@@ -72,6 +72,7 @@
                     <input type="radio" id="recruteur" name="role" value="recruteur"/>
 
 
+
                     <label class="radioLine" for="candidat">Candidat :</label>
                     <input type="radio" id="candidat" name="role" value="candidat"/>
 

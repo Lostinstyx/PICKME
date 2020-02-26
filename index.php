@@ -1,6 +1,6 @@
 <?php
 
-require_once ('Inc/header.php'); ?>
+require_once('Inc/header.php'); ?>
 
     <div class="flexslider flex1">
         <ul class="slides">
@@ -13,11 +13,23 @@ require_once ('Inc/header.php'); ?>
         </ul>
     </div>
 
+
+    <div class="title">
+        <h2 class="h2-title">
+            Je suis un titre
+        </h2>
+        <hr/>
+        <p class="undertitle">
+            Je suis un texte
+        </p>
+    </div>
+    </div>
+
     <div class="wrap_section">
         <section class="first_block">
             <div class="block_history">
                 <div class="history_title">
-                    <h2 class="title">Notre Histoire</h2>
+                    <h2 class="title_block">Notre Histoire</h2>
                 </div>
                 <div class="line"></div>
                 <div class="desc">
@@ -56,7 +68,9 @@ require_once ('Inc/header.php'); ?>
             </div>
             <div class="principles_desc">
                 <div class="desc_title">
-                    <h2 id="h2_offset"  class="title">Nos principes</h2>
+
+                    <h2 id="h2_offset" class="title_block">Nos principes</h2>
+
                 </div>
                 <div class="trait"></div>
                 <div class="desc">
@@ -83,7 +97,7 @@ require_once ('Inc/header.php'); ?>
         <section class="third_block">
             <div class="block_conf">
                 <div class="desc_title">
-                    <h2 class="title">Titre a trouver</h2>
+                    <h2 class="title_block">Titre a trouver</h2>
                 </div>
                 <div class="trait2"></div>
                 <div class="conf_desc">
@@ -116,4 +130,4 @@ require_once ('Inc/header.php'); ?>
     </div>
 
 
-<?php require_once ('Inc/footer.php');
+<?php require_once('Inc/footer.php');

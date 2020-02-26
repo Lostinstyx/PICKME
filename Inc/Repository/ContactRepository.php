@@ -5,12 +5,12 @@ include('Inc/pdo.php');
 
 class ContactRepository
 {
-    private $tab= 'contact';
+    private $table= 'contact';
 
     public function getAllContact()
     {
         global $pdo;
-        $sql = "SELECT * FROM $this->tab";
+        $sql = "SELECT * FROM $this->table";
         $query = $pdo->prepare($sql);
         $query->execute();
         $table = $query->fetchAll(\PDO::FETCH_CLASS, '\Inc\Models\ContactModels');
@@ -20,7 +20,7 @@ class ContactRepository
     public function getFullContact($id)
     {
         global $pdo;
-        $sql = "SELECT * FROM $this->tab WHERE id = :id";
+        $sql = "SELECT * FROM $this->table WHERE id = :id";
         $query = $pdo->prepare($sql);
         $query->bindValue(':id',$id,PDO::PARAM_INT);
         $query->execute();
@@ -32,9 +32,7 @@ class ContactRepository
     {
         global $pdo;
 
-        $table = 'contact';
-
-        $sql = "INSERT INTO $table VALUES (NULL, :email, :object, :content,NOW())";
+        $sql = "INSERT INTO $this->table VALUES (NULL, :email, :object, :content,NOW())";
 
         $query = $pdo->prepare($sql);
 

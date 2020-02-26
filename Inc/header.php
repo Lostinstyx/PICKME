@@ -1,4 +1,6 @@
-<?php
+<?php require_once('verif_inscription.php'); ?>
+
+<!DOCTYPE html>
 
 require_once('verif_inscription.php');
 ?>

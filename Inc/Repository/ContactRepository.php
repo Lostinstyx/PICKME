@@ -28,6 +28,22 @@ class ContactRepository
         return $table;
     }
 
+    public function insertContact($email, $object, $content)
+    {
+        global $pdo;
 
+        $table = 'contact';
 
+        $sql = "INSERT INTO $table VALUES (NULL, :email, :object, :content,NOW())";
+
+        $query = $pdo->prepare($sql);
+
+        $query->bindValue(':email', $email, PDO::PARAM_STR);
+        $query->bindValue(':object', $object, PDO::PARAM_STR);
+        $query->bindValue(':content', $content, PDO::PARAM_STR);
+
+        $query->execute();
+
+        return $pdo->lastInsertId();
+    }
 }

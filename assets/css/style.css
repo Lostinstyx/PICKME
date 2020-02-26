@@ -190,7 +190,8 @@ div#users-contain table td, div#users-contain table th {
     margin-bottom: 12px;
 }
 
-#create-user, #connect-user {
+#create-user, #connect-user, #create-user2, #connect-user2{
+
     background-color: transparent;
     border: none;
 }
@@ -199,7 +200,24 @@ div#users-contain table td, div#users-contain table th {
     color: white;
 }
 
-/* ---------------------------------------  Index.php  ------------------------------- */
+
+#modalLien{
+    color: white;
+}
+/* **************************** Formulaire Mot de passe oublié **************************** */
+
+.mdpOTitre{
+    margin-top: 50px;
+    margin-left: 40%;
+    font-size: 2em;
+}
+
+.mdpOform{
+    padding-top: 50px;
+    padding-left: 40%;
+}
+
+
 
 /* Sections */
 

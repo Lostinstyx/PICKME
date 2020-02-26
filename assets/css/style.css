@@ -1,7 +1,7 @@
 @import "reset.css";
 @import "burger.css";
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -34,7 +34,7 @@ header .nav_container {
 
 .sticky {
     position: fixed !important;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     transition: .5s;
 }
 
@@ -104,7 +104,8 @@ header .connect ul li a {
     text-decoration: none;
     color: #ffffff;
 }
-  header .connect ul li a:hover {
+
+header .connect ul li a:hover {
     color: grey;
     border-bottom: 1px solid #E1C6A3;
 }
@@ -144,9 +145,9 @@ div#users-contain table td, div#users-contain table th {
     text-align: left;
 }
 
-.ui-dialog{
+.ui-dialog {
     border-radius: 5%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 .ui-dialog .ui-state-error {
@@ -155,16 +156,17 @@ div#users-contain table td, div#users-contain table th {
 
 .ui-dialog-title {
     text-align: center;
-    color : #E1C6A3;
+    color: #E1C6A3;
 }
 
-.ui-dialog-titlebar{
-    background-color : transparent;
+.ui-dialog-titlebar {
+    background-color: transparent;
     margin: 0 auto;
     width: 80%;
     border: none;
 }
-.ui-dialog-buttonpane{
+
+.ui-dialog-buttonpane {
     background-color: transparent;
     margin: 0 auto;
     width: 60%;
@@ -182,20 +184,22 @@ div#users-contain table td, div#users-contain table th {
 
 }
 
-.modal_form input[type=radio]{
+.modal_form input[type=radio] {
     display: inline-block;
-    margin-right : 10%;
+    margin-right: 10%;
     margin-bottom: 12px;
 }
 
-#create-user, #connect-user{
+#create-user, #connect-user {
     background-color: transparent;
     border: none;
 }
 
-.modalLabel{
+.modalLabel {
     color: white;
 }
+
+/* ---------------------------------------  Index.php  ------------------------------- */
 
 /* Sections */
 
@@ -365,6 +369,7 @@ div#users-contain table td, div#users-contain table th {
     width: 100%;
     height: 20px;
 }
+
 .progress-wrap {
     background: #f80;
     margin: 20px 0;
@@ -372,6 +377,7 @@ div#users-contain table td, div#users-contain table th {
     position: relative;
     border-radius: 15px;
 }
+
 .progress-bar {
     background: #ddd;
     left: 0;
@@ -384,6 +390,70 @@ div#users-contain table td, div#users-contain table th {
     text-align: center;
 }
 
+/* ------------------------------------------ Contact.php------------------------------------------------------- */
+
+.container_truc {
+    margin-top: 150px;
+    border: red 2px solid;
+    height: 670px;
+    width: 100%;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 65%;
+}
+.block_1 {
+    margin-top: 95px;
+    border: black 2px solid;
+    width: 33%;
+    float: left;
+    margin-bottom: 10px;
+}
+.block_1 .titre {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.block_1 .line_block{
+    border-bottom: 3px solid #D9BBA0;
+    margin-bottom: 30px;
+    width: 150px;
+    border-radius: 5px;
+}
+.block_1 .par {
+    font-size: 17px;
+    line-height: 25px;
+}
+.block_1 .par .par1 {
+    margin-bottom: 10px;
+}
+.block_2 {
+    margin-top: 95px;
+    border: blue 2px solid;
+    width: 33%;
+    margin-left: 5px;
+    float: left;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.block_2 .call {
+
+}
+
+.block_3 {
+    margin-top: 95px;
+    border: yellow 2px solid;
+    width: 33%;
+    float: right;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+/* ------------------------------------ Footer ----------------------------------- */
+
 /* Footer treatment*/
 
 footer .wrap {
@@ -395,16 +465,16 @@ footer .wrap {
 
 .page-footer {
     margin-top: 50px;
-    background-color: rgba(215, 212, 207, 0.4) ;
+    background-color: rgba(215, 212, 207, 0.4);
 }
 
-footer .lead{
-    color : #333;
+footer .lead {
+    color: #333;
     font-size: 1.15em;
     text-transform: uppercase;
 }
 
-footer img{
+footer img {
     width: 100%;
 }
 
@@ -414,82 +484,82 @@ footer .nav {
     text-align: center;
 }
 
-footer .nav li{
+footer .nav li {
     display: inline-block;
 }
 
-footer .nav a{
+footer .nav a {
     color: #736156;
     text-decoration: none;
 }
 
 
-footer img{
+footer img {
     vertical-align: middle;
-    transition : opacity .2s ease-in;
+    transition: opacity .2s ease-in;
 }
 
-footer img:hover{
+footer img:hover {
     opacity: .7;
 }
 
-footer .page-footer{
+footer .page-footer {
     background-color: #736156;
     font-size: .75em;
     padding-top: 30px;
-    color : #fff;
+    color: #fff;
 }
 
-footer .columns{
+footer .columns {
     max-width: 100%;
 }
 
-footer .column{
+footer .column {
     float: left;
     width: 33.333333333333333333333333%;
     padding-bottom: 30px;
     padding-right: 5px;
 }
 
-footer .column-title{
+footer .column-title {
     padding-bottom: 30px;
     font-size: 1.2em;
     text-align: center;
 }
 
-footer .flickr{
+footer .flickr {
     margin-left: -3%;
     margin-bottom: -3%;
 }
 
-footer .column img{
+footer .column img {
     width: 31%;
     margin-left: 35%;
 }
 
-footer .flickr img{
+footer .flickr img {
     float: left;
-    width : 25%;
+    width: 25%;
     margin-left: 3%;
     margin-bottom: 3%;
     border-radius: 3px;
 }
 
-footer .bottom-bar{
+footer .bottom-bar {
     background-color: #D9BBA0;
-    color : #736156;
+    color: #736156;
     padding-left: 10px;
     line-height: 3em;
     margin-bottom: 30px;
     border-radius: 3px;
 }
 
-footer .copyright{
+footer .copyright {
     float: left;
     margin-right: 35%;
 }
 
-footer address{
+footer address {
     font-style: italic;
     padding-left: 5px;
     line-height: 17px;
@@ -500,7 +570,7 @@ footer .social-icons {
     margin-left: 27%;
 }
 
-footer .social-icons li{
+footer .social-icons li {
     float: left;
     margin-right: 3%;
 }
@@ -533,21 +603,21 @@ footer .linkedin img {
 }
 
 footer .post-list {
-    padding-right : 40px;
+    padding-right: 40px;
 }
 
 footer .post-list li {
     padding-bottom: 10px;
-    border-bottom: 1px solid #d7d4cf ;
-    color : #000000;
+    border-bottom: 1px solid #d7d4cf;
+    color: #000000;
     line-height: 16px;
     margin-bottom: 25px;
     text-align: justify;
 }
 
-footer .title{
+footer .title {
     background-color: #333;
-    color : #fff;
+    color: #fff;
     margin-bottom: 30px;
     font-size: .875em;
     padding-left: 10px;
@@ -555,7 +625,7 @@ footer .title{
     text-transform: uppercase;
 }
 
-footer .title-focus{
+footer .title-focus {
     color: #ba5136;
     font-weight: bold;
 }

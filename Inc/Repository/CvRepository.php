@@ -22,7 +22,7 @@ class CvRepository
         $cv_user = $_SESSION['login']['id'];
 
         $sql = "INSERT INTO $this->table VALUES (NULL, :cv_user, :category, :study, :experience, :work, :title_formation1,
- :formation1, :title_formation2, :formation2, :title_experience1, :experience1, :title_experience2, :experience2, :informations,NOW(), NULL)";
+        :formation1, :title_formation2, :formation2, :title_experience1, :experience1, :title_experience2, :experience2, :informations,NOW(), NULL)";
 
         $query = $pdo->prepare($sql);
         $query->bindValue(':cv_user', $cv_user, PDO::PARAM_STR);

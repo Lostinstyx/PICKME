@@ -34,7 +34,7 @@ if(!empty ($_POST['submitted'])) {
 require_once ('Inc/header.php');?>
 
 
-    <form action="" method="post" style="margin-top: 100px">
+    <form class="searchCV" action="" method="post" style="margin-top: 100px">
         <?= $form->label('choicecandidat', 'Candidat'); ?>
         <?= $form->radio('typeregister', 'choicecandidat') ?>
         <?= $form->label('choicerecruteur', 'Recruteur'); ?>
@@ -42,12 +42,9 @@ require_once ('Inc/header.php');?>
 
 
         <?= $form->error('title'); ?>
-
-        <div id="show"></div>
-        <?= $form->submit(); ?>
     </form>
 
-<form id="form-recruteur" action="" method="post">
+<form class="searchCV" id="form-recruteur" action="" method="post">
     <?= $form->label('prenom', 'Prenom'); ?>
     <?= $form->input('prenom','text'); ?>
 
@@ -77,9 +74,11 @@ require_once ('Inc/header.php');?>
 
     <?= $form->label('password', 'Mot de passe'); ?>
     <?= $form->input('password','password'); ?>
+
+    <?= $form->submit(); ?>
 </form>
 
-    <form id="form-candidat" action="" method="post">
+    <form class="searchCV" id="form-candidat" action="" method="post">
         <?= $form->label('prenom', 'Prenom'); ?>
         <?= $form->input('prenom','text'); ?>
 
@@ -103,6 +102,8 @@ require_once ('Inc/header.php');?>
 
         <?= $form->label('password', 'Mot de passe'); ?>
         <?= $form->input('password','password'); ?>
+
+        <?= $form->submit(); ?>
     </form>
 
 

@@ -2,6 +2,7 @@ $(window).load(function () {
 
 
     $('#form-recruteur').hide();
+    $('#form-candidat').hide();
 
     $('.flexslider.flex1').flexslider({
         slideshowSpeed: 5000,
@@ -65,15 +66,13 @@ $( document ).ready(function() {
 
     $('input[name=typeregister]').on('change', function() {
         var choice = $(this).val();
-        console.log(choice);
         switch(choice)
         {
             case 'choicerecruteur':
-                //document.getElementById('show').innerHTML="<h2>RECRUTEUR</h2>";
                 $('#form-recruteur').show();
                 break;
             case 'choicecandidat':
-                document.getElementById('show').innerHTML="<h2>CANDIDAT</h2>";
+                $('#form-candidat').show();
                 break;
         }
     });

@@ -79,6 +79,32 @@ require_once ('Inc/header.php');?>
     <?= $form->input('password','password'); ?>
 </form>
 
+    <form id="form-candidat" action="" method="post">
+        <?= $form->label('prenom', 'Prenom'); ?>
+        <?= $form->input('prenom','text'); ?>
+
+        <?= $form->label('nom', 'Nom'); ?>
+        <?= $form->input('nom','text'); ?>
+
+        <?= $form->label('email', 'Email'); ?>
+        <?= $form->input('email','email'); ?>
+
+        <?= $form->label('telephone', 'telephone'); ?>
+        <?= $form->input('telephone','text'); ?>
+
+        <?= $form->label('street', 'Adresse'); ?>
+        <?= $form->input('street','text'); ?>
+
+        <?= $form->label('postalcode', 'Code Postal'); ?>
+        <?= $form->input('postalcode','text'); ?>
+
+        <?= $form->label('city', 'Ville'); ?>
+        <?= $form->input('city','text'); ?>
+
+        <?= $form->label('password', 'Mot de passe'); ?>
+        <?= $form->input('password','password'); ?>
+    </form>
+
 
 
 <?php require_once ('Inc/footer.php');

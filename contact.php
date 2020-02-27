@@ -49,6 +49,11 @@ $errors = array();
                             $errors = $validation->validChamp($errors, $_POST['objet'], 'objet', 3, 100);
                             $errors = $validation->validChamp($errors, $_POST['email'], 'email', 10, 50);
                             $errors = $validation->validChamp($errors, $_POST['content'], 'content', 1, 15);
+
+                            if (count($errors) ==0){
+                                $tableau = new ContactRepository();
+                                $tableau->insertContact($_POST['email'], $_POST['objet'], $_POST['content']);
+                            }
                         }
                         $form = new Form($errors, 'post');
                         $html = $form->label('objet', 'objet');
@@ -62,11 +67,6 @@ $errors = array();
                         $html .= $form->submit('submitted');
                         print $html;
 //                        $tools->debug($form);
-                        if ($_SERVER['REQUEST_METHOD'] == 'POST' && count($errors) == 0) {
-                            $tableau = new ContactRepository();
-                            $tableau->insertContact($_POST['email'], $_POST['objet'], $_POST['content']);
-//                            $tools->debug($tableau);
-                        }
                         ?>
                     </form>
                 </div>

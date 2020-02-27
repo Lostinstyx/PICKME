@@ -11,7 +11,6 @@ class CvRepository
 
     private $table = 'cv';
 
-
     public function insertCv($category, $study, $experience, $work, $title_formation1, $formation1,
                              $title_formation2, $formation2, $title_experience1, $experience1, $title_experience2,
                              $experience2,$informations)

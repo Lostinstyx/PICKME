@@ -23,16 +23,19 @@ class CvRepository
 
         $query = $pdo->prepare($sql);
 
-        $query->bindValue(':name', $name, PDO::PARAM_STR);
-        $query->bindValue(':surname', $surname, PDO::PARAM_STR);
-        $query->bindValue(':email', $email, PDO::PARAM_STR);
-        $query->bindValue(':telephone', $telephone, PDO::PARAM_STR);
-        $query->bindValue(':street', $street, PDO::PARAM_STR);
-        $query->bindValue(':postalcode', $postalcode, PDO::PARAM_STR);
-        $query->bindValue(':city', $city, PDO::PARAM_STR);
-        $query->bindValue(':password', $hashPassword, PDO::PARAM_STR);
-        $query->bindValue(':token', $token, PDO::PARAM_STR);
-        $query->bindValue(':role', $role, PDO::PARAM_INT);
+        $query->bindValue(':category', $category, PDO::PARAM_STR);
+        $query->bindValue(':study', $study, PDO::PARAM_STR);
+        $query->bindValue(':experience', $experience, PDO::PARAM_STR);
+        $query->bindValue(':work', $work, PDO::PARAM_STR);
+        $query->bindValue(':title_formation1', $title_formation1, PDO::PARAM_STR);
+        $query->bindValue(':formation1', $formation1, PDO::PARAM_STR);
+        $query->bindValue(':title_formation2', $title_formation2, PDO::PARAM_STR);
+        $query->bindValue(':formation2', $formation2, PDO::PARAM_STR);
+        $query->bindValue(':title_experience1', $title_experience1, PDO::PARAM_STR);
+        $query->bindValue(':experience1', $experience1, PDO::PARAM_STR);
+        $query->bindValue(':title_experience2', $title_experience2, PDO::PARAM_STR);
+        $query->bindValue(':experience2', $experience2, PDO::PARAM_STR);
+        $query->bindValue(':informations', $informations, PDO::PARAM_STR);
 
         $query->execute();
 

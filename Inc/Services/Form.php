@@ -38,7 +38,6 @@ class Form
         return $html;
     }
 
-
     public function textarea()
     {
 

@@ -37,6 +37,12 @@ class Form
     return '<input type="'.$type.'" name="'.$name.'" id="'.$name.'" value="'.$this->getValue($name).'" />';
   }
 
+    public function radio($name, $value)
+    {
+        $html = '<input name="'. $name . '" type=radio " id="' . $name . '" value = "' . $value . '">';
+        return $html;
+    }
+
   public function textarea($name)
   {
     return '<textarea name="'.$name.'">'.$this->getValue($name).'</textarea>';

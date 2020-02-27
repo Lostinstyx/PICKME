@@ -69,9 +69,11 @@ $( document ).ready(function() {
         switch(choice)
         {
             case 'choicerecruteur':
+                $('#form-candidat').hide();
                 $('#form-recruteur').show();
                 break;
             case 'choicecandidat':
+                $('#form-recruteur').hide();
                 $('#form-candidat').show();
                 break;
         }

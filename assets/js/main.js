@@ -59,8 +59,22 @@ $( document ).ready(function() {
         $(".burger-button").toggleClass("active");
         $(".burger-menu").toggleClass("active");
     });
-});
 
+    $('input[name=\'typeregister\']').on('change', function() {
+        var n = $(this).val();
+        console.log(n);
+        switch(n)
+        {
+            case '1':
+                document.getElementById('#show').innerHTML="1st radio button";
+                break;
+            case '2':
+                document.getElementById('#show').innerHTML="<h2>2nd radio button</h2>";
+                break;
+        }
+    });
+
+});
 
 
 

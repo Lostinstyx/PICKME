@@ -1,19 +1,14 @@
 <?php
 
-use Inc\Service\Form;
-
-include_once 'Inc/Service/Form.php';
+require_once('Inc/header.php'); ?>
 
 
 
-$form = new Form($errors, 'GET');
-// require_once('Inc/header.php'); ?>
+        <h1 class="titleCV">Rechercher un CV</h1>
+        <div class="wrap_section">
+        <form class="searchCV" name="searchCv" method="get" action="">
 
-
-    <div class="wrap_section">
-        <h1 class="title">Rechercher un CV</h1>
-        <form id="searchCv">
-            <?php $form->label('category_select','Choisir une catégorie : ') ?>
+            <label for="category_select">Choisir catégorie</label>
             <select name="category" id="category_select">
                 <option value="">-Catégories-</option>
                 <option value="">------------------A----------------------</option>
@@ -76,8 +71,8 @@ $form = new Form($errors, 'GET');
                 <option value="transport">Transport-Logistique</option>
             </select>
 
-            <?php $form->label('niveau_select','Choisir un niveau : ') ?>
-                <select name="niveau_select" id="niveau_select">
+                <label for="category_select">Choisir un niveau : </label>
+                <select name="category" id="category_select">
                     <option value="">-niveau-</option>
                     <option value="aucun">Aucun</option>
                     <option value="cap">CAP, BEP</option>
@@ -90,18 +85,28 @@ $form = new Form($errors, 'GET');
                 </select>
 
 
+            <label for="experience_select">Choisir un nombre d'année d'expérience : </label>
+            <select name="experience" id="experience_select">
+                <option value="">-Expérience-</option>
+                <option value="aucune">Aucune</option>
+                <option value="junior">Entre 1 et 3 ans </option>
+                <option value="confirme">entre 3 et 10</option>
+                <option value="senior">plus de 10 ans</option>
+            </select>
+
+
             <label for="rechercheMetier">Choisir un métier : </label>
-
-            <?php $form->submit('submitted', 'Rechercher'); ?>
+            <input type="text" name="rechercheMetier" id="rechercheMetier" placeholder="métier">
+            <input type="submit" name="submitted" value="Rechercher">
         </form>
-    </div>
+
+        </div>
 
 
 
 
 
 
-
-<?php //require_once('Inc/footer.php');
+<?php require_once('Inc/footer.php');
 
 

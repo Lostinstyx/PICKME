@@ -1,0 +1,53 @@
+.searchCV {
+    width: 50%;
+    margin-left: 30%;
+    background-color: #efeeec;
+    padding: 3%;
+    border : 2px solid #634b30;
+    border-radius: 5%;
+    margin-bottom: 100px;
+}
+
+.searchCV label{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.searchCV select{
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: rgb(215, 212, 207);
+    border : none;
+    width : 98%;
+
+}
+
+
+
+.searchCV input[type=text]
+{
+    padding: 5px;
+    width: 48%;
+    margin-right: 2%;
+
+}
+
+
+
+.searchCV input[type=submit]{
+    padding: 5px;
+    width: 48%;
+
+}
+
+
+
+.titleCV{
+    color: #634b30;
+    font-size: 3em;
+    margin-left: 43%;
+    margin-top: 150px;
+    padding-bottom: 25px;
+    font-weight: bold;
+}

@@ -11,18 +11,21 @@ class CvRepository
 
     private $table = 'cv';
 
+
     public function insertCv($category, $study, $experience, $work, $title_formation1, $formation1,
                              $title_formation2, $formation2, $title_experience1, $experience1, $title_experience2,
                              $experience2,$informations)
     {
+
         global $pdo;
 
+        $cv_user = $_SESSION['login']['id'];
 
-        $sql = "INSERT INTO $this->table VALUES (NULL, :category, :study, :experience, :work, :title_formation1,
+        $sql = "INSERT INTO $this->table VALUES (NULL, :cv_user, :category, :study, :experience, :work, :title_formation1,
  :formation1, :title_formation2, :formation2, :title_experience1, :experience1, :title_experience2, :experience2, :informations,NOW(), NULL)";
 
         $query = $pdo->prepare($sql);
-
+        $query->bindValue(':cv_user', $cv_user, PDO::PARAM_STR);
         $query->bindValue(':category', $category, PDO::PARAM_STR);
         $query->bindValue(':study', $study, PDO::PARAM_STR);
         $query->bindValue(':experience', $experience, PDO::PARAM_STR);

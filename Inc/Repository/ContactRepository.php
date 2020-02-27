@@ -32,7 +32,7 @@ class ContactRepository
     {
         global $pdo;
 
-        $sql = "INSERT INTO $this->table VALUES (NULL, :email, :object, :content,NOW())";
+        $sql = "INSERT INTO $this->table VALUES (NULL, :object , :email, :content,NOW())";
 
         $query = $pdo->prepare($sql);
 

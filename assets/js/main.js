@@ -1,5 +1,8 @@
 $(window).load(function () {
 
+
+    $('#form-recruteur').hide();
+
     $('.flexslider.flex1').flexslider({
         slideshowSpeed: 5000,
         controlNav: false,
@@ -60,21 +63,24 @@ $( document ).ready(function() {
         $(".burger-menu").toggleClass("active");
     });
 
-    $('input[name=\'typeregister\']').on('change', function() {
-        var n = $(this).val();
-        console.log(n);
-        switch(n)
+    $('input[name=typeregister]').on('change', function() {
+        var choice = $(this).val();
+        console.log(choice);
+        switch(choice)
         {
-            case '1':
-                document.getElementById('#show').innerHTML="1st radio button";
+            case 'choicerecruteur':
+                //document.getElementById('show').innerHTML="<h2>RECRUTEUR</h2>";
+                $('#form-recruteur').show();
                 break;
-            case '2':
-                document.getElementById('#show').innerHTML="<h2>2nd radio button</h2>";
+            case 'choicecandidat':
+                document.getElementById('show').innerHTML="<h2>CANDIDAT</h2>";
                 break;
         }
     });
 
 });
+
+
 
 
 

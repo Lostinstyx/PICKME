@@ -1,15 +1,20 @@
 <?php
 
-require_once('Inc/header.php'); ?>
+
+
+require_once('Inc/header.php');
+require ('Inc/function/debug.php')
+
+?>
 
 
 
         <h1 class="titleCV">Rechercher un CV</h1>
         <div class="wrap_section">
-        <form class="searchCV" name="searchCv" method="get" action="">
+        <form class="searchCV" name="searchCv" method="get" action="rechercheCv.php">
 
-            <label for="category_select">Choisir catégorie</label>
-            <select name="category" id="category_select">
+            <label for="categorie_select">Choisir catégorie</label>
+            <select name="categorie" id="categorie_select">
                 <option value="">-Catégories-</option>
                 <option value="">------------------A----------------------</option>
                 <option value="aeroEtEspace">Aéronautique Et Espace</option>
@@ -71,8 +76,8 @@ require_once('Inc/header.php'); ?>
                 <option value="transport">Transport-Logistique</option>
             </select>
 
-                <label for="category_select">Choisir un niveau : </label>
-                <select name="category" id="category_select">
+                <label for="niveau_select">Choisir un niveau : </label>
+                <select name="niveau" id="niveau_select">
                     <option value="">-niveau-</option>
                     <option value="aucun">Aucun</option>
                     <option value="cap">CAP, BEP</option>
@@ -90,8 +95,8 @@ require_once('Inc/header.php'); ?>
                 <option value="">-Expérience-</option>
                 <option value="aucune">Aucune</option>
                 <option value="junior">Entre 1 et 3 ans </option>
-                <option value="confirme">entre 3 et 10</option>
-                <option value="senior">plus de 10 ans</option>
+                <option value="confirme">Entre 3 et 10</option>
+                <option value="senior">Plus de 10 ans</option>
             </select>
 
 
@@ -99,6 +104,38 @@ require_once('Inc/header.php'); ?>
             <input type="text" name="rechercheMetier" id="rechercheMetier" placeholder="métier">
             <input type="submit" name="submitted" value="Rechercher">
         </form>
+
+            <hr />
+
+            <div class="listeCv">
+                 <?php
+
+                 $cvModel = new \Inc\Model\CvModel();
+                 $repo = new \Inc\Repository\ResearchCvRepository();
+                 $searches = $repo->getAllcvs();
+
+
+                /* foreach ($searches as $search) {
+
+                     echo $cvModel->viewCv();
+                 } */
+
+
+                 $searchesCat = $repo->getCvByCategorie('categorie');
+                 foreach ($searchesCat as $searchCat) {
+                     echo $cvModel->viewCv();
+                 }
+                ?>
+
+
+
+
+
+            </div>
+
+
+
+
 
         </div>
 

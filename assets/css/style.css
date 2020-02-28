@@ -124,7 +124,10 @@ header .connect ul li a:active {
     padding: 3%;
     border : 2px solid #634b30;
     border-radius: 5%;
+    margin-bottom: 100px;
 }
+
+
 
 .searchCV label{
     display: block;
@@ -169,19 +172,6 @@ header .connect ul li a:active {
     padding-bottom: 25px;
     font-weight: bold;
 }
-/* **************************** Formulaire Mot de passe oublié **************************** */
-
-.mdpOTitre{
-    margin-top: 50px;
-    margin-left: 40%;
-    font-size: 2em;
-}
-
-.mdpOform{
-    padding-top: 50px;
-    padding-left: 40%;
-}
-
 
 /* Sections */
 

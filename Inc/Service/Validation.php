@@ -21,4 +21,17 @@ class Validation
     }
     return $errors;
   }
+
+  public function validMail($errors, $email, $key)
+  {
+      if(!empty($email)) {
+          if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+              $errors[$key] = 'Veuillez renseigner un email valide !';
+          }
+      } else {
+          $errors[$key] = 'Veuillez renseigner ce champ';
+      }
+      return $errors;
+
+  }
 }

@@ -6,6 +6,7 @@ namespace Inc\Service;
  */
 class Validation
 {
+
   public function validChamp($errors,$value,$key,$min,$max,$empty = false)
   {
     if(!empty($value)) {
@@ -21,4 +22,18 @@ class Validation
     }
     return $errors;
   }
+
+  public function VerifMail($errors,$mail,$key)
+  {
+
+          if (!empty($mail)) {
+              if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
+                  $errors[$key] = 'Email, où mot de passe non valide';
+              }
+          } else {
+              $errors[$key] = "Veuillez renseigner ces champs";
+          }
+          return $errors;
+  }
+
 }

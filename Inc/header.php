@@ -1,9 +1,3 @@
-<?php require_once('verif_inscription.php'); ?>
-
-<!DOCTYPE html>
-
-require_once('verif_inscription.php');
-?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 
@@ -18,6 +12,7 @@ require_once('verif_inscription.php');
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cv.css">
 
 </head>
 
@@ -64,7 +59,7 @@ require_once('verif_inscription.php');
             <div class="connect">
                 <ul>
                     <li id="create-user2"><a>Inscription</a></li>
-                    <li id="connect-user2"><a>Connexion</a></li>
+                    <li id="connect-user2"><a  href="connexion.php" >Connexion</a></li>
                 </ul>
             </div>
 

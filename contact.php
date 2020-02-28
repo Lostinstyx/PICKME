@@ -1,6 +1,15 @@
 <?php
 include_once 'Inc/header.php'; ?>
+<?php spl_autoload_register();
 
+use \Inc\Model\ContactModel;
+use \Inc\Repository\ContactRepository;
+use \Inc\Service\Tools;
+use \Inc\Service\Form;
+use \Inc\Service\Validation;
+
+$errors = array();
+?>
     <section class="container_truc">
         <div class="wrapper">
             <div class="block_1">
@@ -8,7 +17,8 @@ include_once 'Inc/header.php'; ?>
                 <div class="line_block"></div>
                 <div class="par">
                     <p class="par1">Lorem ipsum – dolor quis ex mattis, euismod mauris eget, scelerisque sapien.</p>
-                    <p>Quisque semper malesuada ipsum! <br> Curabitur et mattis ante. Maecenas sit amet commodo tellus.</p>
+                    <p>Quisque semper malesuada ipsum! <br> Curabitur et mattis ante. Maecenas sit amet commodo tellus.
+                    </p>
                 </div>
             </div>
             <div class="block_2">
@@ -31,7 +41,34 @@ include_once 'Inc/header.php'; ?>
             </div>
             <div class="block_3">
                 <div class="form">
+                    <form method="post" action="#">
+                        <?php
+                        $tools = new Tools();
+                        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                            $validation = new Validation();
+                            $errors = $validation->validChamp($errors, $_POST['objet'], 'objet', 3, 100);
+                            $errors = $validation->validChamp($errors, $_POST['email'], 'email', 10, 50);
+                            $errors = $validation->validChamp($errors, $_POST['content'], 'content', 1, 15);
 
+                            if (count($errors) ==0){
+                                $tableau = new ContactRepository();
+                                $tableau->insertContact($_POST['email'], $_POST['objet'], $_POST['content']);
+                            }
+                        }
+                        $form = new Form($errors, 'post');
+                        $html = $form->label('objet', 'objet');
+                        $html .= $form->input('objet', 'text');
+                        $html .= $form->error('objet');
+                        $html .= $form->label('email', 'email');
+                        $html .= $form->input('email', 'email');
+                        $html .= $form->error('email');
+                        $html .= $form->label('content', 'content');
+                        $html .= $form->textarea('content');
+                        $html .= $form->submit('submitted');
+                        print $html;
+//                        $tools->debug($form);
+                        ?>
+                    </form>
                 </div>
             </div>
             <div class="clear"></div>

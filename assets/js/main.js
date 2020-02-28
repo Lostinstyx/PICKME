@@ -6,7 +6,6 @@ $(window).load(function () {
         directionNav: false,
     });
 
-
     var n = 85; // Nombre final du compteur
     var cpt = 0; // Initialisation du compteur
     var duree = 2.5; // Durée en seconde pendant laquel le compteur ira de 0 à X

@@ -34,6 +34,8 @@ $errors = array();
             } else {
                 return $errors = 'Email, où mot de passe non valide';
             }
+        } else {
+            return $errors = "Email, où mot de passe non valide";
         }
     }
 }

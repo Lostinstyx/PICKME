@@ -85,12 +85,12 @@ require ('Inc/Repository/ResearchCvRepository.php');
                     <option value="">-niveau-</option>
                     <option value="aucun">Aucun</option>
                     <option value="cap">CAP, BEP</option>
-                    <option value="bac">Baccalauréat</option>
-                    <option value="bac2">DEUG, BTS, DUT, DEUST</option>
-                    <option value="bac3">Licence, licence professionnelle</option>
-                    <option value="bac4">Maîtrise, master 1</option>
-                    <option value="bac5">Master, diplôme d'études approfondies, diplôme d'études supérieures spécialisées, diplôme d'ingénieur</option>
-                    <option value="bac8">Doctorat, habilitation à diriger des recherches</option>
+                    <option value="baccalaureat">Baccalauréat</option>
+                    <option value="bts">DEUG, BTS, DUT, DEUST</option>
+                    <option value="licence">Licence, licence professionnelle</option>
+                    <option value="master">Maîtrise, master 1</option>
+                    <option value="ingenieur">Master, diplôme d'études approfondies, diplôme d'études supérieures spécialisées, diplôme d'ingénieur</option>
+                    <option value="doctorat">Doctorat, habilitation à diriger des recherches</option>
                 </select>
 
 
@@ -99,7 +99,7 @@ require ('Inc/Repository/ResearchCvRepository.php');
                 <option value="">-Expérience-</option>
                 <option value="aucune">Aucune</option>
                 <option value="junior">Entre 1 et 3 ans </option>
-                <option value="confirme">Entre 3 et 10</option>
+                <option value="confirme">Entre 4 et 10</option>
                 <option value="senior">Plus de 10 ans</option>
             </select>
 
@@ -115,15 +115,25 @@ require ('Inc/Repository/ResearchCvRepository.php');
                 <?php
 
                 if(!empty($_GET['submitted'])) {
+
                     $cvModel = new CvModel();
                     $repo = new ResearchCvRepository();
-                    $searches = $repo->getCvByCategorie($_GET['categorie']);
-
+                    $searches = $repo->getCvByCategorie($_GET['categorie']); //OR $repo->getCvByCategorie($_GET['niveau']) OR $repo->getCvByCategorie($_GET['experience']);
+                    $searches = $repo->getCvByNiveau($_GET['niveau']);
+                    $searches = $repo->getCvByExperience($_GET['experience']);
                     foreach ($searches as $search)
                     {
                         echo $search->viewCv();
                     }
-                } else {
+
+
+
+                }
+
+
+
+
+                else {
                     $cvModel = new CvModel();
                     $repo = new ResearchCvRepository();
                     $searches = $repo->getAllcvs();

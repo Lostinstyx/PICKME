@@ -34,12 +34,12 @@ class ResearchCvRepository
         return $query->fetchAll(PDO::FETCH_CLASS,'\Inc\Model\CvModel');
     }
 
-    public function getCvByNiveau($niveau)
+    public function getCvByNiveau($study)
     {
         global $pdo;
         $sql = "SELECT * FROM $this->table WHERE study = :niveau";
         $query = $pdo->prepare($sql);
-        $query->bindValue(':category',$niveau,PDO::PARAM_STR);
+        $query->bindValue(':niveau',$study,PDO::PARAM_STR);
         $query->execute();
         return $query->fetchAll(PDO::FETCH_CLASS,'\Inc\Model\CvModel');
     }
@@ -47,6 +47,7 @@ class ResearchCvRepository
     public function getCvByExperience($experience)
     {
         global $pdo;
+
         $sql = "SELECT * FROM $this->table WHERE experience = :experience";
         $query = $pdo->prepare($sql);
         $query->bindValue(':experience',$experience,PDO::PARAM_STR);

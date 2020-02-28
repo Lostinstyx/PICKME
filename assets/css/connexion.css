@@ -7,7 +7,7 @@
     font-weight: bold;
 }
 
-.searchCV{
+.searchCVC{
     width: 50%;
     margin-left: 25%;
     background-color: #efeeec;
@@ -18,14 +18,14 @@
 
 }
 
-.searchCV input[type=text] {
+.searchCVC input[type=text] {
     width: 70%;
     margin-left: 15%;
     height: 40px;
     margin-bottom: 25px;
 }
 
-.searchCV input[type=submit]{
+.searchCVC input[type=submit]{
     margin-left: 15%;
     width: 70%;
     height: 40px;
@@ -43,5 +43,10 @@
     color: #634b30;
 }
 
-
+.searchCVC p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: red;
+    font-size: 1.3em;
+}
 

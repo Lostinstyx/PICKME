@@ -20,32 +20,23 @@ $errors = array();
     $login = trim(strip_tags($_POST['login']));
     $password = trim(strip_tags($_POST['password']));
 
-    $verif->VerifMail($errors, $login, 'login');
-    $verif->validChamp($errors, $password, 'password', 1, 50);
+    $errors = $verif->VerifMail($errors,$login,'login');
 
-    if ($errors == 0) {
+    if (count($errors) === 0) {
 
-        $sql = "SELECT * FROM user WHERE email = :login";
-        $query = $pdo->prepare($sql);
-        $query->bindValue(':login', $login, PDO::PARAM_STR);
-        $query->execute();
-        $user = $query->fetch();
-
-        print_r($user);
+        $user = $request->getUserConnexion($login);
 
         if (!empty($user)) {
-            if (password_verify($password, $user['password'])) {
-                $_SESSION['login'] = array(
-                    'id' => $user['id'],
-                    'nom' => $user['surname'],
-                    'prenom' => $user['name'],
-                    'role' => $user['role'],
-                    'ip' => $_SERVER['REMOTE_ADDR'],
-                );
 
-                header('Location: index.php');
+            if(password_verify($password, $user['password'])) {
 
+                $request->InitializeSession($user,'index.php');
+
+            } else {
+                return $errors = 'Email, où mot de passe non valide';
             }
+        } else {
+            echo $errors = ' va te faire';
         }
     }
 }

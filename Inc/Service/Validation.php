@@ -28,10 +28,10 @@ class Validation
 
           if (!empty($mail)) {
               if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-                  $errors[$key] = 'Email non valide';
+                  $errors[$key] = 'Email, où mot de passe non valide';
               }
           } else {
-              $errors[$key] = "Veuillez renseigner ce champ";
+              $errors[$key] = "Veuillez renseigner ces champs";
           }
           return $errors;
   }

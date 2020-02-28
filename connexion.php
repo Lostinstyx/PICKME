@@ -6,17 +6,17 @@
 <div class="barre"></div>
 
 <div class="login">
-    <form class="searchCV" action="#" method="post">
+    <form class="searchCVC" action="" method="post">
         <div class="login">
             <label for="mail"></label>
             <input type="text" name="login" id="login" placeholder="Votre mail" value="<?php if (!empty
             ($_POST['login'])) {echo $_POST['login'];} ?>">
-            <p class="error"><?php if(!empty($errors['login'])) { echo $errors['login']; } ?></p>
         </div>
         <div class="password">
             <label for="password"></label>
             <input type="text" name="password" id="password_log" placeholder="Votre mot de passe">
         </div>
+        <p class="errors"><?php if(!empty($errors['login'])) { echo $errors['login']; } ?></p>
         <input id="submit_log" type="submit" name="submitted" value="Login">
 
         <div class="forgot">

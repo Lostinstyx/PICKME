@@ -12,18 +12,37 @@ $form = new Form($errors);
 
 if(!empty ($_POST['submitted'])) {
     //Faille XSS
-    $title = trim(strip_tags($_POST['title']));
-    $content = trim(strip_tags($_POST['content']));
+    $prenom = trim(strip_tags($_POST['prenom']));
+    $nom = trim(strip_tags($_POST['nom']));
+    $email = trim(strip_tags($_POST['email']));
+    $telephone = trim(strip_tags($_POST['telephone']));
+    $entreprise = trim(strip_tags($_POST['entreprise']));
+    $siret = trim(strip_tags($_POST['siret']));
+    $street = trim(strip_tags($_POST['street']));
+    $postalcode = trim(strip_tags($_POST['postalcode']));
+    $city = trim(strip_tags($_POST['city']));
+    $password1 = trim(strip_tags($_POST['password1']));
+    $password2 = trim(strip_tags($_POST['password2']));
+
 
     //validation
     $v = new Validation();
-    $errors = $v->validChamp($errors, $title, 'titre', 3, 120);
-    $errors = $v->validChamp($errors, $title, 'titre', 3, 500);
+    $errors = $v->validChamp($errors, $nom, 'nom', 2, 50);
+    $errors = $v->validChamp($errors, $prenom, 'prenom', 2, 20);
+    $errors = $v->validChamp($errors, $telephone, 'telephone', 2, 20);
+    $errors = $v->validChamp($errors, $entreprise, 'entreprise', 2, 30);
+    $errors = $v->validChamp($errors, $siret, 'siret', 14, 14);
+    $errors = $v->validChamp($errors, $street, 'street', 5, 100);
+    $errors = $v->validChamp($errors, $postalcode, 'postalcode', 5, 5);
+    $errors = $v->validChamp($errors, $city, 'city', 2, 40);
+
+    $errors = $v->validPassword($errors, $password1, $password2, 'password');
+    $errors = $v->validMail($errors, $email, 'email');
 
     if(count($errors) == 0) {
         //insert into
         $repo = new \Inc\Repository\ArticleRepository();
-        $newid = $repo->insert($title, $content);
+      //  $newid = $repo->insert($title, $content);
 
 
     }
@@ -73,7 +92,10 @@ require_once ('Inc/header.php');?>
     <?= $form->input('siret','text'); ?>
 
     <?= $form->label('password', 'Mot de passe'); ?>
-    <?= $form->input('password','password'); ?>
+    <?= $form->input('password','password1'); ?>
+
+    <?= $form->label('password', 'Valider votre mot de passe'); ?>
+    <?= $form->input('password','password2'); ?>
 
     <?= $form->submit(); ?>
 </form>
@@ -101,7 +123,10 @@ require_once ('Inc/header.php');?>
         <?= $form->input('city','text'); ?>
 
         <?= $form->label('password', 'Mot de passe'); ?>
-        <?= $form->input('password','password'); ?>
+        <?= $form->input('password','password1'); ?>
+
+        <?= $form->label('password', 'Valider votre mot de passe'); ?>
+        <?= $form->input('password','password2'); ?>
 
         <?= $form->submit(); ?>
     </form>

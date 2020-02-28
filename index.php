@@ -1,6 +1,17 @@
 <?php
 session_start();
 
+spl_autoload_register();
+
+use \Inc\Service\Form;
+use \Inc\Service\Tools;
+use \Inc\Service\Validation;
+use \Inc\Repository\ArticleRepository;
+use \Inc\Repository\ContactRepository;
+use \Inc\Repository\CvRepository;
+use \Inc\Repository\ResearchCvRepository;
+use \Inc\Repository\LoggedRepository;
+
 require_once('Inc/header.php'); ?>
 
     <div class="flexslider flex1">

@@ -58,8 +58,12 @@
 
             <div class="connect">
                 <ul>
-                    <li id="create-user2"><a>Inscription</a></li>
+                    <?php if (\Inc\Repository\LoggedRepository::is_logged()) { ?>
+                    <li id="connect-user2"><a  href="deconnexion.php" >Deconnexion</a></li>
+                    <?php } else { ?>
+                    <li id="create-user2"><a href="inscription.php">Inscription</a></li>
                     <li id="connect-user2"><a  href="connexion.php" >Connexion</a></li>
+                    <?php } ?>
                 </ul>
             </div>
 

@@ -34,4 +34,18 @@ class Validation
       return $errors;
 
   }
+
+  public function validPassword($errors, $password1, $password2, $key)
+  {
+      if (!empty($password1)) {
+          if ($password1 != $password2) {
+              $errors['password'] = 'Les deux mot de passe doivent être identiques';
+          } elseif (mb_strlen($password1) <= 5) {
+              $errors[$key] = 'min 6  caractères';
+          }
+      } else {
+          $errors[$key] = 'Veuillez renseigner un mot de passe';
+      }
+      return $errors;
+  }
 }

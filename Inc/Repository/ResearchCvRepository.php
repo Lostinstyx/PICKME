@@ -26,6 +26,7 @@ class ResearchCvRepository
     public function getCvByCategorie($category)
     {
         global $pdo;
+        //SELECT client FROM achat GROUP BY client
         $sql = "SELECT * FROM $this->table WHERE category = :categorie";
         $query = $pdo->prepare($sql);
         $query->bindValue(':categorie',$category,PDO::PARAM_STR);
@@ -36,7 +37,7 @@ class ResearchCvRepository
     public function getCvByNiveau($niveau)
     {
         global $pdo;
-        $sql = "SELECT * FROM $this->table WHERE niveau = :study";
+        $sql = "SELECT * FROM $this->table WHERE study = :niveau";
         $query = $pdo->prepare($sql);
         $query->bindValue(':category',$niveau,PDO::PARAM_STR);
         $query->execute();

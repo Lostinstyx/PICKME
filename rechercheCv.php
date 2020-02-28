@@ -112,23 +112,27 @@ require ('Inc/Repository/ResearchCvRepository.php');
             <hr />
 
             <div class="listeCv">
-                 <?php
+                <?php
 
-                 $cvModel = new CvModel();
-                 $repo = new ResearchCvRepository();
-                 $searches = $repo->getAllcvs();
-               
-                 foreach ($searches as $search) {
-                     echo $search->viewCv();
+                if(!empty($_GET['submitted'])) {
+                    $cvModel = new CvModel();
+                    $repo = new ResearchCvRepository();
+                    $searches = $repo->getCvByCategorie($_GET['categorie']);
 
-                 }
+                    foreach ($searches as $search)
+                    {
+                        echo $search->viewCv();
+                    }
+                } else {
+                    $cvModel = new CvModel();
+                    $repo = new ResearchCvRepository();
+                    $searches = $repo->getAllcvs();
 
-                /*
-                 $searchesCat = $repo->getCvByCategorie('categorie');
-                 foreach ($searchesCat as $searchCat) {
-                     echo $cvModel->viewCv();
-                 }
-                */
+                    foreach ($searches as $search) {
+                        echo $search->viewCv();
+
+                    }
+                }
                 ?>
 
 

@@ -1,0 +1,47 @@
+.login_title {
+    margin-top: 200px;
+    text-align: center;
+    color: #634b30;
+    font-size: 3em;
+    padding-bottom: 25px;
+    font-weight: bold;
+}
+
+.searchCV{
+    width: 50%;
+    margin-left: 25%;
+    background-color: #efeeec;
+    padding: 3%;
+    border : 2px solid #634b30;
+    border-radius: 5%;
+    margin-bottom: 250px;
+
+}
+
+.searchCV input[type=text] {
+    width: 70%;
+    margin-left: 15%;
+    height: 40px;
+    margin-bottom: 25px;
+}
+
+.searchCV input[type=submit]{
+    margin-left: 15%;
+    width: 70%;
+    height: 40px;
+    margin-bottom: 25px;
+    color: #634b30;
+    font-size: 1em;
+}
+
+.forgot {
+    text-align: center;
+}
+
+#forgot_link {
+    text-decoration: none;
+    color: #634b30;
+}
+
+
+

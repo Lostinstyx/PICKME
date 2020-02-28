@@ -2,7 +2,7 @@
 namespace Inc\Model;
 
 use \DateTime;
-class ArticleModel
+class  ArticleModel
 {
   private $id;
   private $title;

@@ -18,7 +18,8 @@ class ResearchCvRepository
         $sql = "SELECT * FROM $this->table";
         $query = $pdo->prepare($sql);
         $query->execute();
-        return $query->fetchAll(PDO::FETCH_CLASS,'\Inc\Model\CvModel');
+        $table = $query->fetchAll(\PDO::FETCH_CLASS, '\Inc\Model\CvModel');
+        return $table;
     }
 
 

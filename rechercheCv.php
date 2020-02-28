@@ -1,9 +1,13 @@
 <?php
 
 
+use Inc\Model\CvModel;
+use Inc\Repository\ResearchCvRepository;
 
 require_once('Inc/header.php');
-require ('Inc/function/debug.php')
+require ('Inc/function/debug.php');
+require ('Inc/Model/CvModel.php');
+require ('Inc/Repository/ResearchCvRepository.php');
 
 ?>
 
@@ -110,21 +114,21 @@ require ('Inc/function/debug.php')
             <div class="listeCv">
                  <?php
 
-                 $cvModel = new \Inc\Model\CvModel();
-                 $repo = new \Inc\Repository\ResearchCvRepository();
+                 $cvModel = new CvModel();
+                 $repo = new ResearchCvRepository();
                  $searches = $repo->getAllcvs();
+               
+                 foreach ($searches as $search) {
+                     echo $search->viewCv();
 
+                 }
 
-                /* foreach ($searches as $search) {
-
-                     echo $cvModel->viewCv();
-                 } */
-
-
+                /*
                  $searchesCat = $repo->getCvByCategorie('categorie');
                  foreach ($searchesCat as $searchCat) {
                      echo $cvModel->viewCv();
                  }
+                */
                 ?>
 
 

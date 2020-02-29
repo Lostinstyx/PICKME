@@ -1,8 +1,14 @@
 $(window).load(function () {
 
-
-    $('#form-recruteur').hide();
-    $('#form-candidat').hide();
+    // non of use
+        $("[data-toggle]").click(function() {
+            var target = $(".text-form");
+            if($(this).prop('checked')) {
+                target.html('<a href = "inscription-candidat.php">Cliquez ici pour vous inscrire en tant que candidat</a>');
+            } else {
+                target.html('<a href = "inscription-recruteur.php">Cliquez ici pour vous inscrire en tant que recruteur</a>');
+            }
+        });
 
     $('.flexslider.flex1').flexslider({
         slideshowSpeed: 5000,
@@ -64,20 +70,20 @@ $( document ).ready(function() {
         $(".burger-menu").toggleClass("active");
     });
 
-    $('input[name=typeregister]').on('change', function() {
-        var choice = $(this).val();
-        switch(choice)
-        {
-            case 'choicerecruteur':
-                $('#form-candidat').hide();
-                $('#form-recruteur').show();
-                break;
-            case 'choicecandidat':
-                $('#form-recruteur').hide();
-                $('#form-candidat').show();
-                break;
-        }
-    });
+    // $('input[name=typeregister]').on('change', function() {
+    //     var choice = $(this).val();
+    //     switch(choice)
+    //     {
+    //         case 'choicerecruteur':
+    //             $('#form-candidat').hide();
+    //             $('#form-recruteur').show();
+    //             break;
+    //         case 'choicecandidat':
+    //             $('#form-recruteur').hide();
+    //             $('#form-candidat').show();
+    //             break;
+    //     }
+    // });
 
 });
 

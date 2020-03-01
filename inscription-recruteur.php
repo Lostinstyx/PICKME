@@ -5,7 +5,6 @@ use \Inc\Service\Form;
 use \Inc\Service\Validation;
 use \Inc\Repository\ArticleRepository;
 
-
 $errors = array();
 
 $form = new Form($errors);
@@ -41,7 +40,7 @@ if(!empty ($_POST['submitted'])) {
 
     if(count($errors) == 0) {
         //insert into
-        die('OK MA COUILLE');
+        die('OK INSERT HERE');
         //$repo = new \Inc\Repository\ArticleRepository();
         //  $newid = $repo->insert($title, $content);
 
@@ -101,6 +100,8 @@ require_once ('Inc/header.php');?>
 
         <?= $form->submit('submitted', 'oui'); ?>
     </form>
+<?php $tools = new \Inc\Service\Tools();
+$tools->debug($errors); ?>
 
 
 

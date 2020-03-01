@@ -39,9 +39,6 @@ class Form
 
     public function radio($name, $value)
     {
-        if(!empty($value)) {
-            $value = $_POST['typeregister'];
-        }
         $html = '<input name="'. $name . '" type=radio " id="' . $name . '" value = "' . $value . '">';
         return $html;
     }

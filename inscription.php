@@ -41,7 +41,8 @@ if(!empty ($_POST['submitted'])) {
 
     if(count($errors) == 0) {
         //insert into
-        $repo = new \Inc\Repository\ArticleRepository();
+        die('OK MA COUILLE');
+        //$repo = new \Inc\Repository\ArticleRepository();
       //  $newid = $repo->insert($title, $content);
 
 
@@ -91,11 +92,11 @@ require_once ('Inc/header.php');?>
     <?= $form->label('siret', 'N° de Siret'); ?>
     <?= $form->input('siret','text'); ?>
 
-    <?= $form->label('password', 'Mot de passe'); ?>
-    <?= $form->input('password','password1'); ?>
+    <?= $form->label('password1', 'Mot de passe'); ?>
+    <?= $form->input('password1','password'); ?>
 
-    <?= $form->label('password', 'Valider votre mot de passe'); ?>
-    <?= $form->input('password','password2'); ?>
+    <?= $form->label('password2', 'Valider votre mot de passe'); ?>
+    <?= $form->input('password2','password'); ?>
 
     <?= $form->submit(); ?>
 </form>
@@ -122,11 +123,11 @@ require_once ('Inc/header.php');?>
         <?= $form->label('city', 'Ville'); ?>
         <?= $form->input('city','text'); ?>
 
-        <?= $form->label('password', 'Mot de passe'); ?>
-        <?= $form->input('password','password1'); ?>
+        <?= $form->label('password1', 'Mot de passe'); ?>
+        <?= $form->input('password1','password'); ?>
 
-        <?= $form->label('password', 'Valider votre mot de passe'); ?>
-        <?= $form->input('password','password2'); ?>
+        <?= $form->label('password2', 'Valider votre mot de passe'); ?>
+        <?= $form->input('password2','password'); ?>
 
         <?= $form->submit(); ?>
     </form>

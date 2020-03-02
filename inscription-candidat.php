@@ -5,6 +5,7 @@ use \Inc\Service\Form;
 use \Inc\Service\Validation;
 use \Inc\Repository\ArticleRepository;
 
+$errors = array();
 
 if(!empty ($_POST['submitted'])) {
     //Faille XSS
@@ -28,7 +29,7 @@ if(!empty ($_POST['submitted'])) {
     $errors = $v->validChamp($errors, $postalcode, 'postalcode', 5, 5);
     $errors = $v->validChamp($errors, $city, 'city', 2, 40);
 
-    $errors = $v->validPassword($errors, $password1, $password2, 'password');
+    $errors = $v->validPassword($errors, $password1, $password2, 'password1');
     $errors = $v->validMail($errors, $email, 'email');
 
     if(count($errors) == 0) {
@@ -42,7 +43,7 @@ if(!empty ($_POST['submitted'])) {
 
 }
 
-$errors = array();
+
 
 $form = new Form($errors);
 
@@ -84,6 +85,7 @@ require_once ('Inc/header.php');?>
         <?= $form->label('password2', 'Valider votre mot de passe'); ?>
         <?= $form->input('password2','password'); ?>
         <?= $form->error('password2'); ?>
+
 
         <?= $form->submit('submitted'); ?>
     </form>

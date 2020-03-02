@@ -33,7 +33,7 @@ if(!empty ($_POST['submitted'])) {
     $errors = $v->validChamp($errors, $postalcode, 'postalcode', 5, 5);
     $errors = $v->validChamp($errors, $city, 'city', 2, 40);
 
-    $errors = $v->validPassword($errors, $password1, $password2, 'password');
+    $errors = $v->validPassword($errors, $password1, $password2, 'password1');
     $errors = $v->validMail($errors, $email, 'email');
 
     if(count($errors) == 0) {

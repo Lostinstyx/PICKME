@@ -121,13 +121,22 @@ require ('Inc/Repository/ResearchCvRepository.php');
                     $cvModel = new CvModel();
                     $repo = new ResearchCvRepository();
                     $searches = $repo->getCvByCategorie($_GET['categorie']); //OR $repo->getCvByCategorie($_GET['niveau']) OR $repo->getCvByCategorie($_GET['experience']);
-                    $searches = $repo->getCvByNiveau($_GET['niveau']);
-                    $searches = $repo->getCvByExperience($_GET['experience']);
+                    $searches2 = $repo->getCvByNiveau($_GET['niveau']);
+                    $searches3 = $repo->getCvByExperience($_GET['experience']);
                     foreach ($searches as $search)
                     {
                         echo $search->viewCv();
                     }
 
+                    foreach ($searches2 as $search2)
+                    {
+                        echo $search2->viewCv();
+                    }
+
+                    foreach ($searches3 as $search3)
+                    {
+                        echo $search3->viewCv();
+                    }
 
 
                 }

@@ -215,9 +215,12 @@ div#users-contain table td, div#users-contain table th {
     cursor: pointer;
     overflow-y: auto;
     max-height: 400px;
+    background-color : #634b30;
+    color: white;
     box-sizing: border-box;
     z-index: 1001;
 }
+
 
 
 

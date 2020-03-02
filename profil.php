@@ -1,6 +1,6 @@
-<h1>Mon profil</h1>
+<link rel="stylesheet" href="assets/css/profil.css">
 
-
+<h1 id="profilh1">Mon profil</h1>
 
 <?php
 
@@ -19,8 +19,8 @@ foreach ($cv as $key => $donnees) {
 }
 
 ?>
-
-<table>
+<h2 id="profilh2">Mon CV</h2>
+<table id="profiltable">
     <tr>
         <td>id: <?php echo $donnees['id'];?></td>
     </tr>

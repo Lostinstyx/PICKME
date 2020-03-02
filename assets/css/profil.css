@@ -1,0 +1,25 @@
+@import "reset.css";
+#profiltable {
+    max-width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+#profilh1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+#profilh2 {
+    margin-left: 5%;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+#profiltable tr {
+
+}

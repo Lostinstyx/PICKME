@@ -16,7 +16,17 @@ class ProfilModel
     private $city;
     private $siret;
 
-
+    public function __construct($user)
+    {
+        $this->name = $user['name'];
+        $this->surname = $user['surname'];
+        $this->email = $user['email'];
+        $this->telephone = $user['telephone'];
+        $this->street = $user['street'];
+        $this->postalcode = $user['postalcode'];
+        $this->city = $user['city'];
+        $this->siret = $user['siret'];
+    }
 
     public function viewProfil()
     {
@@ -34,22 +44,6 @@ class ProfilModel
         $html .= '</div>';
         return $html;
 
-    }
-
-    // public function getId()
-    // {
-    //   return $this->id;
-    // }
-
-
-
-
-
-
-
-    public function item()
-    {
-        echo $this->id;
     }
 
 }

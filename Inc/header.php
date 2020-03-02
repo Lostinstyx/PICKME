@@ -1,9 +1,3 @@
-<?php require_once('verif_inscription.php'); ?>
-
-<!DOCTYPE html>
-
-<?php require_once('verif_inscription.php');
-?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
 
@@ -16,9 +10,11 @@
 
     <link rel="stylesheet" href="assets/flexslider/flexslider.css" type="text/css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/register.css">
+    <link rel="stylesheet" href="assets/css/cv.css">
 
 </head>
 
@@ -65,7 +61,7 @@
             <div class="connect">
                 <ul>
                     <li id="create-user2"><a>Inscription</a></li>
-                    <li id="connect-user2"><a>Connexion</a></li>
+                    <li id="connect-user2"><a  href="connexion.php" >Connexion</a></li>
                 </ul>
             </div>
 

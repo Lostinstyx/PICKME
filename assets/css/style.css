@@ -1,5 +1,6 @@
 @import "reset.css";
 @import "burger.css";
+@import "connexion.css";
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -115,28 +116,23 @@ header .connect ul li a:active {
     border-bottom: 1px solid #E1C6A3;
 }
 
-/* ---------------------------------------  modals  ------------------------------- */
 
-.modal_form label, input {
-    display: inline-block;
-    margin-top: 10px;
+/* **************************** Formulaire de recherche de CV  **************************** */
+
+.searchCV {
+    width: 50%;
+    margin-left: 30%;
+    background-color: #efeeec;
+    padding: 3%;
+    border: 2px solid #634b30;
+    border-radius: 5%;
+    margin-bottom: 100px;
 }
 
-.modal_form input.text {
-    margin-bottom: 12px;
-    width: 95%;
-    padding: .4em;
-}
-
-div#users-contain {
-    width: 350px;
-    margin: 20px 0;
-}
-
-div#users-contain table {
-    margin: 1em 0;
-    border-collapse: collapse;
-    width: 100%;
+.searchCV label {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 div#users-contain table td, div#users-contain table th {
@@ -150,8 +146,12 @@ div#users-contain table td, div#users-contain table th {
     background: rgba(0, 0, 0, 0.8);
 }
 
-.ui-dialog .ui-state-error {
-    padding: .3em;
+.searchCV select {
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: rgb(215, 212, 207);
+    border: none;
+    width: 98%;
 }
 
 .ui-dialog-title {
@@ -172,16 +172,16 @@ div#users-contain table td, div#users-contain table th {
     width: 60%;
 }
 
-.validateTips {
-    border: 1px solid transparent;
-    padding: 0.3em;
-    color: darkred;
+.searchCV input[type=text] {
+    padding: 5px;
+    width: 48%;
+    margin-right: 2%;
+
 }
 
-.radioLine {
-    display: inline-block;
-    color: white;
-
+.searchCV input[type=submit] {
+    padding: 5px;
+    width: 48%;
 }
 
 .modal_form input[type=radio] {
@@ -190,7 +190,7 @@ div#users-contain table td, div#users-contain table th {
     margin-bottom: 12px;
 }
 
-#create-user, #connect-user, #create-user2, #connect-user2{
+#create-user, #connect-user, #create-user2, #connect-user2 {
 
     background-color: transparent;
     border: none;
@@ -201,22 +201,32 @@ div#users-contain table td, div#users-contain table th {
 }
 
 
-#modalLien{
+#modalLien {
     color: white;
-}
-/* **************************** Formulaire Mot de passe oublié **************************** */
 
-.mdpOTitre{
-    margin-top: 50px;
-    margin-left: 40%;
-    font-size: 2em;
 }
 
-.mdpOform{
-    padding-top: 50px;
-    padding-left: 40%;
+#resultRecherche {
+    position: absolute;
+    width: 100%;
+    max-width:870px;
+    cursor: pointer;
+    overflow-y: auto;
+    max-height: 400px;
+    background-color : #634b30;
+    color: white;
+    box-sizing: border-box;
+    z-index: 1001;
 }
 
+.titleCV{
+    color: #634b30;
+    font-size: 3em;
+    margin-left: 43%;
+    margin-top: 150px;
+    padding-bottom: 25px;
+    font-weight: bold;
+}
 
 
 /* Sections */
@@ -409,64 +419,151 @@ div#users-contain table td, div#users-contain table th {
 }
 
 /* ------------------------------------------ Contact.php------------------------------------------------------- */
+.before {
+    position: relative;
+}
+
+.before img {
+    position: absolute;
+    width: 100%;
+    height: 350px;
+}
+
+.before .big_titre {
+    position: absolute;
+    top: 160px;
+    left: 43%;
+    font-size: xx-large;
+    color: #ffffff;
+}
+
+.before .ligne {
+    position: absolute;
+    top: 175px;
+    left: 43%;
+    border-bottom: 3px solid #D9BBA0;
+    margin-top: 30px;
+    width: 200px;
+    border-radius: 5px;
+}
+
 
 .container_truc {
-    margin-top: 150px;
-    border: red 2px solid;
-    height: 670px;
+    margin-top: 350px;
+    /*border: red 2px solid;*/
+    min-height: 510px;
     width: 100%;
+
+
 }
+
 .wrapper {
     margin: 0 auto;
     width: 65%;
 }
+
 .block_1 {
-    margin-top: 95px;
-    border: black 2px solid;
-    width: 33%;
+    margin-top: 70px;
+    /*border: black 2px solid;*/
+    width: 50%;
     float: left;
-    margin-bottom: 10px;
+
 }
+
 .block_1 .titre {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 19px;
     margin-bottom: 10px;
+
 }
-.block_1 .line_block{
+
+.block_1 .line_block {
     border-bottom: 3px solid #D9BBA0;
     margin-bottom: 30px;
-    width: 150px;
+    width: 95px;
     border-radius: 5px;
 }
+
 .block_1 .par {
-    font-size: 17px;
-    line-height: 25px;
+    font-size: 14px;
+    line-height: 20px;
 }
+
 .block_1 .par .par1 {
     margin-bottom: 10px;
 }
+
 .block_2 {
-    margin-top: 95px;
-    border: blue 2px solid;
-    width: 33%;
-    margin-left: 5px;
+    margin-top: 70px;
+    /*border: blue 2px solid;*/
+    width: 50%;
     float: left;
-    margin-bottom: 10px;
     text-align: center;
 }
 
 .block_2 .call {
+    margin-bottom: 30px;
+    width: 90%;
+}
 
+.block_2 img {
+    width: 10%;
+    float: left;
+}
+
+.block_2 .hours {
+    margin-bottom: 30px;
+    width: 90%;
+}
+
+
+.block_2 .email {
+    margin-bottom: 30px;
+    width: 90%;
 }
 
 .block_3 {
-    margin-top: 95px;
-    border: yellow 2px solid;
-    width: 33%;
+    margin-top: 70px;
+    /*border: yellow 2px solid;*/
+    width: 100%;
     float: right;
-    margin-left: 5px;
-    margin-bottom: 10px;
+    display: inline-block;
     text-align: center;
+}
+
+.block_3 .form input[type=text], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.block_3 textarea {
+    max-height: 150px;
+}
+
+.block_3 .form input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.block_3 .form input[type=submit] {
+    background-color: #D9BBA0;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 
@@ -654,3 +751,13 @@ footer .title-focus {
         height: 25px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .block {
+        float: none;
+        display: block;
+        width: 100%;
+        margin-top: unset;
+    }
+}
+

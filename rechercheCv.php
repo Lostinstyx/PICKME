@@ -123,6 +123,7 @@ require ('Inc/Repository/ResearchCvRepository.php');
                     $searches = $repo->getCvByCategorie($_GET['categorie']); //OR $repo->getCvByCategorie($_GET['niveau']) OR $repo->getCvByCategorie($_GET['experience']);
                     $searches2 = $repo->getCvByNiveau($_GET['niveau']);
                     $searches3 = $repo->getCvByExperience($_GET['experience']);
+                    $searches4 = $repo->getCvByMetier($_GET['rechercheMetier']);
                     foreach ($searches as $search)
                     {
                         echo $search->viewCv();
@@ -138,6 +139,10 @@ require ('Inc/Repository/ResearchCvRepository.php');
                         echo $search3->viewCv();
                     }
 
+                    foreach ($searches4 as $search4)
+                    {
+                        echo $search4->viewCv();
+                    }
 
                 }
 

@@ -55,4 +55,15 @@ class ResearchCvRepository
         return $query->fetchAll(PDO::FETCH_CLASS,'\Inc\Model\CvModel');
     }
 
+
+    public function getCvByMetier($work)
+    {
+        global $pdo;
+
+        $sql = "SELECT * FROM $this->table WHERE work = :metier";
+        $query = $pdo->prepare($sql);
+        $query->bindValue(':metier',$work,PDO::PARAM_STR);
+        $query->execute();
+        return $query->fetchAll(PDO::FETCH_CLASS,'\Inc\Model\CvModel');
+    }
 }

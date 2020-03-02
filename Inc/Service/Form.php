@@ -52,12 +52,13 @@ class Form
   {
     return '<input type="submit" name="'.$name.'" value="'.$value.'"/>';
   }
-  public function error($name)
-  {
-    $error = !empty($this->errors[$name]) ? $this->errors[$name] : '';
-    return '<span class="error">'.$error.'</span>';
-  }
 
-
+    public function error($name)
+    {
+        if(!empty($this->errors[$name])) {
+            return '<span class="error">'.$this->errors[$name].'</span>';
+        }
+        return null;
+    }
 
 }

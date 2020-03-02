@@ -7,8 +7,6 @@ use \Inc\Repository\ArticleRepository;
 
 $errors = array();
 
-$form = new Form($errors);
-
 if(!empty ($_POST['submitted'])) {
     //Faille XSS
     $prenom = trim(strip_tags($_POST['prenom']));
@@ -49,6 +47,8 @@ if(!empty ($_POST['submitted'])) {
 
 }
 
+
+$form = new Form($errors);
 
 require_once ('Inc/header.php');?>
 
@@ -100,9 +100,5 @@ require_once ('Inc/header.php');?>
 
         <?= $form->submit('submitted', 'oui'); ?>
     </form>
-<?php $tools = new \Inc\Service\Tools();
-$tools->debug($errors); ?>
-
-
 
 <?php require_once ('Inc/footer.php');

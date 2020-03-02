@@ -6,10 +6,6 @@ use \Inc\Service\Validation;
 use \Inc\Repository\ArticleRepository;
 
 
-$errors = array();
-
-$form = new Form($errors);
-
 if(!empty ($_POST['submitted'])) {
     //Faille XSS
     $prenom = trim(strip_tags($_POST['prenom']));
@@ -32,12 +28,12 @@ if(!empty ($_POST['submitted'])) {
     $errors = $v->validChamp($errors, $postalcode, 'postalcode', 5, 5);
     $errors = $v->validChamp($errors, $city, 'city', 2, 40);
 
-//    $errors = $v->validPassword($errors, $password1, $password2, 'password');
-//    $errors = $v->validMail($errors, $email, 'email');
+    $errors = $v->validPassword($errors, $password1, $password2, 'password');
+    $errors = $v->validMail($errors, $email, 'email');
 
     if(count($errors) == 0) {
         //insert into
-        die('OK MA COUILLE');
+        die('OK MEC');
         //$repo = new \Inc\Repository\ArticleRepository();
         //  $newid = $repo->insert($title, $content);
 
@@ -46,6 +42,9 @@ if(!empty ($_POST['submitted'])) {
 
 }
 
+$errors = array();
+
+$form = new Form($errors);
 
 require_once ('Inc/header.php');?>
 

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="assets/css/profil.css">
-
+<div class="wrap">
 <h1 id="profilh1">Mon profil</h1>
 
 
@@ -20,7 +20,8 @@ foreach($allUsers as $user) {
     echo $profil->viewProfil();
 }
 
-
+?>
+</div>
 
 
 

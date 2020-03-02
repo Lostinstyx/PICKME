@@ -1,6 +1,6 @@
 $(window).load(function () {
 
-    // non of use
+    // toggle button
         $("[data-toggle]").click(function() {
             var target = $(".text-form");
             if($(this).prop('checked')) {

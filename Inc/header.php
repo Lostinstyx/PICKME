@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-require_once('verif_inscription.php');
+<?php require_once('verif_inscription.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">

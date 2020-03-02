@@ -106,7 +106,9 @@ require ('Inc/Repository/ResearchCvRepository.php');
 
             <label for="rechercheMetier">Choisir un métier : </label>
             <input type="text" name="rechercheMetier" id="rechercheMetier" placeholder="métier">
+            <ul class="resultats" id="resultRecherche"></ul>
             <input type="submit" name="submitted" value="Rechercher">
+
         </form>
 
             <hr />

@@ -255,4 +255,26 @@ $( document ).ready(function() {
 
 
 
+$(document).ready(function(){
+    $.ajaxSetup({ cache: false });
+    $('#rechercheMetier').keyup(function(){
+        $('#resultRecherche').html('');
+        $('#state').val('');
+        var searchField = $('#rechercheMetier').val();
+        var expression = new RegExp(searchField, "i");
+        $.getJSON("assets/js/metier.json", function(data) {
+            $.each(data, function(key, value){
+                    if (value.libelle_metier.search(expression) !== -1)
+                    {
+                        $('#resultRecherche').append('<li>'+value.libelle_metier+'</li>');
+                    }
+            });
+        });
+    });
 
+    $('#resultRecherche').on('click', 'li', function() {
+        var click_text = $(this).text().split('|');
+        $('#rechercheMetier').val($.trim(click_text[0]));
+        $("#resultRecherche").html('');
+    });
+});

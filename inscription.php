@@ -43,7 +43,7 @@ if(!empty ($_POST['submitted'])) {
         //insert into
         die('OK MA COUILLE');
         //$repo = new \Inc\Repository\ArticleRepository();
-      //  $newid = $repo->insert($title, $content);
+        //  $newid = $repo->insert($title, $content);
 
 
     }
@@ -60,46 +60,48 @@ require_once ('Inc/header.php');?>
         <?= $form->label('choicerecruteur', 'Recruteur'); ?>
         <?= $form->radio('typeregister', 'choicerecruteur') ?>
 
+<div id="dialog-form" title="Inscription">
+    <p class="validateTips">Les champs doivent tous être remplis..</p>
 
         <?= $form->error('title'); ?>
     </form>
 
-<form class="searchCV" id="form-recruteur" action="" method="post">
-    <?= $form->label('prenom', 'Prenom'); ?>
-    <?= $form->input('prenom','text'); ?>
+    <form class="searchCV" id="form-recruteur" action="" method="post">
+        <?= $form->label('prenom', 'Prenom'); ?>
+        <?= $form->input('prenom','text'); ?>
 
-    <?= $form->label('nom', 'Nom'); ?>
-    <?= $form->input('nom','text'); ?>
+        <?= $form->label('nom', 'Nom'); ?>
+        <?= $form->input('nom','text'); ?>
 
-    <?= $form->label('email', 'Email'); ?>
-    <?= $form->input('email','email'); ?>
+        <?= $form->label('email', 'Email'); ?>
+        <?= $form->input('email','email'); ?>
 
-    <?= $form->label('telephone', 'telephone'); ?>
-    <?= $form->input('telephone','text'); ?>
+        <?= $form->label('telephone', 'telephone'); ?>
+        <?= $form->input('telephone','text'); ?>
 
-    <?= $form->label('entreprise', 'Entreprise'); ?>
-    <?= $form->input('entreprise','text'); ?>
+        <?= $form->label('entreprise', 'Entreprise'); ?>
+        <?= $form->input('entreprise','text'); ?>
 
-    <?= $form->label('street', 'Adresse'); ?>
-    <?= $form->input('street','text'); ?>
+        <?= $form->label('street', 'Adresse'); ?>
+        <?= $form->input('street','text'); ?>
 
-    <?= $form->label('postalcode', 'Code Postal'); ?>
-    <?= $form->input('postalcode','text'); ?>
+        <?= $form->label('postalcode', 'Code Postal'); ?>
+        <?= $form->input('postalcode','text'); ?>
 
-    <?= $form->label('city', 'Ville'); ?>
-    <?= $form->input('city','text'); ?>
+        <?= $form->label('city', 'Ville'); ?>
+        <?= $form->input('city','text'); ?>
 
-    <?= $form->label('siret', 'N° de Siret'); ?>
-    <?= $form->input('siret','text'); ?>
+        <?= $form->label('siret', 'N° de Siret'); ?>
+        <?= $form->input('siret','text'); ?>
 
-    <?= $form->label('password1', 'Mot de passe'); ?>
-    <?= $form->input('password1','password'); ?>
+        <?= $form->label('password1', 'Mot de passe'); ?>
+        <?= $form->input('password1','password'); ?>
 
-    <?= $form->label('password2', 'Valider votre mot de passe'); ?>
-    <?= $form->input('password2','password'); ?>
+        <?= $form->label('password2', 'Valider votre mot de passe'); ?>
+        <?= $form->input('password2','password'); ?>
 
-    <?= $form->submit(); ?>
-</form>
+        <?= $form->submit(); ?>
+    </form>
 
     <form class="searchCV" id="form-candidat" action="" method="post">
         <?= $form->label('prenom', 'Prenom'); ?>

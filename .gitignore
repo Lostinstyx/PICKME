@@ -169,7 +169,7 @@ $RECYCLE.BIN/
 *.lnk
 
 #PDO
-pdo.php
+Inc/pdo.php
 
 # End of https://www.gitignore.io/api/osx,linux,macos,windows,phpstorm+all
 /node_modules/

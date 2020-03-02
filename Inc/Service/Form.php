@@ -37,6 +37,12 @@ class Form
     return '<input type="'.$type.'" name="'.$name.'" id="'.$name.'" value="'.$this->getValue($name).'" />';
   }
 
+    public function radio($name, $value)
+    {
+        $html = '<input name="'. $name . '" type=radio " id="' . $name . '" value = "' . $value . '">';
+        return $html;
+    }
+
   public function textarea($name)
   {
     return '<textarea name="'.$name.'">'.$this->getValue($name).'</textarea>';
@@ -46,12 +52,13 @@ class Form
   {
     return '<input type="submit" name="'.$name.'" value="'.$value.'"/>';
   }
-  public function error($name)
-  {
-    $error = !empty($this->errors[$name]) ? $this->errors[$name] : '';
-    return '<span class="error">'.$error.'</span>';
-  }
 
-
+    public function error($name)
+    {
+        if(!empty($this->errors[$name])) {
+            return '<span class="error">'.$this->errors[$name].'</span>';
+        }
+        return null;
+    }
 
 }

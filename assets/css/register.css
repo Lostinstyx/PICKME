@@ -1,0 +1,109 @@
+.searchCV {
+    width: 50%;
+    margin-left: 30%;
+    background-color: #efeeec;
+    padding: 3%;
+    border : 2px solid #634b30;
+    border-radius: 5%;
+    margin-bottom: 100px;
+}
+
+.searchCV label{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.searchCV select{
+    margin-bottom: 15px;
+    padding: 5px;
+    background-color: rgb(215, 212, 207);
+    border : none;
+    width : 98%;
+
+}
+
+
+
+.searchCV input[type=text]
+{
+    padding: 5px;
+    width: 48%;
+    margin-right: 2%;
+
+}
+
+
+
+.searchCV input[type=submit]{
+    padding: 5px;
+    width: 48%;
+
+}
+
+
+
+.titleCV{
+    color: #634b30;
+    font-size: 3em;
+    margin-left: 43%;
+    margin-top: 150px;
+    padding-bottom: 25px;
+    font-weight: bold;
+}
+
+
+
+p.text-form {
+    font-size: 1.5em;
+    padding-bottom: 15px;
+}
+
+.text-red {
+    color: #f07464;
+}
+
+.button-toggle-wrap {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.button-toggle {
+    display: inline-block;
+    background: #bbbbbb;
+    border-radius: 30px;
+    height: 48px;
+    padding: 4px;
+    width: 101px;
+    position: relative;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.22);
+}
+.button-toggle .handle {
+    position: absolute;
+    left: 4px;
+    right: auto;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 20px;
+    -webkit-transition: all 0.4s cubic-bezier(0.33, 1.6, 0.66, 1);
+    transition: all 0.4s cubic-bezier(0.33, 1.6, 0.66, 1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
+}
+
+.toggler {
+    display: none;
+}
+.toggler:checked + .button-toggle {
+    background: #f07464;
+}
+.toggler:checked + .button-toggle .handle {
+    left: 57px;
+}
+.spacer {
+    height: 800px;
+}

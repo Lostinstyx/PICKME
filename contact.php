@@ -10,18 +10,23 @@ use \Inc\Service\Validation;
 
 $errors = array();
 ?>
+    <div class="before">
+        <img src="assets/img/espace-coworking-3.jpg" alt="notre bureau">
+        <span class="big_titre">Contactez-nous</span>
+        <div class="ligne"></div>
+    </div>
     <section class="container_truc">
         <div class="wrapper">
-            <div class="block_1">
+            <div class="block block_1">
                 <h2 class="titre">Vous souhaitez nous contacter? <br> Nous serons ravis d'avoir vos retours</h2>
                 <div class="line_block"></div>
                 <div class="par">
-                    <p class="par1">Lorem ipsum – dolor quis ex mattis, euismod mauris eget, scelerisque sapien.</p>
-                    <p>Quisque semper malesuada ipsum! <br> Curabitur et mattis ante. Maecenas sit amet commodo tellus.
+                    <p class="par1">Lorem ipsum – dolor quis ex mattis, euismod <br> mauris eget, scelerisque sapien.</p>
+                    <p>Quisque semper malesuada ipsum! <br> Curabitur et mattis ante. Maecenas sit amet <br>commodo tellus.
                     </p>
                 </div>
             </div>
-            <div class="block_2">
+            <div class="block block_2">
                 <div class="call">
                     <img src="https://img.icons8.com/cute-clipart/64/000000/phone.png" alt="phone_icon">
                     <p class="text">Nous contacter</p>
@@ -39,9 +44,8 @@ $errors = array();
                     <p class="mail">contact@pickme.fr</p>
                 </div>
             </div>
-            <div class="block_3">
+            <div class="block block_3">
                 <div class="form">
-                    <form method="post" action="#">
                         <?php
                         $tools = new Tools();
                         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -55,14 +59,17 @@ $errors = array();
                                 $tableau->insertContact($_POST['email'], $_POST['objet'], $_POST['content']);
                             }
                         }
+                        ?>
+                    <form method="post" action="#">
+                        <?php
                         $form = new Form($errors, 'post');
-                        $html = $form->label('objet', 'objet');
+                        $html = $form->label('objet', 'Objet');
                         $html .= $form->input('objet', 'text');
                         $html .= $form->error('objet');
-                        $html .= $form->label('email', 'email');
+                        $html .= $form->label('email', 'Votre email');
                         $html .= $form->input('email', 'email');
                         $html .= $form->error('email');
-                        $html .= $form->label('content', 'content');
+                        $html .= $form->label('content', 'Votre message');
                         $html .= $form->textarea('content');
                         $html .= $form->submit('submitted');
                         print $html;
@@ -71,7 +78,7 @@ $errors = array();
                     </form>
                 </div>
             </div>
-            <div class="clear"></div>
         </div>
+        <div class="clear"></div>
     </section>
 <?php include_once 'Inc/footer.php';

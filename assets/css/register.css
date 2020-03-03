@@ -88,7 +88,7 @@ p.text-form {
     right: auto;
     width: 40px;
     height: 40px;
-    background: #fff;
+    background: #efeeec;
     border-radius: 20px;
     -webkit-transition: all 0.4s cubic-bezier(0.33, 1.6, 0.66, 1);
     transition: all 0.4s cubic-bezier(0.33, 1.6, 0.66, 1);
@@ -99,11 +99,25 @@ p.text-form {
     display: none;
 }
 .toggler:checked + .button-toggle {
-    background: #f07464;
+    background: #54381e;
 }
 .toggler:checked + .button-toggle .handle {
     left: 57px;
 }
 .spacer {
     height: 800px;
+}
+
+.linkInscription{
+    color : #54381e;
+    font-weight: bold;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+.text-form{
+    color : #54381e;
+    font-weight: bold;
+    font-size: 3em;
+    text-decoration: none;
 }

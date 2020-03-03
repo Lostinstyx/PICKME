@@ -15,7 +15,7 @@ require_once ('Inc/verif_connexion.php');?>
         </div>
         <div class="password">
             <label for="password"></label>
-            <input type="text" name="password" id="password_log" placeholder="Votre mot de passe">
+            <input type="password" name="password" id="password_log" placeholder="Votre mot de passe">
         </div>
         <p class="errors"><?php if(!empty($errors['login'])) { echo $errors['login']; } ?></p>
         <input id="submit_log" type="submit" name="submitted" value="Login">

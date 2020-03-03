@@ -1,6 +1,12 @@
 <?php
 session_start();
 
+spl_autoload_register();
+
+use Inc\Repository\LoggedRepository;
+
+$logged = new LoggedRepository();
+
 require ("../inc/pdo.php");
 require ('../Inc/function/functions.php');
 

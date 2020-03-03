@@ -119,7 +119,7 @@ function inputDate($err, $date, $key)
 
 function is_logged()
 {
-    $roles = array('user', 'admin');
+    $roles = array('user','recruter','admin');
     if (!empty($_SESSION['login'])) {
         if (!empty($_SESSION['login']['id']) && is_numeric($_SESSION['login']['id'])) {
             if (!empty($_SESSION['login']['nom'])) {
@@ -131,6 +131,24 @@ function is_logged()
                     }
                 }
             }
+        }
+    }
+    return false;
+}
+function is_user()
+{
+    if (is_logged()) {
+        if ($_SESSION['login']['role'] == 'user') {
+            return true;
+        }
+    }
+    return false;
+}
+function is_recruter()
+{
+    if (is_logged()) {
+        if ($_SESSION['login']['role'] == 'recruter') {
+            return true;
         }
     }
     return false;

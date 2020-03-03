@@ -32,8 +32,8 @@
                     <span class="burger-bottom"></span>
                 </div>
                 <div class="burger-menu">
-                    <a id="create-user">Inscription</a>
-                    <a id="connect-user">Connexion</a>
+                    <a href="choice_inscription.php" id="create-user">Inscription</a>
+                    <a href="connexion.php" id="connect-user">Connexion</a>
                     <a href="index.php">Home</a>
                     <div class="burger_active">
                     <a class="" href="">Services</a>
@@ -61,7 +61,7 @@
                     <?php } elseif (is_admin()) { ?>
                     <li><a href="">Déposez mon CV</a></li>
                     <li><a href="">Mon profil</a></li>
-                    <li><a href="">Trouver un profil</a></li>
+                    <li><a href="rechercheCv.php">Trouver un profil</a></li>
                     <li><a href="">Administration</a></li>
                     <?php } ?>
                 </ul>
@@ -72,7 +72,7 @@
                     <?php if (\Inc\Repository\LoggedRepository::is_logged()) { ?>
                     <li id="connect-user2"><a  href="deconnexion.php" >Deconnexion</a></li>
                     <?php } else { ?>
-                    <li id="create-user2"><a href="inscription.php">Inscription</a></li>
+                    <li id="create-user2"><a href="choice_inscription.php">Inscription</a></li>
                     <li id="connect-user2"><a  href="connexion.php" >Connexion</a></li>
                     <?php } ?>
                 </ul>

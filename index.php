@@ -11,6 +11,7 @@ use \Inc\Repository\ContactRepository;
 use \Inc\Repository\CvRepository;
 use \Inc\Repository\ResearchCvRepository;
 use \Inc\Repository\LoggedRepository;
+
 require_once ('Inc/function/functions.php');
 require_once('Inc/header.php'); ?>
 

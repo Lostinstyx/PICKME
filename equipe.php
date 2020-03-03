@@ -1,7 +1,9 @@
 <?php
 session_start();
 
+use Inc\Repository\LoggedRepository;
 
+require_once ('Inc/function/functions.php');
 include('inc/header.php'); ?>
 
 

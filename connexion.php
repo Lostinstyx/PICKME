@@ -1,10 +1,11 @@
-<?php require_once ('Inc/verif_connexion.php');?>
+<?php session_start();
+
+require_once ('Inc/verif_connexion.php');?>
 <?php require_once ('Inc/header.php');?>
 
 <h2 class="login_title">Qui êtes-vous ?</h2>
 
 <div class="barre"></div>
-
 <div class="login">
     <form class="searchCVC" action="" method="post">
         <div class="login">

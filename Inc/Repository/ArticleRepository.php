@@ -1,5 +1,6 @@
 <?php
 namespace Inc\Repository;
+use Inc\Service\Tools;
 use \PDO;
 
 include ('Inc/function/functions.php');
@@ -36,9 +37,9 @@ class ArticleRepository
             'prenom' => $user['name'],
             'role' => $user['role'],
             'ip' => $_SERVER['REMOTE_ADDR'],
-
         );
-        header('Location:'.$header.'');
+
+        header('Location: '.$header);
     }
 
     public function getOneArticleById($id)

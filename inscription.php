@@ -1,9 +1,11 @@
 <?php
+require_once ('Inc/function/functions.php');
 spl_autoload_register();
 
 use \Inc\Service\Form;
 use \Inc\Service\Validation;
 use \Inc\Repository\ArticleRepository;
+
 
 
 $errors = array();

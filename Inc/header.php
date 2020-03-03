@@ -62,7 +62,7 @@
                     <li><a href="">Déposez mon CV</a></li>
                     <li><a href="">Mon profil</a></li>
                     <li><a href="">Trouver un profil</a></li>
-                    <li><a href="">Administration</a></li>
+                    <li><a href="back/admin.php">Administration</a></li>
                     <?php } ?>
                 </ul>
             </nav>

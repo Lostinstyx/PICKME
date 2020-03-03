@@ -6,6 +6,46 @@ $(window).load(function () {
         directionNav: false,
     });
 
+        //CV BUILDER
+        var i=1;
+        $('#add').click(function(){
+            i++;
+            $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="name[]" placeholder="Ajouter une formation" class="form-control name_list" /></td>' +
+                '<td><input type="text" name="name[]" placeholder="Intitulé du diplôme" class="form-control name_list" /></td>' +
+                '<td><input type="text" name="name[]" placeholder="Etablissement" class="form-control name_list" /></td>' +
+                '<td><input type="text" name="name[]" placeholder="Tâches effectuées lors de votre formation" class="form-control name_list" /></td>' +
+                '<td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+        });
+        $('#add_xp').click(function(){
+            i++;
+            $('#dynamic_field_xp').append('<tr id="row'+i+'"><td><input type="text" name="name[]" placeholder="Ajouter une expérience" class="form-control name_list" /></td>' +
+                '<td><input type="text" name="name[]" placeholder="Intitulé du poste" class="form-control name_list" /></td>' +
+                '<td><input type="text" name="name[]" placeholder="Entreprise" class="form-control name_list" /></td>' +
+                '<td><input type="text" name="name[]" placeholder="Lieu" class="form-control name_list" /></td>' +
+                '<td><input type="text" name="name[]" placeholder="Description des tâches effectués" class="form-control name_list" /></td>' +
+                '<td><input type="text" name="name[]" placeholder="Période" class="form-control name_list" /></td>' +
+                '<td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+
+        });
+
+        $(document).on('click', '.btn_remove', function(){
+            var button_id = $(this).attr("id");
+            $('#row'+button_id+'').remove();
+        });
+
+        $('#submit').click(function(){
+            $.ajax({
+                url:"name.php",
+                method:"POST",
+                data:$('#add_name').serialize(),
+                success:function(data)
+                {
+                    alert(data);
+                    $('#add_name')[0].reset();
+                }
+            });
+        });
+
  // Modal inscription
     var dialog, form,
 

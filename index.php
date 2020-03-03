@@ -59,7 +59,7 @@ require_once('Inc/header.php'); ?>
                 </div>
                 <div class="history_buttons">
                     <div class="contact">
-                        <a class="ctct_btn" href="#">Contactez nous</a>
+                        <a class="ctct_btn" href="contact.php">Contactez nous</a>
                     </div>
                 </div>
             </div>

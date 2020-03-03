@@ -62,7 +62,7 @@
                     <li><a href="#" title="">Accueil</a></li>&nbsp;&nbsp;|&nbsp;
                     <li><a href="#" title="">Mentions légales</a></li>&nbsp;&nbsp;|&nbsp;
                     <li><a href="#" title="">CGU</a></li>&nbsp;&nbsp;|&nbsp;
-                    <li><a href="#" title="">Contact</a></li>
+                    <li><a href="contact.php" title="">Contact</a></li>
                 </ul>
             </nav>
         </div>

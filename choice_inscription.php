@@ -1,4 +1,7 @@
-<?php require 'Inc/header.php' ?>
+<?php
+session_start();
+require 'Inc/verif_connexion.php';
+require 'Inc/header.php' ?>
 <label class="button-toggle-wrap">
     <p class="text-form">Choisissez votre rôle :</p>
     <input class="toggler" type="checkbox" data-toggle="button-toggle"/>

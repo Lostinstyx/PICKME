@@ -1,4 +1,5 @@
-<?php
+<?php session_start();
+require 'Inc/verif_connexion.php';
 spl_autoload_register();
 
 use \Inc\Service\Form;

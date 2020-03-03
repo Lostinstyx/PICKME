@@ -57,7 +57,7 @@
                     <li><a href="">Déposez mon CV</a></li>
                     <li><a href="">Mon profil</a></li>
                     <?php } elseif (is_recruter()) { ?>
-                    <li><a href="">Trouver un profil</a></li>
+                    <li><a href="rechercheCv.php">Trouver un profil</a></li>
                     <?php } elseif (is_admin()) { ?>
                     <li><a href="">Déposez mon CV</a></li>
                     <li><a href="">Mon profil</a></li>

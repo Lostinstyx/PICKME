@@ -1,15 +1,14 @@
 <?php
 session_start();
 
+spl_autoload_register();
+
 use Inc\Repository\BackOfficeRepository;
+use Inc\Model\BackOfficeModel;
+use Inc\Repository\LoggedRepository;
 
-$sql = "SELECT * from user WHERE 1";
-$query = $pdo->prepare($sql);
-$query->execute();
-$users = $query->fetchALL();
-
-require_once ("admin_header.php");
-if (is_admin()) {
+$logged = new LoggedRepository();
+if ($logged::is_admin()) {
 ?>
 
 

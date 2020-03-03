@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Inc\Repository;
-
 
 class LoggedRepository
 {
@@ -25,7 +23,7 @@ class LoggedRepository
         return false;
     }
 
-    public function is_user()
+    public static function is_user()
     {
         if (is_logged()) {
             if ($_SESSION['login']['role'] == 'user') {
@@ -35,7 +33,7 @@ class LoggedRepository
         return false;
     }
 
-    public function is_recruter()
+    public static function is_recruter()
     {
         if (is_logged()) {
             if ($_SESSION['login']['role'] == 'recruter') {
@@ -46,7 +44,7 @@ class LoggedRepository
     }
 
 
-    public function is_admin()
+    public static function is_admin()
     {
         if (is_logged()) {
             if ($_SESSION['login']['role'] == 'admin') {

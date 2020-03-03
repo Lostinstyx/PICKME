@@ -13,7 +13,8 @@ use \Inc\Repository\ResearchCvRepository;
 use \Inc\Repository\LoggedRepository;
 
 require_once ('Inc/function/functions.php');
-require_once('Inc/header.php'); ?>
+require_once('Inc/header.php');
+?>
 
     <div class="flexslider flex1">
         <ul class="slides">

@@ -1,6 +1,7 @@
 @import "reset.css";
 @import "burger.css";
 @import "connexion.css";
+@import "register.css";
 
 body {
     font-family: 'Roboto', sans-serif;

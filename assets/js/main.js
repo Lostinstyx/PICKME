@@ -278,3 +278,9 @@ $(document).ready(function(){
         $("#resultRecherche").html('');
     });
 });
+
+$(document).ready(function() {
+    $( "button-toggle" ).click(function() {
+        $( "text-form" ).toggle();
+    });
+});

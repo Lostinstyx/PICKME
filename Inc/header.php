@@ -60,7 +60,7 @@
 
             <div class="connect">
                 <ul>
-                    <li id="create-user2"><a>Inscription</a></li>
+                    <li id="create-user2"><a href="choice_inscription.php">Inscription</a></li>
                     <li id="connect-user2"><a  href="connexion.php" >Connexion</a></li>
                 </ul>
             </div>

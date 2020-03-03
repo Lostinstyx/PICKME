@@ -52,7 +52,7 @@ class ArticleRepository
     }
 
 
-    public function insertUser($name, $surname, $email, $telephone, $street, $postalcode, $city, $password, $role = 1)
+    public function insertUser($name, $surname, $email, $telephone, $street, $postalcode, $city, $password, $role = 'candidat')
     {
 
         global $pdo;
@@ -62,7 +62,7 @@ class ArticleRepository
         $hashPassword = password_hash($password, PASSWORD_BCRYPT);
 
 
-        $sql = "INSERT INTO $this->table VALUES (NULL, :name, :surname, :email, :telephone, :street, :postalcode, :city, :password, :token, :role,NOW(), NULL)";
+        $sql = "INSERT INTO $this->table VALUES (NULL, :name, :surname, :email, :telephone, :street, :postalcode, :city, NULL, :password, :token, :role, NOW(), NULL)";
 
         $query = $pdo->prepare($sql);
 
@@ -73,6 +73,7 @@ class ArticleRepository
         $query->bindValue(':street', $street, PDO::PARAM_STR);
         $query->bindValue(':postalcode', $postalcode, PDO::PARAM_STR);
         $query->bindValue(':city', $city, PDO::PARAM_STR);
+        //$query->bindValue(':siret', $siret, PDO::PARAM_STR);
         $query->bindValue(':password', $hashPassword, PDO::PARAM_STR);
         $query->bindValue(':token', $token, PDO::PARAM_STR);
         $query->bindValue(':role', $role, PDO::PARAM_INT);
@@ -83,7 +84,7 @@ class ArticleRepository
     }
 
 
-    public function insertRecruter($name, $surname, $email, $telephone, $street, $postalcode, $city, $siret, $password, $role = 2)
+    public function insertRecruter($nom, $prenom, $email, $telephone, $street, $postalcode, $city, $siret, $password, $role = 'recruter')
     {
         global $pdo;
 
@@ -92,12 +93,12 @@ class ArticleRepository
         $hashPassword = password_hash($password, PASSWORD_BCRYPT);
 
 
-        $sql = "INSERT INTO $this->table VALUES (NULL, :name, :surname, :email, :telephone, :street, :postalcode, :city, :siret, :password, :token, :role,NOW(), NULL)";
+        $sql = "INSERT INTO $this->table VALUES (NULL, :name, :surname, :email, :telephone, :street, :postalcode, :city, :siret, :password, :token, :role, NOW(), NULL)";
 
         $query = $pdo->prepare($sql);
 
-        $query->bindValue(':name', $name, PDO::PARAM_STR);
-        $query->bindValue(':surname', $surname, PDO::PARAM_STR);
+        $query->bindValue(':name', $nom, PDO::PARAM_STR);
+        $query->bindValue(':surname', $prenom, PDO::PARAM_STR);
         $query->bindValue(':email', $email, PDO::PARAM_STR);
         $query->bindValue(':telephone', $telephone, PDO::PARAM_STR);
         $query->bindValue(':street', $street, PDO::PARAM_STR);
@@ -106,10 +107,13 @@ class ArticleRepository
         $query->bindValue(':siret', $siret, PDO::PARAM_STR);
         $query->bindValue(':password', $hashPassword, PDO::PARAM_STR);
         $query->bindValue(':token', $token, PDO::PARAM_STR);
-        $query->bindValue(':role', $role, PDO::PARAM_INT);
+        $query->bindValue(':role', $role, PDO::PARAM_STR);
 
         $query->execute();
 
         return $pdo->lastInsertId();
     }
+
+
+
 }

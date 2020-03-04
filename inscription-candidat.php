@@ -41,6 +41,22 @@ if(!empty ($_POST['submitted'])) {
         $repo->insertUser($prenom, $nom, $email ,$telephone ,$street, $postalcode, $city, $password);
 
 
+
+        $destinataire = $email;
+        $envoyeur	= 'contact@pickme.fr';
+        $sujet = 'Inscription';
+        $message = "Bonjour $prenom ! Ceci est un email automatique. Vous êtes inscrit à la Cvtèque PICKME en tant que candidat \r\n";
+        $headers = 'From: '.$envoyeur . "\r\n" .
+             "Content-type: text/html; charset= utf8\n".
+            'Reply-To: '.$envoyeur. "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+        $envoye = mail($destinataire, $sujet, $message, $headers);
+        if ($envoye){
+            echo "<br />Email envoyé.";
+        header('location: index.php'); }
+    else
+            echo "<br />Email refusé.";
+
     }
 
 }

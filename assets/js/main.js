@@ -6,7 +6,7 @@ $(window).load(function () {
         directionNav: false,
     });
 
- // Modal inscription
+    // Modal inscription
     var dialog, form,
 
         // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
@@ -217,6 +217,7 @@ $(window).load(function () {
 
 });
 
+
 $(window).scroll(function() {
 
     var nav = document.getElementById("nav_container");
@@ -263,10 +264,10 @@ $(document).ready(function(){
         var expression = new RegExp(searchField, "i");
         $.getJSON("assets/js/metier.json", function(data) {
             $.each(data, function(key, value){
-                    if (value.libelle_metier.search(expression) !== -1)
-                    {
-                        $('#resultRecherche').append('<li>'+value.libelle_metier+'</li>');
-                    }
+                if (value.libelle_metier.search(expression) !== -1)
+                {
+                    $('#resultRecherche').append('<li>'+value.libelle_metier+'</li>');
+                }
             });
         });
     });

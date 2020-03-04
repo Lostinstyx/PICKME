@@ -2,6 +2,7 @@
 include_once 'Inc/header.php'; ?>
 <?php spl_autoload_register();
 
+use \Inc\Repository\StatusRepository;
 use \Inc\Model\ContactModel;
 use \Inc\Repository\ContactRepository;
 use \Inc\Service\Tool;

@@ -51,7 +51,7 @@ $form = new Form($errors);
 include "admin_header.php";?>
 
 <div id="form-inscription" class="form">
-    <form action="#" class="signup" method="post">
+    <form class="form-bo" action="#" class="signup" method="post">
         <?= $form->label('prenom', 'Prenom'); ?>
         <?= $form->input('prenom','text'); ?>
         <?= $form->error('prenom'); ?>

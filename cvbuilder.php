@@ -8,29 +8,53 @@ require ('Inc/header.php');?>
     <br />
     <h2 align="center">Construisez votre CV</h2>
     <div class="form-group">
-        <form name="add_name" id="add_name">
+        <form name="add_formation" id="add_formation" method="post">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dynamic_field">
                     <tr>
-                        <!--								<td><input type="text" name="name[]" placeholder="Enter your Name" class="form-control name_list" /></td>-->
                         <td><h3 align="center">Vos Formations</h3></td>
+                    </tr>
+                    <tr id="row'+i+'"><td><input type="text" name="add_formationn[]" placeholder="Ajouter une formation" class="form-control name_list" /></td>
+                        <td><input type="text" name="add_diplome[]" placeholder="Intitulé du diplôme" class="form-control name_list" /></td>
+                        <td><input type="text" name="add_lieu[]" placeholder="Etablissement" class="form-control name_list" /></td>
+                        <td><input type="text" name="add_work[]" placeholder="Tâches effectuées lors de votre formation" class="form-control name_list" /></td>
                         <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
                     </tr>
                 </table>
+                <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" hidden/>
+
             </div>
         </form>
+        <pre>
+
+        </pre>
     </div>
     <div class="form-group">
-        <form name="add_name" id="add_name">
+        <form name="add_name" id="add_name" method="post">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dynamic_field_xp">
                     <tr>
-                        <!--								<td><input type="text" name="name[]" placeholder="Enter your Name" class="form-control name_list" /></td>-->
-                        <td><h3 align="center">Vos expériences pro</h3></td>
+                        <!--								<td><input type="text" name="add_formation" placeholder="Enter your Name" class="form-control name_list" /></td>-->
+                        <td><h3 align="center">Vos expériences pro</h3></td></tr>
+                    <tr id="row'+i+'"><td><input type="text" name="add_xpe[]" placeholder="Ajouter une expérience" class="form-control name_list" /></td>
+                        <td><input type="text" name="add_post[]" placeholder="Intitulé du poste" class="form-control name_list" /></td>
+                        <td><input type="text" name="add_entreprise[]" placeholder="Entreprise" class="form-control name_list" /></td>
+                        <td><input type="text" name="add_place[]" placeholder="Lieu" class="form-control name_list" /></td>
+                        <td><input type="text" name="add_taches[]" placeholder="Description des tâches effectués" class="form-control name_list" /></td>
+                        <td><input type="text" name="add_time[]" placeholder="Période" class="form-control name_list" /></td>
                         <td><button type="button" name="add_xp" id="add_xp" class="btn btn-success">Add More</button></td>
                     </tr>
                 </table>
-                <input type="button" name="submit" id="submit" class="btn btn-info" value="Submit" />
+                <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" />
+                <pre>
+                <?php print_r($_POST);
+//                $ui = serialize($_POST);
+//                echo $ui;
+//                $uiui = unserialize($ui);
+//                print_r($uiui);
+
+                ?>
+                </pre>
             </div>
         </form>
     </div>

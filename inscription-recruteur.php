@@ -1,9 +1,11 @@
-<?php
+<?php session_start();
+require 'Inc/verif_connexion.php';
 spl_autoload_register();
 
 use \Inc\Service\Form;
 use \Inc\Service\Validation;
 use \Inc\Repository\ArticleRepository;
+use \Inc\Repository\LoggedRepository;
 
 $errors = array();
 
@@ -28,19 +30,35 @@ if(!empty ($_POST['submitted'])) {
     $errors = $v->validChamp($errors, $prenom, 'prenom', 2, 20);
     $errors = $v->validChamp($errors, $telephone, 'telephone', 2, 20);
     $errors = $v->validChamp($errors, $entreprise, 'entreprise', 2, 30);
-    $errors = $v->validChamp($errors, $siret, 'siret', 14, 14);
     $errors = $v->validChamp($errors, $street, 'street', 5, 100);
     $errors = $v->validChamp($errors, $postalcode, 'postalcode', 5, 5);
     $errors = $v->validChamp($errors, $city, 'city', 2, 40);
-
+    $errors = $v->validChamp($errors, $siret, 'siret', 14, 14);
     $errors = $v->validPassword($errors, $password1, $password2, 'password1');
-    $errors = $v->validMail($errors, $email, 'email');
+    $errors = $v->VerifMail($errors, $email, 'email');
 
     if(count($errors) == 0) {
-        //insert into
-        die('OK INSERT HERE');
-        //$repo = new \Inc\Repository\ArticleRepository();
-        //  $newid = $repo->insert($title, $content);
+
+        $repo = new ArticleRepository();
+        $repo->insertRecruter($nom, $prenom, $email ,$telephone, $street, $postalcode, $city, $siret, $password);
+
+        $destinataire = $email;
+        $envoyeur	= 'contact@pickme.fr';
+        $sujet = 'Inscription';
+        $message = "Bonjour M. $nom ! Ceci est un email automatique. Vous êtes inscrit à la Cvtèque PICKME en tant que recruteur \r\n";
+        $headers = 'From: '.$envoyeur . "\r\n" .
+            "Content-type: text/html; charset= utf8\n".
+            'Reply-To: '.$envoyeur. "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+        $envoye = mail($destinataire, $sujet, $message, $headers);
+        if ($envoye){
+            echo "<br />Email envoyé.";
+            header('location: index.php');
+        }
+        else
+            echo "<br />Email refusé.";
+
+
 
 
     }
@@ -54,13 +72,14 @@ require_once ('Inc/header.php');?>
 
 
     <form class="searchCV" id="form-recruteur" action="" method="post">
-        <?= $form->label('prenom', 'Prenom'); ?>
-        <?= $form->input('prenom','text'); ?>
-        <?= $form->error('prenom'); ?>
 
         <?= $form->label('nom', 'Nom'); ?>
         <?= $form->input('nom','text'); ?>
         <?= $form->error('nom'); ?>
+
+        <?= $form->label('prenom', 'Prenom'); ?>
+        <?= $form->input('prenom','text'); ?>
+        <?= $form->error('prenom'); ?>
 
         <?= $form->label('email', 'Email'); ?>
         <?= $form->input('email','email'); ?>
@@ -98,7 +117,7 @@ require_once ('Inc/header.php');?>
         <?= $form->input('password2','password'); ?>
         <?= $form->error('password2'); ?>
 
-        <?= $form->submit('submitted', 'oui'); ?>
+        <?= $form->submit('submitted', 'Inscription'); ?>
     </form>
 
 <?php require_once ('Inc/footer.php');

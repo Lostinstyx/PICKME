@@ -278,3 +278,12 @@ $(document).ready(function(){
         $("#resultRecherche").html('');
     });
 });
+
+$("[data-toggle]").click(function() {
+    var target = $(".text-form");
+    if($(this).prop('checked')) {
+        target.html('<a class="linkInscription" href = "inscription-candidat.php">Cliquez ici pour vous inscrire en tant que candidat</a>');
+    } else {
+        target.html('<a class="linkInscription" href = "inscription-recruteur.php">Cliquez ici pour vous inscrire en tant que recruteur</a>');
+    }
+});

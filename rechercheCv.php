@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+require 'Inc/verif_connexion.php';
 
 use Inc\Model\CvModel;
 use Inc\Repository\ResearchCvRepository;

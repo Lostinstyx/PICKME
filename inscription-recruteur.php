@@ -5,6 +5,7 @@ spl_autoload_register();
 use \Inc\Service\Form;
 use \Inc\Service\Validation;
 use \Inc\Repository\ArticleRepository;
+use \Inc\Repository\LoggedRepository;
 
 $errors = array();
 
@@ -40,6 +41,23 @@ if(!empty ($_POST['submitted'])) {
 
         $repo = new ArticleRepository();
         $repo->insertRecruter($nom, $prenom, $email ,$telephone, $street, $postalcode, $city, $siret, $password);
+
+        $destinataire = $email;
+        $envoyeur	= 'contact@pickme.fr';
+        $sujet = 'Inscription';
+        $message = "Bonjour M. $nom ! Ceci est un email automatique. Vous êtes inscrit à la Cvtèque PICKME en tant que recruteur \r\n";
+        $headers = 'From: '.$envoyeur . "\r\n" .
+            "Content-type: text/html; charset= utf8\n".
+            'Reply-To: '.$envoyeur. "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+        $envoye = mail($destinataire, $sujet, $message, $headers);
+        if ($envoye){
+            echo "<br />Email envoyé.";
+            header('location: index.php');
+        }
+        else
+            echo "<br />Email refusé.";
+
 
 
 

@@ -53,7 +53,7 @@ class ArticleRepository
     }
 
 
-    public function insertUser($name, $surname, $email, $telephone, $street, $postalcode, $city, $password, $role = 'candidat')
+    public function insertUser($name, $surname, $email, $telephone, $street, $postalcode, $city, $password, $role = 'user')
     {
 
         global $pdo;
@@ -77,7 +77,7 @@ class ArticleRepository
         //$query->bindValue(':siret', $siret, PDO::PARAM_STR);
         $query->bindValue(':password', $hashPassword, PDO::PARAM_STR);
         $query->bindValue(':token', $token, PDO::PARAM_STR);
-        $query->bindValue(':role', $role, PDO::PARAM_INT);
+        $query->bindValue(':role', $role, PDO::PARAM_STR);
 
         $query->execute();
 

@@ -135,6 +135,7 @@ header .connect ul li a:active {
     display: block;
     margin-top: 5px;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 div#users-contain table td, div#users-contain table th {
@@ -176,14 +177,29 @@ div#users-contain table td, div#users-contain table th {
 
 .searchCV input[type=text] {
     padding: 5px;
-    width: 48%;
+    width: 100%;
+    margin-right: 2%;
+
+}
+
+.searchCV input[type=email] {
+    padding: 5px;
+    width: 100%;
+    margin-right: 2%;
+
+}
+.searchCV input[type=password] {
+    padding: 5px;
+    width: 100%;
     margin-right: 2%;
 
 }
 
 .searchCV input[type=submit] {
+    margin-right: 2%;
     padding: 5px;
-    width: 48%;
+    width: 100%;
+    margin-top: 15px;
 }
 
 .modal_form input[type=radio] {

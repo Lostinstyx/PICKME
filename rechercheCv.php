@@ -14,7 +14,7 @@ require ('Inc/Repository/ResearchCvRepository.php');
 
 
 
-        <h1 class="titleCV">Rechercher un CV</h1>
+    <h2 class="login_title">Recherche d'un Cv </h2>
         <div class="wrap_section">
         <form class="searchCV" name="searchCv" method="get" action="rechercheCv.php">
 

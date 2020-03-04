@@ -21,20 +21,8 @@ require ('Inc/header.php');?>
                         <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
                     </tr>
                 </table>
-                <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" hidden/>
-
-            </div>
-        </form>
-        <pre>
-
-        </pre>
-    </div>
-    <div class="form-group">
-        <form name="add_name" id="add_name" method="post">
-            <div class="table-responsive">
                 <table class="table table-bordered" id="dynamic_field_xp">
                     <tr>
-                        <!--								<td><input type="text" name="add_formation" placeholder="Enter your Name" class="form-control name_list" /></td>-->
                         <td><h3 align="center">Vos expériences pro</h3></td></tr>
                     <tr id="row'+i+'"><td><input type="text" name="add_xpe[]" placeholder="Ajouter une expérience" class="form-control name_list" /></td>
                         <td><input type="text" name="add_post[]" placeholder="Intitulé du poste" class="form-control name_list" /></td>
@@ -48,15 +36,14 @@ require ('Inc/header.php');?>
                 <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" />
                 <pre>
                 <?php print_r($_POST);
-//                $ui = serialize($_POST);
-//                echo $ui;
-//                $uiui = unserialize($ui);
-//                print_r($uiui);
 
                 ?>
                 </pre>
             </div>
         </form>
+        <pre>
+
+        </pre>
     </div>
 </div>
 

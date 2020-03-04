@@ -67,6 +67,8 @@ $form = new Form($errors);
 
 require_once ('Inc/header.php');?>
 
+    <h2 class="login_title">Inscription Candidat </h2>
+
     <form class="searchCV" id="form-candidat" action="" method="post">
         <?= $form->label('prenom', 'Prenom'); ?>
         <?= $form->input('prenom','text'); ?>

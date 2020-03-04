@@ -79,7 +79,7 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="assets/flexslider/jquery.flexslider.js"></script>
-<script src="assets/js/main.js"></script>
+
 
 </body>
 </html>

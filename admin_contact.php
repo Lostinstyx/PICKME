@@ -14,8 +14,6 @@ $ctc = new ContactRepository();
 
 $contacts = $ctc->getAllContact();
 
-var_dump($contacts);
-
 require_once("admin_header.php");?>
 
 

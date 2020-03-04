@@ -217,7 +217,6 @@ $(window).load(function () {
 
 });
 
-
 $(window).scroll(function() {
 
     var nav = document.getElementById("nav_container");

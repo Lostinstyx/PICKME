@@ -1,0 +1,41 @@
+@import "reset.css";
+
+.wrap {
+    background-color: #ccc4b8;
+    max-width: 100%;
+}
+
+#profilh1 {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2.5em;
+    margin-bottom: 55px;
+    padding-top: 30px;
+    color: #3a281d;
+}
+
+.profilprofil {
+    width: 85%;
+    margin: 0 auto;
+    font-family: sans-serif;
+    padding-bottom: 20px;
+}
+
+ #profilh2 {
+     font-weight: bold;
+     font-size: 1.2em;
+     margin-bottom: 20px;
+     color: #3a281d;
+ }
+
+ .profilp {
+     margin-top: 5px;
+     margin-bottom: 5px;
+     margin-left: 3%;
+ }
+
+ span {
+     font-weight: bold;
+     color: #4d3534;
+ }

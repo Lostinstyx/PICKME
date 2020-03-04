@@ -10,16 +10,15 @@ $(window).load(function () {
     var i=1;
     $('#add').click(function(){
         i++;
-        $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="add_formationn" placeholder="Ajouter une formation" class="form-control name_list" /></td>' +
-            '<td><input type="text" name="add_diplome[]" placeholder="Intitulé du diplôme" class="form-control name_list" /></td>' +
+        $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="add_formation[]" placeholder="Intitulé du diplôme" class="form-control name_list" /></td>' +
+            '<td><input type="text" name="add_diplomedate[]" placeholder="Date d\'obtention" class="form-control name_list" /></td>' +
             '<td><input type="text" name="add_lieu[]" placeholder="Etablissement" class="form-control name_list" /></td>' +
             '<td><input type="text" name="add_work[]" placeholder="Tâches effectuées lors de votre formation" class="form-control name_list" /></td>' +
             '<td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
     });
     $('#add_xp').click(function(){
         i++;
-        $('#dynamic_field_xp').append('<tr id="row'+i+'"><td><input type="text" name="add_xpe[]" placeholder="Ajouter une expérience" class="form-control name_list" /></td>' +
-            '<td><input type="text" name="add_post[]" placeholder="Intitulé du poste" class="form-control name_list" /></td>' +
+        $('#dynamic_field_xp').append('<tr id="row'+i+'"><td><input type="text" name="add_post[]" placeholder="Intitulé du poste" class="form-control name_list" /></td>' +
             '<td><input type="text" name="add_entreprise[]" placeholder="Entreprise" class="form-control name_list" /></td>' +
             '<td><input type="text" name="add_place[]" placeholder="Lieu" class="form-control name_list" /></td>' +
             '<td><input type="text" name="add_taches[]" placeholder="Description des tâches effectués" class="form-control name_list" /></td>' +

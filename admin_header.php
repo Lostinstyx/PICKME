@@ -31,7 +31,7 @@
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="admin.php">
-          <div class="sidebar-brand-text mx-3">Administration DCRYPT</div>
+          <div class="sidebar-brand-text mx-3">Administration PICKME</div>
         </a>
 
         <!-- Divider -->

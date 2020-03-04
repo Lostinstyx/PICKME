@@ -21,7 +21,8 @@ require_once("admin_header.php");
 ?>
 
 
-<i class="fas fa-table"></i> Liste des utilisateurs <a href="user_creation.php">Créer un nouvelle utilisateur</a></div>
+<i class="fas fa-table"></i> Liste des utilisateurs <a style="color: black; margin-left: 5%;" href="user_creation.php">Créer un compte utilisateur</a>
+<a style="color: blue; margin-left: 5%;" href="recruter_creation.php">Créer un compte recruteur</a> <a style="color: red; margin-left: 5%;" href="admin_creation.php">Créer un compte administrateur</a></div>
 <div class="card-body">
     <div class="table-responsive">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">

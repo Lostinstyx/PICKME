@@ -12,8 +12,9 @@ $errors = array();
 
 if(!empty ($_POST['submitted'])) {
 
-    $prenom = trim(strip_tags($_POST['prenom']));
+
     $nom = trim(strip_tags($_POST['nom']));
+    $prenom = trim(strip_tags($_POST['prenom']));
     $email = trim(strip_tags($_POST['email']));
     $telephone = trim(strip_tags($_POST['telephone']));
     $street = trim(strip_tags($_POST['street']));
@@ -33,10 +34,12 @@ if(!empty ($_POST['submitted'])) {
     $errors = $v->validChamp($errors, $city, 'city', 2, 40);
 
     $errors = $v->validPassword($errors, $password1, $password2, 'password1');
-    $errors = $v->validMail($errors, $email, 'email');
+    $errors = $v->verifMail($errors, $email, 'email');
 
     if(count($errors) == 0) {
+        $request->insertUser($prenom, $nom, $email ,$telephone ,$street, $postalcode, $city, $password1);
 
+        header('Location: admin.php');
     }
 
 }
@@ -84,6 +87,7 @@ include "admin_header.php";?>
         <?= $form->label('password2', 'Valider votre mot de passe'); ?>
         <?= $form->input('password2','password'); ?>
         <?= $form->error('password2'); ?>
+
         <p class="need">* Champs obligatoires</p>
         <input id="submit_signup" type="submit" name="submitted" value="Envoyer">
     </form>

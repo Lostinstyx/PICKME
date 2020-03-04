@@ -38,7 +38,7 @@ if(!empty ($_POST['submitted'])) {
     if(count($errors) == 0) {
         //insert into
         $repo = new ArticleRepository();
-        $repo->insertUser($prenom, $nom, $email ,$telephone ,$street, $postalcode, $city, $password);
+        $repo->insertUser($prenom, $nom, $email ,$telephone ,$street, $postalcode, $city, $password1);
 
 
 

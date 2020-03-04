@@ -115,4 +115,33 @@ class ArticleRepository
         return $pdo->lastInsertId();
     }
 
+    public function insertAdmin($nom, $prenom, $email, $telephone, $street, $postalcode, $city, $password, $role = 'admin')
+    {
+        global $pdo;
+
+        $token = generateRandomString(255);
+
+        $hashPassword = password_hash($password, PASSWORD_BCRYPT);
+
+
+        $sql = "INSERT INTO $this->table VALUES (NULL, :name, :surname, :email, :telephone, :street, :postalcode, :city, :password, :token, :role, NOW(), NULL)";
+
+        $query = $pdo->prepare($sql);
+
+        $query->bindValue(':name', $nom, PDO::PARAM_STR);
+        $query->bindValue(':surname', $prenom, PDO::PARAM_STR);
+        $query->bindValue(':email', $email, PDO::PARAM_STR);
+        $query->bindValue(':telephone', $telephone, PDO::PARAM_STR);
+        $query->bindValue(':street', $street, PDO::PARAM_STR);
+        $query->bindValue(':postalcode', $postalcode, PDO::PARAM_STR);
+        $query->bindValue(':city', $city, PDO::PARAM_STR);
+        $query->bindValue(':password', $hashPassword, PDO::PARAM_STR);
+        $query->bindValue(':token', $token, PDO::PARAM_STR);
+        $query->bindValue(':role', $role, PDO::PARAM_STR);
+
+        $query->execute();
+
+        return $pdo->lastInsertId();
+    }
+
 }

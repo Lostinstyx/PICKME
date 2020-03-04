@@ -40,7 +40,7 @@ if(!empty ($_POST['submitted'])) {
     if(count($errors) == 0) {
 
         $repo = new ArticleRepository();
-        $repo->insertRecruter($nom, $prenom, $email ,$telephone, $street, $postalcode, $city, $siret, $password);
+        $repo->insertRecruter($nom, $prenom, $email ,$telephone, $street, $postalcode, $city, $siret, $password2);
 
         $destinataire = $email;
         $envoyeur	= 'contact@pickme.fr';

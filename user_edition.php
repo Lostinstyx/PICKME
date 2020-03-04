@@ -1,6 +1,6 @@
 <?php
 session_start();
-require ("../inc/pdo.php");
+require("../inc/pdo.php");
 require ("../function/functions.php");
 
 $id = $_GET['id'];
@@ -45,7 +45,7 @@ if (!empty($_POST['submitted'])) {
   }
 }
 
-require_once ("admin_header.php");
+require_once("admin_header.php");
 if (is_admin()) { ?>
 
     <form action="#" class="usermodified" method="post">

@@ -12,12 +12,12 @@
 <!-- Custom fonts for this template-->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-<link rel="stylesheet" href="css/form-edition-user.css">
-<link rel="stylesheet" href="css/form-creation-user.css">
-<link rel="stylesheet" href="css/style-admin.css">
+<link rel="stylesheet" href="assets/css/form-edition-user.css">
+<link rel="stylesheet" href="assets/css/form-creation-user.css">
+<link rel="stylesheet" href="assets/css/style-admin.css">
 
 <!-- Custom styles for this template-->
-<link href="css/sb-admin-2.css" rel="stylesheet">
+<link href="assets/css/sb-admin-2.css" rel="stylesheet">
 
 </head>
 
@@ -39,7 +39,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item">
-          <a class="nav-link" href="../index.php">
+          <a class="nav-link" href="index.php">
             <i class="fas fa-home"></i>
             <span>Retour à l'acceuil</span></a>
         </li>

@@ -4,7 +4,7 @@ include_once 'Inc/header.php'; ?>
 
 use \Inc\Model\ContactModel;
 use \Inc\Repository\ContactRepository;
-use \Inc\Service\Tools;
+use \Inc\Service\Tool;
 use \Inc\Service\Form;
 use \Inc\Service\Validation;
 
@@ -47,7 +47,7 @@ $errors = array();
             <div class="block block_3">
                 <div class="form">
                         <?php
-                        $tools = new Tools();
+                        $tools = new Tool();
                         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             $validation = new Validation();
                             $errors = $validation->validChamp($errors, $_POST['objet'], 'objet', 3, 100);

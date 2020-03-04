@@ -4,6 +4,7 @@ namespace Inc\Model;
 
 class BackOfficeModel
 {
+
     private $id;
     private $name;
     private $surname;

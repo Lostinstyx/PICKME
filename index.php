@@ -4,13 +4,13 @@ session_start();
 spl_autoload_register();
 
 use \Inc\Service\Form;
-use \Inc\Service\Tools;
+use \Inc\Service\Tool;
 use \Inc\Service\Validation;
 use \Inc\Repository\ArticleRepository;
 use \Inc\Repository\ContactRepository;
 use \Inc\Repository\CvRepository;
 use \Inc\Repository\ResearchCvRepository;
-use \Inc\Repository\LoggedRepository;
+use \Inc\Repository\StatusRepository;
 
 require_once ('Inc/function/functions.php');
 require_once('Inc/header.php');

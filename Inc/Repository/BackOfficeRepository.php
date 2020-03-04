@@ -1,11 +1,9 @@
 <?php
 
-
 namespace Inc\Repository;
-
-use Inc\Service\Tools;
 use \PDO;
-use DateTime;
+
+include('Inc/pdo.php');
 
 class BackOfficeRepository
 {
@@ -15,11 +13,14 @@ class BackOfficeRepository
     public function getUser() {
 
     global $pdo;
+
     $sql = "SELECT * from $this->table";
     $query = $pdo->prepare($sql);
     $query->execute();
-    return $query->fetchALL(PDO::FETCH_CLASS, '\Inc\Model\BackOfficeModel');
+    $table = $query->fetchALL(PDO::FETCH_CLASS, '\Inc\Model\BackOfficeModel');
+    return $table;
 
     }
 
 }
+

@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once 'Inc/header.php'; ?>
 <?php spl_autoload_register();
 

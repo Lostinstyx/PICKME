@@ -557,7 +557,16 @@ div#users-contain table td, div#users-contain table th {
     margin-bottom: 16px;
     resize: vertical;
 }
-
+.block_3 .form input[type=password] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: none;
+}
 .block_3 .form input[type=submit] {
     background-color: #D9BBA0;
     color: white;

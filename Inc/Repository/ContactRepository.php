@@ -3,6 +3,7 @@ namespace Inc\Repository;
 use \PDO;
 include('Inc/pdo.php');
 
+
 class ContactRepository
 {
     private $table= 'contact';
@@ -13,7 +14,7 @@ class ContactRepository
         $sql = "SELECT * FROM $this->table";
         $query = $pdo->prepare($sql);
         $query->execute();
-        $table = $query->fetchAll(\PDO::FETCH_CLASS, '\Inc\Models\ContactModels');
+        $table = $query->fetchAll(\PDO::FETCH_CLASS, '\Inc\Model\ContactModel');
         return $table;
     }
 
@@ -24,7 +25,7 @@ class ContactRepository
         $query = $pdo->prepare($sql);
         $query->bindValue(':id',$id,PDO::PARAM_INT);
         $query->execute();
-        $table = $query->fetchAll(\PDO::FETCH_CLASS, '\Inc\Models\ContactModels');
+        $table = $query->fetchAll(\PDO::FETCH_CLASS, '\Inc\Model\ContactModel');
         return $table;
     }
 
@@ -43,5 +44,19 @@ class ContactRepository
         $query->execute();
 
         return $pdo->lastInsertId();
+    }
+
+    public function deleteContact($header)
+    {
+        global $pdo;
+
+        $id = $_GET['id'];
+
+        $sql = "DELETE FROM $this->table WHERE id = :id";
+        $query = $pdo->prepare($sql);
+        $query->bindValue(':id',$id, PDO::PARAM_INT);
+        $query->execute();
+
+        header('Location: '.$header);
     }
 }

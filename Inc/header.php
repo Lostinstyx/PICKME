@@ -61,15 +61,19 @@
                     <?php } elseif (is_admin()) { ?>
                     <li><a href="">Déposez mon CV</a></li>
                     <li><a href="">Mon profil</a></li>
+
                     <li><a href="rechercheCv.php">Trouver un profil</a></li>
-                    <li><a href="">Administration</a></li>
+                    <li><a href="back/admin.php">Administration</a></li>
+
+
+
                     <?php } ?>
                 </ul>
             </nav>
 
             <div class="connect">
                 <ul>
-                    <?php if (\Inc\Repository\LoggedRepository::is_logged()) { ?>
+                    <?php if (is_logged()) { ?>
                     <li id="connect-user2"><a  href="deconnexion.php" >Deconnexion</a></li>
                     <?php } else { ?>
                     <li id="create-user2"><a href="choice_inscription.php">Inscription</a></li>

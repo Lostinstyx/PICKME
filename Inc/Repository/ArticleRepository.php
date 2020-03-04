@@ -1,6 +1,6 @@
 <?php
 namespace Inc\Repository;
-use Inc\Service\Tools;
+use Inc\Service\Tool;
 use \PDO;
 
 include ('Inc/function/functions.php');

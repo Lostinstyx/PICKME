@@ -2,7 +2,7 @@
 
 namespace Inc\Repository;
 
-class LoggedRepository
+class StatusRepository
 {
     public static function is_logged()
     {

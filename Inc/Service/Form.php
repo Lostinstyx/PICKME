@@ -45,7 +45,7 @@ class Form
 
   public function textarea($name)
   {
-    return '<textarea name="'.$name.'">'.$this->getValue($name).'</textarea>';
+    return '<textarea name="'.$name.'" rows="6" cols="60">'.$this->getValue($name).'</textarea>';
   }
 
   public function submit($name= 'submitted',$value = 'Envoyer')

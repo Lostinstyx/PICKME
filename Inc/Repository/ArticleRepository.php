@@ -28,6 +28,31 @@ class ArticleRepository
         return $query->fetch();
     }
 
+    public function emailExist($mail)
+    {
+        global $pdo;
+        $query = $pdo->prepare("SELECT email FROM $this->table WHERE email = :email");
+        $query->bindParam(':email', $mail, PDO::PARAM_STR);
+        $query->execute();
+
+        if ($query->rowCount() == 1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public function updatePass($newpass)
+    {
+        global $pdo;
+        $hashPassword = password_hash($newpass, PASSWORD_BCRYPT);
+        $query = $pdo->prepare("UPDATE $this->table SET password = '$hashPassword'");
+        $query->bindParam(':password' , $hashPassword, PDO::PARAM_STR);
+        $query->execute();
+
+    }
+
+
     public function InitializeSession($user,$header)
     {
         $_SESSION['login'] = array(

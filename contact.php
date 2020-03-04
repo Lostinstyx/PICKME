@@ -49,12 +49,18 @@ $errors = array();
                         <?php
                         $tools = new Tools();
                         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                            //Faille XSS
+                            $objet = trim(strip_tags($_POST['objet']));
+                            $email = trim(strip_tags($_POST['email']));
+                            $content = trim(strip_tags($_POST['content']));
+
                             $validation = new Validation();
                             $errors = $validation->validChamp($errors, $_POST['objet'], 'objet', 3, 100);
-                            $errors = $validation->validChamp($errors, $_POST['email'], 'email', 10, 50);
+                            $errors = $validation->VerifMail($errors, $_POST['email'] ,'email');
                             $errors = $validation->validChamp($errors, $_POST['content'], 'content', 1, 15);
 
                             if (count($errors) ==0){
+                                echo '<p class="message">Votre message à bien été envoyé </p>';
                                 $tableau = new ContactRepository();
                                 $tableau->insertContact($_POST['email'], $_POST['objet'], $_POST['content']);
                             }
@@ -62,7 +68,7 @@ $errors = array();
                         ?>
                     <form method="post" action="#">
                         <?php
-                        $form = new Form($errors, 'post');
+                        $form = new Form($errors);
                         $html = $form->label('objet', 'Objet');
                         $html .= $form->input('objet', 'text');
                         $html .= $form->error('objet');

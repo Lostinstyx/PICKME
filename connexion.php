@@ -20,12 +20,9 @@
         <input id="submit_log" type="submit" name="submitted" value="Login">
 
         <div class="forgot">
-            <a id="forgot_link" href="forgot_password.php">Mot de passe oublié ?</a>
+            <a id="forgot_link" href="motDePasseOublie.php">Mot de passe oublié ?</a>
         </div>
-
     </form>
-
-
 </div>
 
 <?php require_once ('Inc/footer.php'); ?>

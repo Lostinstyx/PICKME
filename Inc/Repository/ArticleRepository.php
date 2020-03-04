@@ -124,7 +124,7 @@ class ArticleRepository
         $hashPassword = password_hash($password, PASSWORD_BCRYPT);
 
 
-        $sql = "INSERT INTO $this->table VALUES (NULL, :name, :surname, :email, :telephone, :street, :postalcode, :city, :password, :token, :role, NOW(), NULL)";
+        $sql = "INSERT INTO $this->table VALUES (NULL, :name, :surname, :email, :telephone, :street, :postalcode, :city, NULL, :password, :token, :role, NOW(), NULL)";
 
         $query = $pdo->prepare($sql);
 

@@ -46,7 +46,7 @@ class ContactRepository
         return $pdo->lastInsertId();
     }
 
-    public function deleteContact()
+    public function deleteContact($header)
     {
         global $pdo;
 
@@ -57,6 +57,6 @@ class ContactRepository
         $query->bindValue(':id',$id, PDO::PARAM_INT);
         $query->execute();
 
-        header('Location: admin_contact.php');
+        header('Location: '.$header);
     }
 }

@@ -1,109 +1,92 @@
 <?php
 session_start();
-require("../inc/pdo.php");
-require ("../function/functions.php");
 
+spl_autoload_register();
+
+use \Inc\Service\Form;
+use \Inc\Service\Validation;
+use \Inc\Repository\ArticleRepository;
+
+$request = new ArticleRepository();
 $errors = array();
-$success = false;
 
-if (!empty($_POST['submitted'])) {
+if(!empty ($_POST['submitted'])) {
 
-    $name = clean($_POST['name']);
-    $surname = clean($_POST['surname']);
-    $mail = clean($_POST['mail']);
-    $pwd = clean($_POST['password']);
-    $cfrm = clean($_POST['cfrmPassword']);
+    $prenom = trim(strip_tags($_POST['prenom']));
+    $nom = trim(strip_tags($_POST['nom']));
+    $email = trim(strip_tags($_POST['email']));
+    $telephone = trim(strip_tags($_POST['telephone']));
+    $street = trim(strip_tags($_POST['street']));
+    $postalcode = trim(strip_tags($_POST['postalcode']));
+    $city = trim(strip_tags($_POST['city']));
+    $password1 = trim(strip_tags($_POST['password1']));
+    $password2 = trim(strip_tags($_POST['password2']));
 
-    //validation
-    $errors = textValid($errors, $name, 2, 50, 'name');
-    $errors = textValid($errors, $surname, 2, 50, 'surname');
-    $errors = cleanMail($errors, $mail, 'mail');
 
-    if (!empty($mail)) {
-        $sql = "SELECT id FROM user WHERE mail = :mail LIMIT 1";
-        $query = $pdo->prepare($sql);
-        $query->bindValue(':mail', $mail, PDO::PARAM_STR);
-        $query->execute();
-        $check = $query->fetch();
 
-        if (!empty($check)) {
-            $errors['mail'] = 'Cette adresse existe déjà';
-        }
-    }
+    $v = new Validation();
+    $errors = $v->validChamp($errors, $nom, 'nom', 2, 50);
+    $errors = $v->validChamp($errors, $prenom, 'prenom', 2, 20);
+    $errors = $v->validChamp($errors, $telephone, 'telephone', 2, 20);
+    $errors = $v->validChamp($errors, $street, 'street', 5, 100);
+    $errors = $v->validChamp($errors, $postalcode, 'postalcode', 5, 5);
+    $errors = $v->validChamp($errors, $city, 'city', 2, 40);
 
-    $errors = passwordValid($pwd, $errors, 6, 'password');
+    $errors = $v->validPassword($errors, $password1, $password2, 'password1');
+    $errors = $v->validMail($errors, $email, 'email');
 
-    if (!empty($pwd)) {
-        if ($pwd !== $cfrm) {
-            $errors['cfrmPassword'] = 'Les deux mots de passe ne correspondent pas';
-        }
-    }
+    if(count($errors) == 0) {
 
-    if (count($errors) === 0) {
-        $hash = password_hash($pwd, PASSWORD_BCRYPT);
-        $token = generateRandomString(255);
-
-        $sql = "INSERT INTO user VALUES (NULL, :name, :surname, :mail, :pwd, :token, 'user' , NOW(), NULL)";
-        $query = $pdo->prepare($sql);
-        $query->bindValue(':name', $name, PDO::PARAM_STR);
-        $query->bindValue(':surname', $surname, PDO::PARAM_STR);
-        $query->bindValue(':mail', $mail, PDO::PARAM_STR);
-        $query->bindValue(':pwd', $hash, PDO::PARAM_STR);
-        $query->bindValue(':token', $token, PDO::PARAM_STR);
-        $query->execute();
-
-        $success = true;
-
-        //redirection
-        header('Location: admin.php');
     }
 
 }
 
-include "admin_header.php";
-if (is_admin()) { ?>
+
+
+$form = new Form($errors);
+
+include "admin_header.php";?>
 
 <div id="form-inscription" class="form">
     <form action="#" class="signup" method="post">
-        <div class="surname">
-            <label for="surname"></label>
-            <input type="text" name="surname" id="surname" placeholder="Votre nom*" value="<?php if (!empty
-            ($_POST['surname'])) {
-                echo $_POST['surname'];
-            } ?>">
-            <?php spanErr($errors, 'surname'); ?>
-        </div>
-        <div class="name">
-            <label for="name"></label>
-            <input type="text" name="name" id="name" placeholder="Votre prenom*" value="<?php if (!empty
-            ($_POST['name'])) {
-                echo $_POST['name'];
-            } ?>">
-            <?php spanErr($errors, 'name'); ?>
-        </div>
-        <div class="mail">
-            <label for="mail"></label>
-            <input type="email" name="mail" id="mail" placeholder="Votre mail*" <?php if (!empty
-            ($_POST['mail'])) {
-                echo $_POST['mail'];
-            } ?>>
-            <?php spanErr($errors, 'mail'); ?>
-        </div>
-        <div class="password">
-            <label for="password"></label>
-            <input type="password" name="password" id="password" placeholder="Votre password*">
-            <?php spanErr($errors, 'password'); ?>
-        </div>
-        <div class="cfrmPassword">
-            <label for="cfrmPassword"></label>
-            <input type="password" name="cfrmPassword" id="cfrmPassword" placeholder="Confirmez votre mdp*">
-            <?php spanErr($errors, 'cfrmPassword'); ?>
-        </div>
+        <?= $form->label('prenom', 'Prenom'); ?>
+        <?= $form->input('prenom','text'); ?>
+        <?= $form->error('prenom'); ?>
+
+        <?= $form->label('nom', 'Nom'); ?>
+        <?= $form->input('nom','text'); ?>
+        <?= $form->error('nom'); ?>
+
+        <?= $form->label('email', 'Email'); ?>
+        <?= $form->input('email','email'); ?>
+        <?= $form->error('email'); ?>
+
+        <?= $form->label('telephone', 'telephone'); ?>
+        <?= $form->input('telephone','text'); ?>
+        <?= $form->error('telephone'); ?>
+
+        <?= $form->label('street', 'Adresse'); ?>
+        <?= $form->input('street','text'); ?>
+        <?= $form->error('street'); ?>
+
+        <?= $form->label('postalcode', 'Code Postal'); ?>
+        <?= $form->input('postalcode','text'); ?>
+        <?= $form->error('postalcode'); ?>
+
+        <?= $form->label('city', 'Ville'); ?>
+        <?= $form->input('city','text'); ?>
+        <?= $form->error('city'); ?>
+
+        <?= $form->label('password1', 'Mot de passe'); ?>
+        <?= $form->input('password1','password'); ?>
+        <?= $form->error('password1'); ?>
+
+        <?= $form->label('password2', 'Valider votre mot de passe'); ?>
+        <?= $form->input('password2','password'); ?>
+        <?= $form->error('password2'); ?>
         <p class="need">* Champs obligatoires</p>
         <input id="submit_signup" type="submit" name="submitted" value="Envoyer">
     </form>
 
-    <?php include "admin_footer.php";
-    } else {
-    header('Location: ../403.php');
-    }
+<?php include "admin_footer.php";
+

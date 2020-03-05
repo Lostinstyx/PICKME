@@ -1,6 +1,7 @@
 <?php
-
 spl_autoload_register();
+session_start();
+include 'Inc/verif_connexion.php';
 
 use \Inc\Model\ContactModel;
 use \Inc\Repository\ContactRepository;
@@ -26,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 include_once 'Inc/header.php';
 ?>
 
-?>
+
     <div class="before">
         <img src="assets/img/espace-coworking-3.jpg" alt="notre bureau">
         <span class="big_titre">Contactez-nous</span>
@@ -76,7 +77,7 @@ include_once 'Inc/header.php';
                         $html .= $form->textarea('content');
                         $html .= $form->submit('submitted');
                         print $html;
-//                        $tools->debug($form);
+                        //                        $tools->debug($form);
                         ?>
                     </form>
                 </div>
@@ -85,3 +86,4 @@ include_once 'Inc/header.php';
         <div class="clear"></div>
     </section>
 <?php include_once 'Inc/footer.php';
+

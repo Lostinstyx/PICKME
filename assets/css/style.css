@@ -199,7 +199,13 @@ div#users-contain table td, div#users-contain table th {
     padding: 5px;
     width: 48%;
     margin-left: 27%;
+
 }
+.searchCV input[type=password] {
+    padding: 5px;
+    width: 100%;
+    margin-right: 2%;
+
 
 .searchCV input[type=password] {
     padding: 5px;
@@ -220,7 +226,6 @@ div#users-contain table td, div#users-contain table th {
     margin-left: 35%;
     color: red;
 }
-
 .modal_form input[type=radio] {
     display: inline-block;
     margin-right: 10%;

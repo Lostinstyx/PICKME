@@ -1,12 +1,7 @@
 <?php
-session_start();
 
 spl_autoload_register();
 
-
-include ('Inc/function/functions.php');
-
-use \Inc\Repository\LoggedRepository;
 use \Inc\Repository\StatusRepository;
 use \Inc\Model\ContactModel;
 use \Inc\Repository\ContactRepository;
@@ -14,9 +9,24 @@ use \Inc\Service\Tools;
 use \Inc\Service\Form;
 use \Inc\Service\Validation;
 
+$errors = array();
+
+$tools = new Tools();
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $validation = new Validation();
+    $errors = $validation->validChamp($errors, $_POST['objet'], 'objet', 3, 100);
+    $errors = $validation->validChamp($errors, $_POST['email'], 'email', 10, 50);
+    $errors = $validation->validChamp($errors, $_POST['content'], 'content', 1, 15);
+
+    if (count($errors) ==0){
+        $tableau = new ContactRepository();
+        $tableau->insertContact($_POST['email'], $_POST['objet'], $_POST['content']);
+    }
+}
 
 include_once 'Inc/header.php';
-$errors = array();
+?>
+
 ?>
     <div class="before">
         <img src="assets/img/espace-coworking-3.jpg" alt="notre bureau">
@@ -54,6 +64,7 @@ $errors = array();
             </div>
             <div class="block block_3">
                 <div class="form">
+
                         <?php
                         $tools = new Tools();
                         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -68,6 +79,7 @@ $errors = array();
                             }
                         }
                         ?>
+
                     <form method="post" action="#">
                         <?php
                         $form = new Form($errors, 'post');

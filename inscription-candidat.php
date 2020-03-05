@@ -1,5 +1,5 @@
 <?php session_start();
-require_once ('Inc/function/functions.php');
+require 'Inc/verif_connexion.php';
 
 spl_autoload_register();
 
@@ -67,8 +67,10 @@ $form = new Form($errors);
 
 require_once ('Inc/header.php');?>
 
+
 <body class="inscription-body">
     <h2 class="candidat-inscription">Vous êtes candidat :</h2>
+
     <form class="searchCV" id="form-candidat" action="" method="post">
         <?= $form->label('prenom', 'Prenom'); ?>
         <?= $form->input('prenom','text'); ?>

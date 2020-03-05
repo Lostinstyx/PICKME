@@ -6,198 +6,33 @@ $(window).load(function () {
         directionNav: false,
     });
 
-    // Modal inscription
-    var dialog, form,
+    //CV BUILDER
+    var i=1;
+    $('#add').click(function(){
+        i++;
+        $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="add_formation[]" placeholder="Intitulé du diplôme" class="form-control name_list" /></td>' +
+            '<td><input type="text" name="add_diplomedate[]" placeholder="Date d\'obtention" class="form-control name_list" /></td>' +
+            '<td><input type="text" name="add_lieu[]" placeholder="Etablissement" class="form-control name_list" /></td>' +
+            '<td><input type="text" name="add_work[]" placeholder="Tâches effectuées lors de votre formation" class="form-control name_list" /></td>' +
+            '<td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+    });
+    $('#add_xp').click(function(){
+        i++;
+        $('#dynamic_field_xp').append('<tr id="row'+i+'"><td><input type="text" name="add_post[]" placeholder="Intitulé du poste" class="form-control name_list" /></td>' +
+            '<td><input type="text" name="add_entreprise[]" placeholder="Entreprise" class="form-control name_list" /></td>' +
+            '<td><input type="text" name="add_place[]" placeholder="Lieu" class="form-control name_list" /></td>' +
+            '<td><input type="text" name="add_taches[]" placeholder="Description des tâches effectués" class="form-control name_list" /></td>' +
+            '<td><input type="text" name="add_time[]" placeholder="Période" class="form-control name_list" /></td>' +
+            '<td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
 
-        // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
-        emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
-        nom = $("#nom"),
-        prenom = $("#prenom"),
-        email = $("#email"),
-        mdp = $("#password"),
-        allFields = $([]).add(nom).add(prenom).add(email).add(mdp),
-        tips = $(".validateTips");
-
-    function updateTips(t) {
-        tips
-            .text(t)
-            .addClass("ui-state-highlight");
-        setTimeout(function () {
-            tips.removeClass("ui-state-highlight", 1500);
-        }, 500);
-    }
-
-    function checkLength(o, n, min, max) {
-        if (o.val().length > max || o.val().length < min) {
-            o.addClass("ui-state-error");
-            updateTips("La longueur du " + n + " doit être entre " +
-                min + " et " + max + ".");
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    function checkRegexp(o, regexp, n) {
-        if (!(regexp.test(o.val()))) {
-            o.addClass("ui-state-error");
-            updateTips(n);
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    function addUser() {
-        var valid = true;
-        allFields.removeClass("ui-state-error");
-
-        valid = valid && checkLength(nom, "nom", 1, 50);
-        valid = valid && checkLength(prenom, "prenom", 1, 50);
-        valid = valid && checkLength(email, "email", 6, 80);
-        valid = valid && checkLength(mdp, "Mot de passe", 5, 25);
-
-        valid = valid && checkRegexp(nom, /^[a-z]([a-z_\s])+$/i, "Votre nom ne doit contenir que des lettres, des underscores ou des espaces.");
-        valid = valid && checkRegexp(prenom, /^[a-z]([a-z_\s])+$/i, "Votre prenom ne doit contenir que des lettres, des underscores ou des espaces.");
-        valid = valid && checkRegexp(email, emailRegex, "eg. ui@jquery.com");
-
-
-        if (valid) {
-            $("#users tbody").append("<tr>" +
-                "<td>" + nom.val() + "</td>" +
-                "<td>" + prenom.val() + "</td>" +
-                "<td>" + email.val() + "</td>" +
-                "<td>" + mdp.val() + "</td>" +
-                "</tr>");
-            dialog.dialog("close");
-        }
-        return valid;
-    }
-
-    dialog = $("#dialog-form").dialog({
-        autoOpen: false,
-        height: 550,
-        width: 380,
-        modal: true,
-        buttons: {
-            "Inscription": addUser,
-            Annuler: function () {
-                dialog.dialog("close");
-            }
-
-        },
-
-        close: function () {
-            form[0].reset();
-            allFields.removeClass("ui-state-error");
-        }
     });
 
-
-    form = dialog.find( "form" ).on( "submit", function( event ) {
-        event.preventDefault();
-        addUser();
-        console.log('error');
+    $(document).on('click', '.btn_remove', function(){
+        var button_id = $(this).attr("id");
+        $('#row'+button_id+'').remove();
     });
 
-    $( "#create-user" ).button().on( "click", function() {
-        dialog.dialog( "open" );
-    });
-    $( "#create-user2" ).button().on( "click", function() {
-        dialog.dialog( "open" );
-    });
-
-    $( function() {
-        var dialog, form,
-
-            // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
-            emailRegex = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
-
-            email = $( "#email" ),
-            mdp = $( "#password" ),
-            allFields = $( [] ).add( email ).add( mdp ),
-            tips = $( ".validateTips" );
-
-        function updateTips( t ) {
-            tips
-                .text( t )
-                .addClass( "ui-state-highlight" );
-            setTimeout(function() {
-                tips.removeClass( "ui-state-highlight", 1500 );
-            }, 500 );
-        }
-
-        function checkLength( o, n, min, max ) {
-            if ( o.val().length > max || o.val().length < min ) {
-                o.addClass( "ui-state-error" );
-                updateTips( "La longueur du " + n + " doit être entre " +
-                    min + " et " + max + "." );
-                return false;
-            } else {
-                return true;
-            }
-        }
-
-        function checkRegexp( o, regexp, n ) {
-            if ( !( regexp.test( o.val() ) ) ) {
-                o.addClass( "ui-state-error" );
-                updateTips( n );
-                return false;
-            } else {
-                return true;
-            }
-        }
-
-        function connectUser() {
-            var valid = true;
-            allFields.removeClass( "ui-state-error" );
-
-            valid = valid && checkLength( email, "email", 6, 80 );
-            valid = valid && checkLength( mdp, "Mot de passe", 5, 25 );
-
-            valid = valid && checkRegexp( email, emailRegex, "eg. ui@jquery.com" );
-
-
-            if ( valid ) {
-                $( "#users tbody" ).append( "<tr>" +
-                    "<td>" + email.val() + "</td>" +
-                    "<td>" + mdp.val() + "</td>" +
-                    "</tr>" );
-                dialog.dialog( "close" );
-            }
-            return valid;
-        }
-
-        dialog = $( "#dialog-form" ).dialog({
-            autoOpen: false,
-            height: 390,
-            width: 390,
-            modal: true,
-            buttons: {
-                "Connexion": connectUser,
-                Annuler: function() {
-                    dialog.dialog( "close" );
-                }
-            },
-            close: function() {
-                form[ 0 ].reset();
-                allFields.removeClass( "ui-state-error" );
-            }
-        });
-
-        form = dialog.find( "form" ).on( "submit", function( event ) {
-            event.preventDefault();
-            addUser();
-        });
-
-        $( "#connect-user" ).button().on( "click", function() {
-            dialog.dialog( "open" );
-        });
-        $( "#connect-user2" ).button().on( "click", function() {
-            dialog.dialog( "open" );
-        });
-    } );
-
+    //END CV BUILDER
 
     var n = 85; // Nombre final du compteur
     var cpt = 0; // Initialisation du compteur
@@ -264,10 +99,10 @@ $(document).ready(function(){
         var expression = new RegExp(searchField, "i");
         $.getJSON("assets/js/metier.json", function(data) {
             $.each(data, function(key, value){
-                if (value.libelle_metier.search(expression) !== -1)
-                {
-                    $('#resultRecherche').append('<li>'+value.libelle_metier+'</li>');
-                }
+                    if (value.libelle_metier.search(expression) !== -1)
+                    {
+                        $('#resultRecherche').append('<li>'+value.libelle_metier+'</li>');
+                    }
             });
         });
     });

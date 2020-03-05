@@ -1,7 +1,12 @@
 <?php
-include_once 'Inc/header.php'; ?>
-<?php spl_autoload_register();
+session_start();
 
+spl_autoload_register();
+
+
+include ('Inc/function/functions.php');
+
+use \Inc\Repository\LoggedRepository;
 use \Inc\Repository\StatusRepository;
 use \Inc\Model\ContactModel;
 use \Inc\Repository\ContactRepository;
@@ -9,6 +14,8 @@ use \Inc\Service\Tools;
 use \Inc\Service\Form;
 use \Inc\Service\Validation;
 
+
+include_once 'Inc/header.php';
 $errors = array();
 ?>
     <div class="before">

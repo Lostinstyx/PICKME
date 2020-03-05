@@ -34,7 +34,6 @@ if ($logged::is_admin()) {
                     <th>Nom</th>
                     <th>Email</th>
                     <th>Roles</th>
-                    <th>Edition</th>
                     <th>Supression</th>
                 </tr>
                 </thead>
@@ -45,8 +44,6 @@ if ($logged::is_admin()) {
                         <td><?php echo $user->getName(); ?></td>
                         <td><?php echo $user->getEmail(); ?></td>
                         <td><?php echo $user->getRole(); ?></td>
-                        <td><a class="btn btn-success"
-                               href="user_edition.php?id=<?php echo $user->getId(); ?>">EDITION</a></td>
                         <td><a class="btn btn-danger" href="user_suppression.php?id=<?php echo $user->getId(); ?>">SUPPRESSION</a>
                         </td>
                     </tr>

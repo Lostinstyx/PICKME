@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-//require_once ('Inc/verif_connexion.php');
+//require 'Inc/function/functions.php';
 
 
 spl_autoload_register();
@@ -13,7 +13,7 @@ use \Inc\Repository\ArticleRepository;
 $cv = new \Inc\Repository\CvRepository();
 
 
-if(empty($_SESSION)) {
+if(empty($_SESSION['user'])) {
 
 $errors = array();
 

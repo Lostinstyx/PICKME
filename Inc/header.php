@@ -5,7 +5,9 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
+
     <title>PICKME</title>
+
     <link rel="stylesheet" href="assets/flexslider/flexslider.css" type="text/css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -13,9 +15,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/cv.css">
+
 </head>
+
 <body>
+
 <header>
+
     <div class="wrap_header">
         <div class="nav_container" id="nav_container">
             <!--Menu burger-->
@@ -26,8 +32,8 @@
                     <span class="burger-bottom"></span>
                 </div>
                 <div class="burger-menu">
-                    <a id="create-user">Inscription</a>
-                    <a id="connect-user">Connexion</a>
+                    <a href="choice_inscription.php" id="create-user">Inscription</a>
+                    <a href="connexion.php" id="connect-user">Connexion</a>
                     <a href="index.php">Home</a>
                     <div class="burger_active">
                         <a class="" href="">Services</a>
@@ -41,21 +47,43 @@
             <div class="logo">
                 <img src="assets/img/logo.png" alt="logo de l'entreprise">
             </div>
+
             <nav class="nav" id="nav">
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Link</a></li>
                     <li><a href="equipe.php">Team</a></li>
-                    <li><a href="">Link</a></li>
+                    <li><a href="">Services</a></li>
+                    <?php if (is_user()) { ?>
+                        <li><a href="">Déposez mon CV</a></li>
+                        <li><a href="">Mon profil</a></li>
+                    <?php } elseif (is_recruter()) { ?>
+                        <li><a href="rechercheCv.php">Trouver un profil</a></li>
+                    <?php } elseif (is_admin()) { ?>
+                        <li><a href="">Déposez mon CV</a></li>
+                        <li><a href="">Mon profil</a></li>
+
+                        <li><a href="rechercheCv.php">Trouver un profil</a></li>
+                        <li><a href="back/admin.php">Administration</a></li>
+
+
+
+                    <?php } ?>
                 </ul>
             </nav>
+
             <div class="connect">
                 <ul>
-                    <li id="create-user2"><a>Inscription</a></li>
-                    <li id="connect-user2"><a  href="connexion.php" >Connexion</a></li>
+                    <?php if (is_logged()) { ?>
+                        <li id="connect-user2"><a  href="deconnexion.php" >Deconnexion</a></li>
+                    <?php } else { ?>
+                        <li id="create-user2"><a href="choice_inscription.php">Inscription</a></li>
+                        <li id="connect-user2"><a  href="connexion.php" >Connexion</a></li>
+                    <?php } ?>
                 </ul>
             </div>
+
         </div>
         <div class="clear"></div>
+
 </header>
+

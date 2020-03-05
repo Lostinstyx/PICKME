@@ -1,12 +1,3 @@
-<?php
-session_start();
-
-use Inc\Repository\LoggedRepository;
-
-$logged = new LoggedRepository();
-
-if($logged::is_admin()) {
-?>
 </div>
 
 </div>
@@ -69,7 +60,3 @@ if($logged::is_admin()) {
 </body>
 
 </html>
-
-<?php } else {
-    header('Location: 403.php');
-}

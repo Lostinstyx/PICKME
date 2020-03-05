@@ -40,7 +40,7 @@ if(!empty ($_POST['submitted'])) {
     if(count($errors) == 0) {
 
         $repo = new ArticleRepository();
-        $repo->insertRecruter($nom, $prenom, $email ,$telephone, $street, $postalcode, $city, $siret, $password);
+        $repo->insertRecruter($nom, $prenom, $email ,$telephone, $street, $postalcode, $city, $siret, $password2);
 
         $destinataire = $email;
         $envoyeur	= 'contact@pickme.fr';
@@ -70,8 +70,8 @@ $form = new Form($errors);
 
 require_once ('Inc/header.php');?>
 
-    <h2 class="login_title">Inscription recruteur </h2>
 
+    <h2 class="candidat-inscription">Vous êtes recruteur :</h2>
     <form class="searchCV" id="form-recruteur" action="" method="post">
 
 

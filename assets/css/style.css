@@ -6,7 +6,12 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-
+header {
+    font-family: 'Roboto', sans-serif;
+}
+footer {
+    font-family: 'Roboto', sans-serif;
+}
 .wrap_header {
     max-width: 1800px;
     width: 100%;
@@ -119,11 +124,19 @@ header .connect ul li a:active {
 
 
 /* **************************** Formulaire de recherche de CV  **************************** */
-
+.inscription-body {
+    background: #EFEEEC;
+}
+.candidat-inscription {
+    text-align: center;
+    font-size: 3em;
+    color: #786559;
+    margin-top: 100px;
+}
 .searchCV {
     width: 50%;
-    margin-top: 150px;
-    margin-left: 30%;
+    margin-top: 75px;
+    margin-left: 25%;
     background-color: #efeeec;
     padding: 3%;
     border: 2px solid #634b30;
@@ -177,15 +190,15 @@ div#users-contain table td, div#users-contain table th {
 
 .searchCV input[type=text] {
     padding: 5px;
-    width: 100%;
-    margin-right: 2%;
+    width: 48%;
+    margin-left: 27%;
 
 }
 
 .searchCV input[type=email] {
     padding: 5px;
-    width: 100%;
-    margin-right: 2%;
+    width: 48%;
+    margin-left: 27%;
 
 }
 .searchCV input[type=password] {
@@ -193,15 +206,26 @@ div#users-contain table td, div#users-contain table th {
     width: 100%;
     margin-right: 2%;
 
+
+.searchCV input[type=password] {
+    padding: 5px;
+    width: 48%;
+    margin-left: 27%;
 }
 
 .searchCV input[type=submit] {
-    margin-right: 2%;
     padding: 5px;
-    width: 100%;
-    margin-top: 15px;
+    width: 48%;
+    display: block;
+    margin-left: 27%;
+    margin-top: 25px;
 }
 
+.searchCV span {
+    display: block;
+    margin-left: 35%;
+    color: red;
+}
 .modal_form input[type=radio] {
     display: inline-block;
     margin-right: 10%;
@@ -472,7 +496,6 @@ div#users-contain table td, div#users-contain table th {
     min-height: 510px;
     width: 100%;
 
-
 }
 
 .wrapper {
@@ -485,14 +508,12 @@ div#users-contain table td, div#users-contain table th {
     /*border: black 2px solid;*/
     width: 50%;
     float: left;
-
 }
 
 .block_1 .titre {
     font-weight: bold;
     font-size: 19px;
     margin-bottom: 10px;
-
 }
 
 .block_1 .line_block {

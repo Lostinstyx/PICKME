@@ -1,36 +1,29 @@
-<link rel="stylesheet" href="assets/css/profil.css">
-<div class="wrap">
-<h1 id="profilh1">Mon profil</h1>
-
-
 <?php
+session_start();
 
 spl_autoload_register();
 
+include ('Inc/function/functions.php');
+
+
 use \Inc\Repository\ProfilRepository;
-use \Inc\Model\ProfilModel;
+use Inc\Model\ProfilModel;
+use Inc\Service\Tools;
 
-$userRepository = new ProfilRepository();
+$request = new ProfilRepository();
+$inf = new ProfilModel();
+$tool = new Tools();
 
-$allUsers = $userRepository->getAllUser();
 
+$users = $request->getUser();
 
-include ('Inc/header.php');
-?>
+include('Inc/header.php');
 
-<body class="body">
-
-<?php
-foreach($allUsers as $user) {
-    $profil = new ProfilModel($user);
-    echo $profil->viewProfil();
+foreach ($users as $key => $user) {
+echo $inf->ProfilName($user);
+echo $inf->ProfilInformations($user);
 }
-?>
 
-</body>
-
-<?php
-include ('Inc/footer.php');
-
+include('Inc/footer.php');
 
 

@@ -7,13 +7,20 @@ class ProfilRepository
 {
     private $table = 'user';
 
-    public function getAllUser()
+    public function getUser()
     {
+
         global $pdo;
-        $sql = "SELECT * FROM user";
+
+        $id = $_SESSION['login']['id'];
+
+        $sql = "SELECT * FROM $this->table WHERE id = :id";
+
         $query = $pdo->prepare($sql);
+        $query->bindValue(':id', $id, PDO::PARAM_INT);
         $query->execute();
-        $users = $query->fetchAll();
-        return $users;
+        return $query->fetchALL(PDO::FETCH_CLASS, '\Inc\Model\ProfilModel');
+
     }
+
 }

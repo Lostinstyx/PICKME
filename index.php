@@ -1,7 +1,20 @@
 <?php
 session_start();
 
-require_once('Inc/header.php'); ?>
+spl_autoload_register();
+
+use \Inc\Service\Form;
+use \Inc\Service\Tool;
+use \Inc\Service\Validation;
+use \Inc\Repository\ArticleRepository;
+use \Inc\Repository\ContactRepository;
+use \Inc\Repository\CvRepository;
+use \Inc\Repository\ResearchCvRepository;
+use \Inc\Repository\StatusRepository;
+
+require_once ('Inc/function/functions.php');
+require_once('Inc/header.php');
+?>
 
     <div class="flexslider flex1">
         <ul class="slides">
@@ -34,21 +47,14 @@ require_once('Inc/header.php'); ?>
                 </div>
                 <div class="line"></div>
                 <div class="desc">
-                    <p class="bold">Quisque quis ex mattis, euismod mauris lorem ipsum eget, scelerisque sapien.</p>
-                    <p>Quisque quis ex mattis, euismod mauris eget, scelerisque sapien. Curabitur et mattis ante.
-                        Maecenas sit
-                        amet commodo tellus. Phasellus fermentum pretium eros, ut faucibus velit auctor eget. </p>
-                    <p>Vestibulum semper pharetra. Curabitur cursus sapien sed porta dapibus.
-                        Lorem ipsum – dolor quis ex mattis, euismod mauris eget, scelerisque sapien. Quisque semper
-                        malesuada
-                        ipsum! Curabitur et mattis ante. Maecenas sit amet commodo tellus.</p>
-                    <p>Quisque lorem <strong>12 YEARS</strong> quis efficitur felis. Duis pharetra <strong>86
-                            CLIENTS</strong>
-                        for amet ultricies augue, nec rhoncus felis <strong>7 AWARDS</strong> sagittis nec.</p>
+                    <p>Rechercher (et trouver) un emploi, créer un CV, écrire une lettre de motivation, trois activités inspirant l’angoisse. Les fondateurs de Pick Me, comme tout un chacun, ont eux aussi été confrontés à ce parcours du combattant, à ces difficultés, et c’est de leur expérience personnelle que leur est venue une idée simple : rendre la création d’un CV plus facile, plus simple, plus efficace, et pourquoi pas, amusante !</p>
+                    <p>Crée en 2019, la petite entreprise Pick Me s’est rapidement développée : le bouche à oreille, les partages sur les réseaux sociaux, les retours positifs, et surtout, les succès dans la recherche d’emploi, ont permis à la petite pousse de devenir grande, et d’être aujourd’hui un des leaders du marché.</p>
+                    <p>Alors n’hésitez plus, ne marchez plus à reculons devant l’angoissant CV, rejoignez-nous, laissez-nous vous aidez !
+                    </p>
                 </div>
                 <div class="history_buttons">
                     <div class="contact">
-                        <a class="ctct_btn" href="#">Contactez nous</a>
+                        <a class="ctct_btn" href="contact.php">Contactez nous</a>
                     </div>
                 </div>
             </div>
@@ -75,21 +81,9 @@ require_once('Inc/header.php'); ?>
                 </div>
                 <div class="trait"></div>
                 <div class="desc">
-                    <p>Curabitur et mattis ante. Maecenas sit amet commodo tellus. Phasellus fermentum pretium eros, ut
-                        faucibus
-                        velit auctor eget dolor sit amet! Lorem dolor sit glavrida amet.</p>
-                    <div class="principles_1">
-                        <p class="bold">Ceci est un principe fondamental de l'entreprise</p>
-                        <p>Nous pronons le lorem ipsum dolor sit amet avant le Pulvinar dapibus</p>
-                    </div>
-                    <div class="principles_2">
-                        <p class="bold">Ceci est un second principe de l'entreprise</p>
-                        <p>Nous pronons le lorem ipsum dolor sit amet avant le Pulvinar dapibus</p>
-                    </div>
-                    <div class="principles_3">
-                        <p class="bold">Ceci est un troisième principe de l'entreprise</p>
-                        <p>Nous pronons le lorem ipsum dolor sit amet avant le Pulvinar dapibus</p>
-                    </div>
+                    <p>Notre principe premier, c’est que chez Pick Me, on pick tout le monde ! Tout individu ayant à cœur de travailler à sa recherche d’emploi est le bienvenu. Quelque soit votre parcours, vos besoins, vos envies, nous saurons vous accompagner avec respect, compréhension, professionnalisme et bienveillance.</p>
+                    <p>Toujours à la page concernant les demandes des professionnels en matière de CV, nous saurons vous conseiller au mieux. Notre équipe fait un énorme travail de documentation et de veille pour vous proposer un service de qualité.</p>
+
                 </div>
             </div>
         </section>
@@ -98,16 +92,13 @@ require_once('Inc/header.php'); ?>
         <section class="third_block">
             <div class="block_conf">
                 <div class="desc_title">
-                    <h2 class="title_block">Titre a trouver</h2>
+                    <h2 class="title_block">Nos résultats</h2>
                 </div>
                 <div class="trait2"></div>
                 <div class="conf_desc">
                     <div class="progBar">
 
-                        <p>Vestibulum semper pharetra. Curabitur cursus sapien sed porta dapibus.
-                            Lorem ipsum – dolor quis ex mattis, euismod mauris eget, scelerisque sapien. Quisque semper
-                            malesuada
-                            ipsum!</p>
+                        <p>Depuis notre création, nos résultats ne font que progresser, en voici quelques exemples :</p>
 
                         <p class="bold"> Utilisateurs ayant trouvé un emploi suite à l'utilisation de PickMe :</p>
                         <div class="progress-wrap progress" data-progress-percent="85">

@@ -1,12 +1,10 @@
 <?php
+session_start();
 
-require_once("../inc/pdo.php");
+spl_autoload_register();
 
-$id = $_GET['id'];
+use Inc\Repository\BackOfficeRepository;
 
-$sql = "DELETE FROM user WHERE id = :id";
-$query = $pdo->prepare($sql);
-$query->bindValue(':id',$id, PDO::PARAM_INT);
-$query->execute();
+$request = new BackOfficeRepository();
 
-header('Location: admin.php');
+$request->deleteUser('admin.php');

@@ -6,10 +6,14 @@ spl_autoload_register();
 use \Inc\Service\Form;
 use \Inc\Service\Validation;
 use \Inc\Repository\ArticleRepository;
+use Inc\Repository\LoggedRepository;
 
+$logged = new LoggedRepository();
 $request = new ArticleRepository();
 $errors = array();
 
+
+if($logged::is_admin()) {
 if(!empty ($_POST['submitted'])) {
 
     $prenom = trim(strip_tags($_POST['prenom']));
@@ -95,5 +99,7 @@ include "admin_header.php";?>
     </form>
 
 <?php include "admin_footer.php";
-
+} else {
+    header('Location: 403.php');
+}
 

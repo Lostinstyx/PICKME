@@ -6,7 +6,11 @@ spl_autoload_register();
 use \Inc\Service\Form;
 use \Inc\Service\Validation;
 use \Inc\Repository\ArticleRepository;
+use Inc\Repository\StatusRepository;
 
+$logged = new StatusRepository();
+
+if ($logged::is_admin()) {
 $request = new ArticleRepository();
 $errors = array();
 
@@ -93,4 +97,7 @@ include "admin_header.php";?>
     </form>
 
 <?php include "admin_footer.php";
+} else {
+    header('Location: 403.php');
+}
 

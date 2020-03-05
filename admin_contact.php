@@ -3,15 +3,16 @@ session_start();
 
 spl_autoload_register();
 
-use \Inc\Repository\StatusRepository;
+use Inc\Repository\LoggedRepository;
 use \Inc\Repository\ContactRepository;
 use \Inc\Model\ContactModel;
 use \Inc\Service\Tools;
 
 
-
+$logged = new LoggedRepository();
 $ctc = new ContactRepository();
 
+if ($logged::is_admin()) {
 $contacts = $ctc->getAllContact();
 
 require_once("admin_header.php");?>
@@ -45,3 +46,6 @@ require_once("admin_header.php");?>
     </div>
 
     <?php include "admin_footer.php";
+} else {
+    header('Location: 403.php');
+}

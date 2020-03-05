@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+use Inc\Repository\LoggedRepository;
+
+$logged = new LoggedRepository();
+
+if($logged::is_admin()) {
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -87,3 +96,6 @@
               <div class="container-fluid">
                 <div class="card mb-3">
                   <div class="card-header">
+<?php } else {
+    header('Location: 403.php');
+}

@@ -6,9 +6,9 @@ spl_autoload_register();
 use \Inc\Service\Form;
 use \Inc\Service\Validation;
 use \Inc\Repository\ArticleRepository;
-use Inc\Repository\LoggedRepository;
+use Inc\Repository\StatusRepository;
 
-$logged = new LoggedRepository();
+$logged = new StatusRepository();
 
 if ($logged::is_admin()) {
 $request = new ArticleRepository();

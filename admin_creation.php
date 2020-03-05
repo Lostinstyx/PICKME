@@ -6,14 +6,15 @@ spl_autoload_register();
 use \Inc\Service\Form;
 use \Inc\Service\Validation;
 use \Inc\Repository\ArticleRepository;
-use Inc\Repository\LoggedRepository;
+use Inc\Repository\StatusRepository;
 
-$logged = new LoggedRepository();
+$logged = new StatusRepository();
 $request = new ArticleRepository();
 $errors = array();
 
 
 if($logged::is_admin()) {
+
 if(!empty ($_POST['submitted'])) {
 
     $prenom = trim(strip_tags($_POST['prenom']));

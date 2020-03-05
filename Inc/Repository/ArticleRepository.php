@@ -3,7 +3,6 @@ namespace Inc\Repository;
 use Inc\Service\Tool;
 use \PDO;
 
-include ('Inc/function/functions.php');
 include('Inc/pdo.php');
 
 class ArticleRepository

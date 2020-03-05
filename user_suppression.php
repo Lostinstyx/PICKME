@@ -4,10 +4,10 @@ session_start();
 spl_autoload_register();
 
 use Inc\Repository\BackOfficeRepository;
-use Inc\Repository\LoggedRepository;
+use Inc\Repository\StatusRepository;
 
 $request = new BackOfficeRepository();
-$logged = new LoggedRepository();
+$logged = new StatusRepository();
 
 if ($logged::is_admin()) {
 $request->deleteUser('admin.php');

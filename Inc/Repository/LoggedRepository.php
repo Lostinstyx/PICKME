@@ -2,7 +2,6 @@
 
 namespace Inc\Repository;
 
-include ('Inc/function/functions.php');
 
 class LoggedRepository
 {

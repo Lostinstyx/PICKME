@@ -3,13 +3,13 @@ session_start();
 
 spl_autoload_register();
 
-use Inc\Repository\LoggedRepository;
+use Inc\Repository\StatusRepository;
 use \Inc\Repository\ContactRepository;
 use \Inc\Model\ContactModel;
 use \Inc\Service\Tools;
 
 
-$logged = new LoggedRepository();
+$logged = new StatusRepository();
 $ctc = new ContactRepository();
 
 if ($logged::is_admin()) {

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'Inc/verif_connexion.php';
+require_once ('Inc/function/functions.php');
 
 use Inc\Model\CvModel;
 use Inc\Repository\ResearchCvRepository;

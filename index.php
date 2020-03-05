@@ -13,6 +13,7 @@ use \Inc\Repository\ResearchCvRepository;
 use \Inc\Repository\StatusRepository;
 
 require_once ('Inc/function/functions.php');
+
 require_once('Inc/header.php');
 ?>
 

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'Inc/verif_connexion.php';
+require_once ('Inc/function/functions.php');
 require 'Inc/header.php' ?>
 <label class="button-toggle-wrap">
     <p class="text-form">Choisissez votre rôle :</p>

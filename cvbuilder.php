@@ -1,6 +1,7 @@
 <?php
 session_start();
-require_once ('Inc/verif_connexion.php');
+
+//require_once ('Inc/verif_connexion.php');
 
 
 spl_autoload_register();
@@ -9,6 +10,9 @@ use \Inc\Service\Form;
 use \Inc\Service\Validation;
 use \Inc\Repository\ArticleRepository;
 
+$cv = new \Inc\Repository\CvRepository();
+
+if(!empty($_SESSION)) {
 
 $errors = array();
 
@@ -35,28 +39,18 @@ if (!empty ($_POST['submit'])) {
     foreach ($_POST['add_entreprise'] as $diplomes => $value) {
         $xpentreprise = trim(strip_tags($value));
     }
-    foreach ($_POST['add_formation'] as $diplomes => $value) {
-        $diplome = trim(strip_tags($value));
+    foreach ($_POST['add_place'] as $diplomes => $value) {
+        $xpplace = trim(strip_tags($value));
     }
-    foreach ($_POST['add_formation'] as $diplomes => $value) {
-        $diplome = trim(strip_tags($value));
+    foreach ($_POST['add_taches'] as $diplomes => $value) {
+        $xptaches = trim(strip_tags($value));
     }
-    foreach ($_POST['add_formation'] as $diplomes => $value) {
-        $diplome = trim(strip_tags($value));
+    foreach ($_POST['add_time'] as $diplomes => $value) {
+        $xptime = trim(strip_tags($value));
     }
-//    $diplomeDate = trim(strip_tags($_POST['add_diplomedate[]']));
-//    $lieuDiplome = trim(strip_tags($_POST['add_lieu[]']));
-//    $telephone = trim(strip_tags($_POST['telephone']));
-//    $entreprise = trim(strip_tags($_POST['entreprise']));
-//    $siret = trim(strip_tags($_POST['siret']));
-//    $street = trim(strip_tags($_POST['street']));
-//    $postalcode = trim(strip_tags($_POST['postalcode']));
-//    $city = trim(strip_tags($_POST['city']));
-//    $password1 = trim(strip_tags($_POST['password1']));
-//    $password2 = trim(strip_tags($_POST['password2']));
-//
-//
-//    //validation
+
+
+    //validation
 //    $v = new Validation();
 //    $errors = $v->validChamp($errors, $nom, 'nom', 2, 50);
 //    $errors = $v->validChamp($errors, $prenom, 'prenom', 2, 20);
@@ -67,17 +61,17 @@ if (!empty ($_POST['submit'])) {
 //    $errors = $v->validChamp($errors, $postalcode, 'postalcode', 5, 5);
 //    $errors = $v->validChamp($errors, $city, 'city', 2, 40);
 
-//    $errors = $v->validPassword($errors, $password1, $password2, 'password');
-//    $errors = $v->validMail($errors, $email, 'email');
-//
-//    if (count($errors) == 0) {
-//        //insert into
-//        die('OK MA COUILLE');
-//        //$repo = new \Inc\Repository\ArticleRepository();
-//        //  $newid = $repo->insert($title, $content);
+
+    if (count($errors) == 0) {
+        //insert into
+        //$user_id = $_SESSION['login']['id'];
+
+        $charcv = serialize($_POST);
+        $cv->insertCv($charcv);
 
 
-    //}
+
+    }
 
 }
 
@@ -95,7 +89,8 @@ require ('Inc/header.php');?>
                     <tr>
                         <td><h3 align="center">Vos Formations</h3></td>
                     </tr>
-                    <tr id="row'+i+'"><td><input type="text" name="add_formation" placeholder="Intitulé du diplôme" class="form-control name_list" /></td>
+                    <tr id="row'+i+'">
+                        <td><input type="text" name="add_formation[]" placeholder="Intitulé du diplôme" class="form-control name_list" /></td>
                         <td><input type="text" name="add_diplomedate[]" placeholder="Date d'obtention" class="form-control name_list" /></td>
                         <td><input type="text" name="add_lieu[]" placeholder="Etablissement" class="form-control name_list" /></td>
                         <td><input type="text" name="add_work[]" placeholder="Tâches effectuées lors de votre formation" class="form-control name_list" /></td>
@@ -125,7 +120,11 @@ require ('Inc/header.php');?>
     </div>
 </div>
 
-<?php require ('Inc/footer.php');?>
+<?php require ('Inc/footer.php');
+} else {
+    header('Location: 403.php');
+}
+?>
 
 
 

@@ -12,7 +12,8 @@ use \Inc\Repository\ArticleRepository;
 
 $cv = new \Inc\Repository\CvRepository();
 
-if(!empty($_SESSION)) {
+
+if(empty($_SESSION)) {
 
 $errors = array();
 
@@ -51,30 +52,25 @@ if (!empty ($_POST['submit'])) {
 
 
     //validation
-//    $v = new Validation();
-//    $errors = $v->validChamp($errors, $nom, 'nom', 2, 50);
-//    $errors = $v->validChamp($errors, $prenom, 'prenom', 2, 20);
-//    $errors = $v->validChamp($errors, $telephone, 'telephone', 2, 20);
-//    $errors = $v->validChamp($errors, $entreprise, 'entreprise', 2, 30);
-//    $errors = $v->validChamp($errors, $siret, 'siret', 14, 14);
-//    $errors = $v->validChamp($errors, $street, 'street', 5, 100);
-//    $errors = $v->validChamp($errors, $postalcode, 'postalcode', 5, 5);
-//    $errors = $v->validChamp($errors, $city, 'city', 2, 40);
+    $v = new Validation();
+    $errors = $v->validChamp($errors, $diplometitle, 'add_formation', 5, 50);
+    $errors = $v->validChamp($errors, $diplomedate, 'add_diplomedate', 2, 20);
+    $errors = $v->validChamp($errors, $diplomeplace, 'add_lieu', 2, 20);
+    $errors = $v->validChamp($errors, $diplomework, 'add_work', 2, 30);
+    $errors = $v->validChamp($errors, $xppost, 'add_post', 14, 14);
+    $errors = $v->validChamp($errors, $xpentreprise, 'add_entreprise', 5, 100);
+    $errors = $v->validChamp($errors, $xpplace, 'add_place', 5, 5);
+    $errors = $v->validChamp($errors, $xptime, 'add_time', 2, 40);
 
 
     if (count($errors) == 0) {
         //insert into
-        //$user_id = $_SESSION['login']['id'];
-
         $charcv = serialize($_POST);
         $cv->insertCv($charcv);
-
-
-
     }
 
 }
-
+    $form = new Form($errors);
 
 require ('Inc/header.php');?>
 
@@ -91,9 +87,13 @@ require ('Inc/header.php');?>
                     </tr>
                     <tr id="row'+i+'">
                         <td><input type="text" name="add_formation[]" placeholder="Intitulé du diplôme" class="form-control name_list" /></td>
+                        <?php echo $form->error('add_formation[]'); ?>
                         <td><input type="text" name="add_diplomedate[]" placeholder="Date d'obtention" class="form-control name_list" /></td>
+                        <?php echo $form->error('add_diplomedate[]') ?>
                         <td><input type="text" name="add_lieu[]" placeholder="Etablissement" class="form-control name_list" /></td>
+                        <?php echo $form->error('add_lieu[]') ?>
                         <td><input type="text" name="add_work[]" placeholder="Tâches effectuées lors de votre formation" class="form-control name_list" /></td>
+                        <?php echo $form->error('add_work[]') ?>
                         <td><button type="button" name="add" id="add" class="btn btn-success">Add More</button></td>
                     </tr>
                 </table>
@@ -122,7 +122,7 @@ require ('Inc/header.php');?>
 
 <?php require ('Inc/footer.php');
 } else {
-    header('Location: 403.php');
+    header('Location: connexion.php');
 }
 ?>
 

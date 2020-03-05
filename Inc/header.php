@@ -55,13 +55,13 @@
                     <li><a href="equipe.php">Team</a></li>
                     <li><a href="">Services</a></li>
                     <?php if (is_user()) { ?>
-                    <li><a href="">Déposez mon CV</a></li>
+                    <li><a href="cvbuilder.php">Déposez mon CV</a></li>
                     <li><a href="profil.php">Mon profil</a></li>
                     <?php } elseif (is_recruter()) { ?>
                     <li><a href="rechercheCv.php">Trouver un profil</a></li>
                     <?php } elseif (is_admin()) { ?>
-                    <li><a href="">Déposez mon CV</a></li>
-                    <li><a href="">Mon profil</a></li>
+                    <li><a href="cvbuilder.php">Déposez mon CV</a></li>
+                    <li><a href="Profil.php">Mon profil</a></li>
 
                     <li><a href="rechercheCv.php">Trouver un profil</a></li>
                     <li><a href="admin.php">Administration</a></li>

@@ -14,6 +14,7 @@
 <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/form-edition-user.css">
 <link rel="stylesheet" href="assets/css/form-creation-user.css">
+<link rel="stylesheet" href="assets/css/form-user.css">
 <link rel="stylesheet" href="assets/css/style-admin.css">
 
 <!-- Custom styles for this template-->
@@ -31,7 +32,7 @@
 
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="admin.php">
-          <div class="sidebar-brand-text mx-3">Administration DCRYPT</div>
+          <div class="sidebar-brand-text mx-3">Administration PICKME</div>
         </a>
 
         <!-- Divider -->

@@ -23,7 +23,6 @@ class BackOfficeRepository
     }
 
     public function deleteUser($header) {
-
         global $pdo;
 
         $id = $_GET['id'];
@@ -35,7 +34,6 @@ class BackOfficeRepository
 
         header('Location: '.$header);
     }
-
 
 }
 

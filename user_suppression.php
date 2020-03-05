@@ -1,10 +1,16 @@
 <?php
-require("Inc/pdo.php");
+session_start();
 
 spl_autoload_register();
 
-use \Inc\Repository\BackOfficeRepository;
+use Inc\Repository\BackOfficeRepository;
+use Inc\Repository\StatusRepository;
 
-$user = new BackOfficeRepository();
+$request = new BackOfficeRepository();
+$logged = new StatusRepository();
 
-$user->deleteUser('admin.php');
+if ($logged::is_admin()) {
+$request->deleteUser('admin.php');
+} else {
+    header('Location: 403.php');
+}

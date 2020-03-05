@@ -2,6 +2,7 @@
 
 namespace Inc\Repository;
 
+
 class LoggedRepository
 {
     public static function is_logged()

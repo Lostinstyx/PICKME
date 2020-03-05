@@ -1,16 +1,21 @@
-<?php session_start();
-require_once ('Inc/function/functions.php');
+<?php
+session_start();
+
 spl_autoload_register();
 
 use \Inc\Service\Form;
 use \Inc\Service\Validation;
 use \Inc\Repository\ArticleRepository;
-use \Inc\Repository\LoggedRepository;
+use Inc\Repository\StatusRepository;
 
+$logged = new StatusRepository();
+
+if ($logged::is_admin()) {
+$request = new ArticleRepository();
 $errors = array();
 
 if(!empty ($_POST['submitted'])) {
-    //Faille XSS
+
     $prenom = trim(strip_tags($_POST['prenom']));
     $nom = trim(strip_tags($_POST['nom']));
     $email = trim(strip_tags($_POST['email']));
@@ -23,8 +28,6 @@ if(!empty ($_POST['submitted'])) {
     $password1 = trim(strip_tags($_POST['password1']));
     $password2 = trim(strip_tags($_POST['password2']));
 
-
-    //validation
     $v = new Validation();
     $errors = $v->validChamp($errors, $nom, 'nom', 2, 50);
     $errors = $v->validChamp($errors, $prenom, 'prenom', 2, 20);
@@ -42,36 +45,16 @@ if(!empty ($_POST['submitted'])) {
         $repo = new ArticleRepository();
         $repo->insertRecruter($nom, $prenom, $email ,$telephone, $street, $postalcode, $city, $siret, $password2);
 
-        $destinataire = $email;
-        $envoyeur	= 'contact@pickme.fr';
-        $sujet = 'Inscription';
-        $message = "Bonjour M. $nom ! Ceci est un email automatique. Vous êtes inscrit à la Cvtèque PICKME en tant que recruteur \r\n";
-        $headers = 'From: '.$envoyeur . "\r\n" .
-            "Content-type: text/html; charset= utf8\n".
-            'Reply-To: '.$envoyeur. "\r\n" .
-            'X-Mailer: PHP/' . phpversion();
-        $envoye = mail($destinataire, $sujet, $message, $headers);
-        if ($envoye){
-            echo "<br />Email envoyé.";
-            header('location: index.php');
-        }
-        else
-            echo "<br />Email refusé.";
-
-
-
-
+        header('Location: admin.php');
     }
-
 }
-
 
 $form = new Form($errors);
 
-require_once ('Inc/header.php');?>
+include "admin_header.php";?>
 
-    <h2 class="candidat-inscription">Vous êtes recruteur :</h2>
-    <form class="searchCV" id="form-recruteur" action="" method="post">
+    <div id="form-inscription" class="form">
+    <form class="form-bo" action="#" class="signup" method="post">
 
         <?= $form->label('nom', 'Nom'); ?>
         <?= $form->input('nom','text'); ?>
@@ -117,7 +100,12 @@ require_once ('Inc/header.php');?>
         <?= $form->input('password2','password'); ?>
         <?= $form->error('password2'); ?>
 
-        <?= $form->submit('submitted', 'Inscription'); ?>
+        <p class="need">* Champs obligatoires</p>
+        <input id="submit_signup" type="submit" name="submitted" value="Envoyer">
     </form>
 
-<?php require_once ('Inc/footer.php');
+<?php include "admin_footer.php";
+} else {
+    header('Location: 403.php');
+}
+

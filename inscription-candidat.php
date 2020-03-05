@@ -1,5 +1,5 @@
 <?php session_start();
-require 'Inc/verif_connexion.php';
+require_once ('Inc/function/functions.php');
 
 spl_autoload_register();
 
@@ -38,7 +38,7 @@ if(!empty ($_POST['submitted'])) {
     if(count($errors) == 0) {
         //insert into
         $repo = new ArticleRepository();
-        $repo->insertUser($prenom, $nom, $email ,$telephone ,$street, $postalcode, $city, $password);
+        $repo->insertUser($prenom, $nom, $email ,$telephone ,$street, $postalcode, $city, $password1);
 
 
 
@@ -67,8 +67,8 @@ $form = new Form($errors);
 
 require_once ('Inc/header.php');?>
 
-    <h2 class="login_title">Inscription Candidat </h2>
-
+<body class="inscription-body">
+    <h2 class="candidat-inscription">Vous êtes candidat :</h2>
     <form class="searchCV" id="form-candidat" action="" method="post">
         <?= $form->label('prenom', 'Prenom'); ?>
         <?= $form->input('prenom','text'); ?>
@@ -109,7 +109,7 @@ require_once ('Inc/header.php');?>
 
         <?= $form->submit('submitted'); ?>
     </form>
-
+</body>
 
 
 <?php require_once ('Inc/footer.php');

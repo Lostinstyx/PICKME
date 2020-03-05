@@ -45,8 +45,7 @@ if (!empty($_POST['submitted'])) {
   }
 }
 
-require_once("admin_header.php");
-if (is_admin()) { ?>
+require_once("admin_header.php");?>
 
     <form action="#" class="usermodified" method="post">
         <div class="surname">
@@ -98,7 +97,4 @@ if (is_admin()) { ?>
     </form>
 
     <?php require_once("admin_footer.php");
-} else {
-    header('Location: ../403.php');
-}
 

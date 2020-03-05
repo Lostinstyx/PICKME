@@ -199,7 +199,13 @@ div#users-contain table td, div#users-contain table th {
     padding: 5px;
     width: 48%;
     margin-left: 27%;
+
 }
+.searchCV input[type=password] {
+    padding: 5px;
+    width: 100%;
+    margin-right: 2%;
+
 
 .searchCV input[type=password] {
     padding: 5px;
@@ -490,7 +496,6 @@ div#users-contain table td, div#users-contain table th {
     min-height: 510px;
     width: 100%;
 
-
 }
 
 .wrapper {
@@ -503,14 +508,12 @@ div#users-contain table td, div#users-contain table th {
     /*border: black 2px solid;*/
     width: 50%;
     float: left;
-
 }
 
 .block_1 .titre {
     font-weight: bold;
     font-size: 19px;
     margin-bottom: 10px;
-
 }
 
 .block_1 .line_block {

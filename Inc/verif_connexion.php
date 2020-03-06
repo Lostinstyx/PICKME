@@ -9,7 +9,6 @@ use \Inc\Repository\ArticleRepository;
 use \Inc\Service\Tools;
 
 $tool = new Tools();
-
 $request = new ArticleRepository();
 $verif = new Validation();
 
@@ -36,7 +35,7 @@ $errors = array();
                 return $errors = 'Email, où mot de passe non valide';
             }
         } else {
-            echo $errors = ' va te faire';
+            return $errors = "Email, où mot de passe non valide";
         }
     }
 }

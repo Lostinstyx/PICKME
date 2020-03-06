@@ -1,7 +1,21 @@
 <?php
 session_start();
 
-require_once('Inc/header.php'); ?>
+spl_autoload_register();
+
+use \Inc\Service\Form;
+use \Inc\Service\Tool;
+use \Inc\Service\Validation;
+use \Inc\Repository\ArticleRepository;
+use \Inc\Repository\ContactRepository;
+use \Inc\Repository\CvRepository;
+use \Inc\Repository\ResearchCvRepository;
+use \Inc\Repository\StatusRepository;
+
+require_once ('Inc/function/functions.php');
+
+require_once('Inc/header.php');
+?>
 
     <div class="flexslider flex1">
         <ul class="slides">
@@ -41,7 +55,7 @@ require_once('Inc/header.php'); ?>
                 </div>
                 <div class="history_buttons">
                     <div class="contact">
-                        <a class="ctct_btn" href="#">Contactez nous</a>
+                        <a class="ctct_btn" href="contact.php">Contactez nous</a>
                     </div>
                 </div>
             </div>

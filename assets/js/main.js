@@ -6,6 +6,34 @@ $(window).load(function () {
         directionNav: false,
     });
 
+    //CV BUILDER
+    var i=1;
+    $('#add').click(function(){
+        i++;
+        $('#dynamic_field').append('<tr id="row'+i+'"><td><input type="text" name="add_formation[]" placeholder="Intitulé du diplôme" class="form-control name_list" /></td>' +
+            '<td><input type="text" name="add_diplomedate[]" placeholder="Date d\'obtention" class="form-control name_list" /></td>' +
+            '<td><input type="text" name="add_lieu[]" placeholder="Etablissement" class="form-control name_list" /></td>' +
+            '<td><input type="text" name="add_work[]" placeholder="Tâches effectuées lors de votre formation" class="form-control name_list" /></td>' +
+            '<td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+    });
+    $('#add_xp').click(function(){
+        i++;
+        $('#dynamic_field_xp').append('<tr id="row'+i+'"><td><input type="text" name="add_post[]" placeholder="Intitulé du poste" class="form-control name_list" /></td>' +
+            '<td><input type="text" name="add_entreprise[]" placeholder="Entreprise" class="form-control name_list" /></td>' +
+            '<td><input type="text" name="add_place[]" placeholder="Lieu" class="form-control name_list" /></td>' +
+            '<td><input type="text" name="add_taches[]" placeholder="Description des tâches effectués" class="form-control name_list" /></td>' +
+            '<td><input type="text" name="add_time[]" placeholder="Période" class="form-control name_list" /></td>' +
+            '<td><button type="button" name="remove" id="'+i+'" class="btn btn-danger btn_remove">X</button></td></tr>');
+
+    });
+
+    $(document).on('click', '.btn_remove', function(){
+        var button_id = $(this).attr("id");
+        $('#row'+button_id+'').remove();
+    });
+
+    //END CV BUILDER
+
     var n = 85; // Nombre final du compteur
     var cpt = 0; // Initialisation du compteur
     var duree = 2.5; // Durée en seconde pendant laquel le compteur ira de 0 à X
@@ -62,4 +90,35 @@ $( document ).ready(function() {
 
 
 
+$(document).ready(function(){
+    $.ajaxSetup({ cache: false });
+    $('#rechercheMetier').keyup(function(){
+        $('#resultRecherche').html('');
+        $('#state').val('');
+        var searchField = $('#rechercheMetier').val();
+        var expression = new RegExp(searchField, "i");
+        $.getJSON("assets/js/metier.json", function(data) {
+            $.each(data, function(key, value){
+                    if (value.libelle_metier.search(expression) !== -1)
+                    {
+                        $('#resultRecherche').append('<li>'+value.libelle_metier+'</li>');
+                    }
+            });
+        });
+    });
 
+    $('#resultRecherche').on('click', 'li', function() {
+        var click_text = $(this).text().split('|');
+        $('#rechercheMetier').val($.trim(click_text[0]));
+        $("#resultRecherche").html('');
+    });
+});
+
+$("[data-toggle]").click(function() {
+    var target = $(".text-form");
+    if($(this).prop('checked')) {
+        target.html('<a class="linkInscription" href = "inscription-candidat.php">Cliquez ici pour vous inscrire en tant que candidat</a>');
+    } else {
+        target.html('<a class="linkInscription" href = "inscription-recruteur.php">Cliquez ici pour vous inscrire en tant que recruteur</a>');
+    }
+});

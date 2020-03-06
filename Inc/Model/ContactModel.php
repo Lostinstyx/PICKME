@@ -5,7 +5,7 @@ namespace Inc\Model;
 class ContactModel
 {
     private $id;
-    private $objet;
+    private $object;
     private $email;
     private $content;
     private $created_at;
@@ -37,17 +37,17 @@ class ContactModel
     /**
      * @return mixed
      */
-    public function getObjet()
+    public function getObject()
     {
-        return $this->objet;
+        return $this->object;
     }
 
     /**
-     * @param mixed $objet
+     * @param mixed $object
      */
-    public function setObjet($objet)
+    public function setObject($object)
     {
-        $this->objet = $objet;
+        $this->object = $object;
     }
 
     /**

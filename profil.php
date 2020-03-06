@@ -34,4 +34,3 @@ echo $inf->ProfilInformations($user);
 
 include('Inc/footer.php');
 
-

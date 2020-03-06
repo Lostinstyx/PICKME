@@ -1,0 +1,44 @@
+.form-creation-user{
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+  border: 4px solid #035997;
+  padding: 30px 0;
+  border-radius: 10px;
+}
+
+.form-creation-user p{
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form-creation-user label, .form-creation-user input{
+  display: block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 10px;
+}
+
+.form-creation-user input{
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.form-creation-user input[type = "submit"]{
+  padding: 5px 15px;
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: #035997;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+
+.form-creation-user label{
+  color: #035997;
+  font-weight: bold;
+  text-decoration: underline;
+  padding-left: 2%;
+}

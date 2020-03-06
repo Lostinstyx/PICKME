@@ -18,13 +18,15 @@ class ResearchCvRepository
         $sql = "SELECT * FROM $this->table";
         $query = $pdo->prepare($sql);
         $query->execute();
-        return $query->fetchAll(PDO::FETCH_CLASS,'\Inc\Model\CvModel');
+        $table = $query->fetchAll(\PDO::FETCH_CLASS, '\Inc\Model\CvModel');
+        return $table;
     }
 
 
     public function getCvByCategorie($category)
     {
         global $pdo;
+        //SELECT client FROM achat GROUP BY client
         $sql = "SELECT * FROM $this->table WHERE category = :categorie";
         $query = $pdo->prepare($sql);
         $query->bindValue(':categorie',$category,PDO::PARAM_STR);
@@ -32,12 +34,12 @@ class ResearchCvRepository
         return $query->fetchAll(PDO::FETCH_CLASS,'\Inc\Model\CvModel');
     }
 
-    public function getCvByNiveau($niveau)
+    public function getCvByNiveau($study)
     {
         global $pdo;
-        $sql = "SELECT * FROM $this->table WHERE niveau = :study";
+        $sql = "SELECT * FROM $this->table WHERE study = :niveau";
         $query = $pdo->prepare($sql);
-        $query->bindValue(':category',$niveau,PDO::PARAM_STR);
+        $query->bindValue(':niveau',$study,PDO::PARAM_STR);
         $query->execute();
         return $query->fetchAll(PDO::FETCH_CLASS,'\Inc\Model\CvModel');
     }
@@ -45,6 +47,7 @@ class ResearchCvRepository
     public function getCvByExperience($experience)
     {
         global $pdo;
+
         $sql = "SELECT * FROM $this->table WHERE experience = :experience";
         $query = $pdo->prepare($sql);
         $query->bindValue(':experience',$experience,PDO::PARAM_STR);
@@ -52,4 +55,15 @@ class ResearchCvRepository
         return $query->fetchAll(PDO::FETCH_CLASS,'\Inc\Model\CvModel');
     }
 
+
+    public function getCvByMetier($work)
+    {
+        global $pdo;
+
+        $sql = "SELECT * FROM $this->table WHERE work = :metier";
+        $query = $pdo->prepare($sql);
+        $query->bindValue(':metier',$work,PDO::PARAM_STR);
+        $query->execute();
+        return $query->fetchAll(PDO::FETCH_CLASS,'\Inc\Model\CvModel');
+    }
 }

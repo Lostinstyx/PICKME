@@ -44,5 +44,5 @@ if ($logged::is_logged()) {
 }
 
 include('Inc/footer.php');
-$tool->debug($cvs);
+
 

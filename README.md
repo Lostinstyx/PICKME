@@ -13,11 +13,13 @@
                                                         
 
 
-4) Our project is based on the fact to ... 
+4) Our project is based on the fact to add some cv's on our website in objective to find a job, you can use our website as a recruter (an enterprise) or as user when you're looking for a job.
 
-5) To use it, ...
+5) To use it, you must download it and use it as your usually using a repository on git, or you can clone it. 
 
-6) After it launch xamp or mamp server, open the project on apache, register yourself, and start to use our website ....
+6) After it launch xamp or mamp server, open the project on apache, register yourself, and start to use our website.
+
+7) You will find on our website a recruter part, to find some cv about user who whants job, with profil, or as user always your profil,  with the possibility to create a CV.
 
 
 

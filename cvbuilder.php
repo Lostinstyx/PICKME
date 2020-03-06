@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-//require_once ('Inc/verif_connexion.php');
+include ('Inc/function/functions.php');
 
 
 spl_autoload_register();
@@ -13,7 +13,7 @@ use \Inc\Repository\ArticleRepository;
 $cv = new \Inc\Repository\CvRepository();
 
 
-if(empty($_SESSION)) {
+if(!empty($_SESSION)) {
 
 $errors = array();
 
@@ -109,9 +109,6 @@ require ('Inc/header.php');?>
                     </tr>
                 </table>
                 <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" />
-                <pre>
-                    <?php print_r($_POST) ?>
-                </pre>
             </div>
         </form>
         <pre>

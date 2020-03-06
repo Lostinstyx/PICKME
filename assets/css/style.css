@@ -8,12 +8,7 @@
 body {
     font-family: 'Roboto', sans-serif;
 }
-header {
-    font-family: 'Roboto', sans-serif;
-}
-footer {
-    font-family: 'Roboto', sans-serif;
-}
+
 .wrap_header {
     max-width: 1800px;
     width: 100%;
@@ -624,6 +619,7 @@ footer .wrap {
 }
 
 .page-footer {
+    padding-top: 40px;
     margin-top: 50px;
     background-color: rgba(215, 212, 207, 0.4);
 }

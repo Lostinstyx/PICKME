@@ -2,6 +2,7 @@
 namespace Inc\Repository;
 use \PDO;
 
+include ('Inc/function/functions.php');
 include('Inc/pdo.php');
 
 
@@ -40,7 +41,6 @@ class CvRepository
         return $pdo->lastInsertId();
     }
 
-
     public function getUserCv()
     {
         global $pdo;
@@ -55,5 +55,6 @@ class CvRepository
         return $query->fetchALL(PDO::FETCH_CLASS, '\Inc\Model\CvModel');
 
     }
+
 
 }

@@ -21,7 +21,6 @@ class ProfilModel
     private $created_at;
     private $modified_at;
 
-
     public function ProfilName($var)
     {
         $html ='<body class="bodyProfil">';

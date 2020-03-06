@@ -6,9 +6,7 @@ namespace Inc\Model;
 
 class CvModel
 {
-
     private $id;
-    private $cv_user;
     private $category;
     private $study;
     private $experience;
@@ -28,22 +26,21 @@ class CvModel
 
     public function userCv($var)
     {
-
-        $html = '<div class="infoProfilCv">';
+        $html  = '<div class="infoProfilCv">';
         $html .= '<div class="container_informationProfil">';
-        $html .= '<p class="ProfilInfcv">Catégorie : ' . ucfirst($var->getCategory()) . '</p>';
-        $html .= '<p class="ProfilInfcv">Etudes : ' . ucfirst($var->getStudy()) . '</p>';
-        $html .= '<p class="ProfilInfcv">Travail souhaité : ' . ucfirst($var->getWork()) . '</p>';
+        $html .= '<p class="ProfilInf">Catégorie : '.ucfirst($var->getCategory()).'</p>';
+        $html .= '<p class="ProfilInf">Etudes : '.ucfirst($var->getStudy()).'</p>';
+        $html .= '<p class="ProfilInf">Travail souhaité : '.ucfirst($var->getWork()).'</p>';
         $html .= '<ul>';
-        $html .= '<li>Formation : ' . ucfirst($var->getTitleFormation1()) . '</li>';
-        $html .= '<li>contenu de la formation : ' . ucfirst($var->getFormation1()) . '</li>';
-        $html .= '<li>Formation : ' . ucfirst($var->getTitleFormation2()) . '</li>';
-        $html .= '<li>contenu de la formation : ' . ucfirst($var->getFormation2()) . '</li>';
-        $html .= '<li>Experience : ' . ucfirst($var->getTitleExperience1()) . '</li>';
-        $html .= '<li>Qu\'avez vous effectuez durant cette expérience ? : ' . ucfirst($var->getExperience1()) . '</li>';
-        $html .= '<li>Experience : ' . ucfirst($var->getTitleExperience2()) . '</li>';
-        $html .= '<li>Qu\'avez vous effectuez durant cette expérience ? : ' . ucfirst($var->getExperience2()) . '</li>';
-        $html .= '<p>Informations complémentaires : ' . $var->getInformations() . '</p>';
+        $html .= '<li>Formation : '.ucfirst($var->getTitleFormation1()).'</li>';
+        $html .= '<li>contenu de la formation : '.ucfirst($var->getFormation1()).'</li>';
+        $html .= '<li>Formation : '.ucfirst($var->getTitleFormation2()).'</li>';
+        $html .= '<li>contenu de la formation : '.ucfirst($var->getFormation2()).'</li>';
+        $html .= '<li>Experience : '.ucfirst($var->getTitleExperience1()).'</li>';
+        $html .= '<li>Qu\'avez vous effectuez durant cette expérience ? : '.ucfirst($var->getExperience1()).'</li>';
+        $html .= '<li>Experience : '.ucfirst($var->getTitleExperience2()).'</li>';
+        $html .= '<li>Qu\'avez vous effectuez durant cette expérience ? : '.ucfirst($var->getExperience2()).'</li>';
+        $html .= '<p>Informations complémentaires : '.$var->getInformations().'</p>';
         $html .= '<li></li>';
         $html .= '</div>';
         $html .= '</div>';
@@ -324,6 +321,20 @@ class CvModel
         $this->modified_at = $modified_at;
     }
 
+    // public function getId()
+    // {
+    //   return $this->id;
+    // }
+
+
+
+
+
+
+
+    public function item()
+    {
+        echo $this->id;
+    }
 
 }
-

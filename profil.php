@@ -5,11 +5,13 @@ spl_autoload_register();
 
 include ('Inc/function/functions.php');
 
+
 use \Inc\Repository\ProfilRepository;
 use Inc\Model\ProfilModel;
 use Inc\Service\Tools;
 use Inc\Repository\CvRepository;
 use Inc\Model\CvModel;
+
 
 $request = new ProfilRepository();
 $cvrequest = new CvRepository();

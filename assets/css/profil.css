@@ -11,9 +11,11 @@
 
 .profil_title{
     margin-top: 150px;
+    margin-bottom: 25px;
     font-size: 2em;
     text-align: center;
     color: #705436;
+
 }
 
 .infoProfil {
@@ -21,13 +23,35 @@
     float: left;
 }
 
-.infoProfil img {
+.infoProfilCv {
     width: 50%;
+    float: right;
+}
+
+.infoProfilCv ul li {
+    font-size: 1.5em;
+    line-height: 30px;
+}
+
+.infoProfilCv p {
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+.infoProfil img {
+    width: 30%;
     border-radius: 50%;
-    margin-top: 20px;
+    margin-left: 25%;
 }
 
 .ProfilInf {
     font-size: 1.5em;
     line-height: 75px;
+    padding-left: 30%;
+}
+
+.ProfilInfcv {
+    font-size: 1.5em;
+    line-height: 75px;
+
 }

@@ -14,8 +14,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/cv.css">
+    <link rel="stylesheet" href="assets/css/equipe.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 
 </head>
@@ -60,15 +61,12 @@
                     <li><a href="profil.php">Mon profil</a></li>
                     <?php } elseif (is_recruter()) { ?>
                     <li><a href="rechercheCv.php">Trouver un profil</a></li>
+                    <li><a href="profil.php">Mon profil</a></li>
                     <?php } elseif (is_admin()) { ?>
                     <li><a href="cvbuilder.php">Déposez mon CV</a></li>
-                    <li><a href="Profil.php">Mon profil</a></li>
-
+                    <li><a href="profil.php">Mon profil</a></li>
                     <li><a href="rechercheCv.php">Trouver un profil</a></li>
                     <li><a href="admin.php">Administration</a></li>
-
-
-
                     <?php } ?>
                 </ul>
             </nav>

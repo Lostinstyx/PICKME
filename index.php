@@ -31,11 +31,11 @@ require_once('Inc/header.php');
 
     <div class="title">
         <h2 class="h2-title">
-            Je suis un titre
+            PickMe
         </h2>
         <hr/>
         <p class="undertitle">
-            Je suis un texte
+            L'emploi facile
         </p>
     </div>
     </div>

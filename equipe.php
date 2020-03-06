@@ -5,7 +5,7 @@ require_once ('Inc/function/functions.php');
 include('inc/header.php'); ?>
 
 
-    <link rel="stylesheet" href="assets/css/equipe.css">
+
 <div class="wrappy">
     <div class="equipe">
 
@@ -24,7 +24,7 @@ include('inc/header.php'); ?>
             <div class="faces">
                 <img src="assets/img/avatarpierre.png" alt="Pierre">
                 <h3>Pierre</h3>
-                <p>Développeur Web Chef Adjoint</p>
+                <p>Développeur Web</p>
             </div>
             <div class="faces">
                 <img src="assets/img/avatarmoi.png" alt="Melanie">
@@ -44,6 +44,7 @@ include('inc/header.php'); ?>
         </div>
 
     </div>
+    <div class="clear"></div>
 </div>
 
 <?php include('inc/footer.php'); ?>

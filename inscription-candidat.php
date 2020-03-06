@@ -1,5 +1,5 @@
 <?php session_start();
-require 'Inc/verif_connexion.php';
+require 'Inc/function/functions.php';
 
 spl_autoload_register();
 
@@ -52,10 +52,10 @@ if(!empty ($_POST['submitted'])) {
             'X-Mailer: PHP/' . phpversion();
         $envoye = mail($destinataire, $sujet, $message, $headers);
         if ($envoye){
-            echo "<br />Email envoyé.";
+            echo "<p>Email envoyé.</p>";
         header('location: index.php'); }
     else
-            echo "<br />Email refusé.";
+            echo "<p>Email refusé.</p>";
 
     }
 

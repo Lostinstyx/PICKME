@@ -23,7 +23,7 @@ class ProfilModel
 
     public function ProfilName($var)
     {
-        $html ='<body class="bodyProfil">';
+        $html  ='<body class="bodyProfil">';
         $html .= '<div class="wrapProfil">';
         $html .= '<h2 class="profil_title">Voici vos informations '.ucfirst($var->getName()).'<h2>';
 

@@ -1,3 +1,16 @@
+<?php
+session_start();
+include ('Inc/function/functions.php');
+
+ require_once ('Inc/header.php');
+
+?>
+
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<body>
+<div class="clear"></div>
 <div class='hover'>
     <div class='background'>
         <div class='door'>403</div>
@@ -27,11 +40,12 @@
     html,
     body {
         width: 100%;
-        height: 100;
+        height: 100%;
         margin: 0;
         padding: 0;
         font-family: "Limelight", cursive;
         color: #38434a;
+        background: black;
     }
     .background {
         position: absolute;
@@ -378,3 +392,5 @@
     }
 
 </style>
+</body>
+</html>

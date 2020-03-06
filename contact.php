@@ -2,6 +2,8 @@
 
 spl_autoload_register();
 
+include ('Inc/function/functions.php');
+
 use \Inc\Repository\StatusRepository;
 use \Inc\Model\ContactModel;
 use \Inc\Repository\ContactRepository;
@@ -14,13 +16,18 @@ $errors = array();
 $tools = new Tools();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $validation = new Validation();
-    $errors = $validation->validChamp($errors, $_POST['objet'], 'objet', 3, 100);
-    $errors = $validation->validChamp($errors, $_POST['email'], 'email', 10, 50);
-    $errors = $validation->validChamp($errors, $_POST['content'], 'content', 1, 15);
+
+    $objet = trim(strip_tags($_POST['objet']));
+    $mail = trim(strip_tags($_POST['email']));
+    $content = trim(strip_tags($_POST['content']));
+
+    $errors = $validation->validChamp($errors, $objet, 'objet', 3, 100);
+    $errors = $validation->validChamp($errors, $mail, 'email', 10, 50);
+    $errors = $validation->validChamp($errors, $content, 'content', 1, 15);
 
     if (count($errors) ==0){
         $tableau = new ContactRepository();
-        $tableau->insertContact($_POST['email'], $_POST['objet'], $_POST['content']);
+        $tableau->insertContact($mail, $objet, $content);
     }
 }
 
@@ -65,21 +72,6 @@ include_once 'Inc/header.php';
             <div class="block block_3">
                 <div class="form">
 
-                        <?php
-                        $tools = new Tools();
-                        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                            $validation = new Validation();
-                            $errors = $validation->validChamp($errors, $_POST['objet'], 'objet', 3, 100);
-                            $errors = $validation->validChamp($errors, $_POST['email'], 'email', 10, 50);
-                            $errors = $validation->validChamp($errors, $_POST['content'], 'content', 1, 15);
-
-                            if (count($errors) ==0){
-                                $tableau = new ContactRepository();
-                                $tableau->insertContact($_POST['email'], $_POST['objet'], $_POST['content']);
-                            }
-                        }
-                        ?>
-
                     <form method="post" action="#">
                         <?php
                         $form = new Form($errors, 'post');
@@ -93,7 +85,7 @@ include_once 'Inc/header.php';
                         $html .= $form->textarea('content');
                         $html .= $form->submit('submitted');
                         print $html;
-//                        $tools->debug($form);
+
                         ?>
                     </form>
                 </div>

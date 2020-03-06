@@ -45,7 +45,7 @@ class Validation
                 $errors[$key] = 'min 6  caractères';
             }
         } else {
-            $errors[$key] = 'Veuillez renseigner un mot de passe';
+            $errors[$key] = '<p class="error"> Veuillez renseigner un mot de passe </p>';
         }
         return $errors;
     }

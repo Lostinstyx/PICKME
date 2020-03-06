@@ -32,16 +32,16 @@ include_once 'Inc/header.php';
             $valid = new Validation();
             $errors = $valid->VerifMail($errors, $email, 'email');
             $user = $verif->emailExist($email);
-            if (!empty ($user)){
-                    $token = $user['token'];
-                    $email = urlencode($email);
-                    $html = '<a href="modif-password.php?token='.$token.'&email='.$email.'">C\'est ici</a>';
-                    echo $html;
-                } else {
-                    $errors['email'] = 'Erreur veuillez rentrer un mail valide !';
-                }
-                return '<p>Ca marche pas mdr</p>';
+            if (!empty ($user)) {
+                $token = $user['token'];
+                $email = urlencode($email);
+                $html = '<a href="modif-password.php?token=' . $token . '&email=' . $email . '">Cliquez ici pour modifier votre mot de passe</a>';
+                echo $html;
+            } else { ?>
+                <p class="error">Erreur veuillez rentrer un mail valide ! </p>
+                <?php
             }
+        }
     }
     ?>
     <form method="post" class="searchCVC" action="#">

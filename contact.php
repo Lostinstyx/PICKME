@@ -2,6 +2,8 @@
 
 spl_autoload_register();
 
+include ('Inc/function/functions.php');
+
 use \Inc\Repository\StatusRepository;
 use \Inc\Model\ContactModel;
 use \Inc\Repository\ContactRepository;

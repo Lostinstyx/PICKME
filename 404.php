@@ -1,9 +1,21 @@
-<html lang="fr">
+<?php
+session_start();
+include ('Inc/function/functions.php');
+
+require_once ('Inc/header.php');
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
 <head>
     <meta charset="UTF-8">
     <title>Animation SVG</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
 </head>
+
 <body style="background: #ececec;">
 
 <svg id="error" style="  margin: 0 auto;display: block;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="400px"

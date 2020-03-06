@@ -38,8 +38,8 @@ class ProfilModel
         $html .= '<img src="assets/img/Profilpicture.png" alt="votre photo">';
         $html .= '</div>';
         $html .= '<div class="container_informationProfil">';
-        $html .= '<p class="ProfilInf">Prenom : '.$var->getName().'</p>';
-        $html .= '<p class="ProfilInf">Nom : '.$var->getSurname().'</p>';
+        $html .= '<p class="ProfilInf">Catégorie : '.ucfirst($var->getName()).'</p>';
+        $html .= '<p class="ProfilInf">Nom : '.ucfirst($var->getSurname()).'</p>';
         $html .= '<p class="ProfilInf">Email : '.$var->getEmail().'</p>';
         $html .= '<p class="ProfilInf">Téléphone : '.$var->getTelephone().'</p>';
         $html .= '</div>';

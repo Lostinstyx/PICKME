@@ -2,7 +2,6 @@
 namespace Inc\Repository;
 use \PDO;
 
-include ('Inc/function/functions.php');
 include('Inc/pdo.php');
 
 
@@ -43,4 +42,21 @@ class CvRepository
 
         return $pdo->lastInsertId();
     }
+
+    public function getUserCv()
+    {
+        global $pdo;
+
+        $id = $_SESSION['login']['id'];
+
+        $sql = "SELECT * FROM $this->table WHERE cv_user = :id";
+
+        $query = $pdo->prepare($sql);
+        $query->bindValue(':id', $id, PDO::PARAM_INT);
+        $query->execute();
+        return $query->fetchALL(PDO::FETCH_CLASS, '\Inc\Model\CvModel');
+
+    }
+
+
 }

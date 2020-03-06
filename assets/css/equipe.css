@@ -1,8 +1,11 @@
 @import "reset.css";
 /*css bloc texte du haut*/
 
-body {
-padding-top: 100px;
+.wrappy {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 .txtequipe {
@@ -33,9 +36,12 @@ padding-top: 100px;
     margin-left: 5%;
     background-color: #1c7430;
 }
+.facesequipe p {
+    color : #786559;
+}
 
 .faces {
-    width: 16%;
+    width: 18%;
     float: left;
     text-align: center;
     padding: 1%;

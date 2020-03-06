@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap" rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/css/cv.css">
+    <link rel="stylesheet" href="assets/css/equipe.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
 

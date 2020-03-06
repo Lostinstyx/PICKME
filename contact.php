@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 include_once 'Inc/header.php';
 ?>
 
-?>
+
     <div class="before">
         <img src="assets/img/espace-coworking-3.jpg" alt="notre bureau">
         <span class="big_titre">Contactez-nous</span>

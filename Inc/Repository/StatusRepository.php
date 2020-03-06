@@ -2,6 +2,8 @@
 
 namespace Inc\Repository;
 
+include ('Inc/function/functions.php');
+
 class StatusRepository
 {
     public static function is_logged()

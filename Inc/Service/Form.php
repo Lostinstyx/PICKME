@@ -56,7 +56,7 @@ class Form
     public function error($name)
     {
         if(!empty($this->errors[$name])) {
-            return '<span class="error">'.$this->errors[$name].'</span>';
+            return '<p class="error">'.$this->errors[$name].'</p>';
         }
         return null;
     }

@@ -593,6 +593,10 @@ div#users-contain table td, div#users-contain table th {
     border-radius: 4px;
     cursor: pointer;
 }
+/*-------------------------------------Forget Password----------------------------- */
+.pass_success {
+    color: green;
+}
 /* ------------------------------------ Footer ----------------------------------- */
 
 /* Footer treatment*/

@@ -1,9 +1,9 @@
 <?php
 namespace Inc\Repository;
-use Inc\Service\Tool;
+use Inc\Service\Tools;
 use \PDO;
-
-include ('Inc/function/functions.php');
+//
+//include ('Inc/function/functions.php');
 include('Inc/pdo.php');
 
 class ArticleRepository
@@ -26,9 +26,48 @@ class ArticleRepository
         $query = $pdo->prepare($sql);
         $query->bindValue(':login', $login, PDO::PARAM_STR);
         $query->execute();
+    }
+    public function emailExist($email)
+    {
+        global $pdo;
+        $query = $pdo->prepare("SELECT email , token FROM $this->table WHERE email = :email");
+        $query->bindParam(':email', $email, PDO::PARAM_STR);
+        $query->execute();
         return $query->fetch();
     }
 
+    public function tokenVerif($email , $token)
+    {
+        global $pdo;
+        $query = $pdo->prepare("SELECT * FROM $this->table WHERE email = :email AND token = :token ");
+        $query->bindValue(':email', $email, PDO::PARAM_STR);
+        $query->bindValue(':token', $token, PDO::PARAM_STR);
+        $query->execute();
+        return $query->fetch();
+
+    }
+    public function updatePass($newpass , $email)
+    {
+        global $pdo;
+        function generateRandomString($length)
+        {
+            $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $charactersLength = strlen($characters);
+            $randomString = '';
+            for ($i = 0; $i < $length; $i++) {
+                $randomString .= $characters[rand(0, $charactersLength - 1)];
+            }
+            return $randomString;
+        }
+        $token = generateRandomString(120);
+        $hashPassword = password_hash($newpass, PASSWORD_BCRYPT);
+        $query = $pdo->prepare("UPDATE $this->table SET password = :password, token = :token WHERE email = :email ");
+        $query->bindValue(':email',   $email,PDO::PARAM_STR);
+        $query->bindValue(':password',$hashPassword,PDO::PARAM_STR);
+        $query->bindValue(':token',   $token,PDO::PARAM_STR);
+        $query->execute();
+
+    }
     public function InitializeSession($user,$header)
     {
         $_SESSION['login'] = array(

@@ -1,7 +1,6 @@
 <?php
 spl_autoload_register();
-session_start();
-include 'Inc/verif_connexion.php';
+
 
 use \Inc\Model\ContactModel;
 use \Inc\Repository\ContactRepository;
@@ -23,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $tableau->insertContact($_POST['email'], $_POST['objet'], $_POST['content']);
     }
 }
-
+require_once ('Inc/function/functions.php');
 include_once 'Inc/header.php';
 ?>
 

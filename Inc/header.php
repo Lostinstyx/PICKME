@@ -60,15 +60,12 @@
                     <li><a href="profil.php">Mon profil</a></li>
                     <?php } elseif (is_recruter()) { ?>
                     <li><a href="rechercheCv.php">Trouver un profil</a></li>
+                    <li><a href="profil.php">Mon profil</a></li>
                     <?php } elseif (is_admin()) { ?>
                     <li><a href="cvbuilder.php">Déposez mon CV</a></li>
-                    <li><a href="Profil.php">Mon profil</a></li>
-
+                    <li><a href="profil.php">Mon profil</a></li>
                     <li><a href="rechercheCv.php">Trouver un profil</a></li>
                     <li><a href="admin.php">Administration</a></li>
-
-
-
                     <?php } ?>
                 </ul>
             </nav>

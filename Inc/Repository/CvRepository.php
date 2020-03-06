@@ -2,7 +2,6 @@
 namespace Inc\Repository;
 use \PDO;
 
-include ('Inc/function/functions.php');
 include('Inc/pdo.php');
 
 

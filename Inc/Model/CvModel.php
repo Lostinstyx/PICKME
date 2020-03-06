@@ -28,9 +28,9 @@ class CvModel
     {
         $html  = '<div class="infoProfilCv">';
         $html .= '<div class="container_informationProfil">';
-        $html .= '<p class="ProfilInf">Catégorie : '.ucfirst($var->getCategory()).'</p>';
-        $html .= '<p class="ProfilInf">Etudes : '.ucfirst($var->getStudy()).'</p>';
-        $html .= '<p class="ProfilInf">Travail souhaité : '.ucfirst($var->getWork()).'</p>';
+        $html .= '<p class="ProfilInfcv">Catégorie : '.ucfirst($var->getCategory()).'</p>';
+        $html .= '<p class="ProfilInfcv">Etudes : '.ucfirst($var->getStudy()).'</p>';
+        $html .= '<p class="ProfilInfcv">Travail souhaité : '.ucfirst($var->getWork()).'</p>';
         $html .= '<ul>';
         $html .= '<li>Formation : '.ucfirst($var->getTitleFormation1()).'</li>';
         $html .= '<li>contenu de la formation : '.ucfirst($var->getFormation1()).'</li>';

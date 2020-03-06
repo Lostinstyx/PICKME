@@ -10,18 +10,28 @@ class CvRepository
 
     private $table = 'cv';
 
-    public function insertCv($charcv)
+    public function insertCv($user_id, $category, $study, $experience, $work, $title_formation1, $formation1, $title_formation2, $formation2, $informations, $created_at)
     {
 
         global $pdo;
 
-        $cv_user = $_SESSION['login']['id'];
+        $user_id = $_SESSION['login']['id'];
 
-        $sql = "INSERT INTO testcv VALUES ('', :charcv, :user_id)";
+        $sql = "INSERT INTO $this->table VALUES ('', :user_id, :category, :study, :experience, :work, :title_formation1, :formation1,:title_formation2, :formation2, :informations, created_at) ";
 
         $query = $pdo->prepare($sql);
-        $query->bindValue(':charcv', $charcv, PDO::PARAM_STR);
+        //$query->bindValue(':charcv', $charcv, PDO::PARAM_STR);
         $query->bindValue(':user_id', $user_id, PDO::PARAM_INT);
+        $query->bindValue(':category', $category, PDO::PARAM_STR);
+        $query->bindValue(':study', $study, PDO::PARAM_STR);
+        $query->bindValue(':experience', $experience, PDO::PARAM_STR);
+        $query->bindValue(':work', $work, PDO::PARAM_STR);
+        $query->bindValue(':title_formation1', $title_formation1, PDO::PARAM_STR);
+        $query->bindValue(':formation1', $formation1, PDO::PARAM_STR);
+        $query->bindValue(':title_formation2', $title_formation2, PDO::PARAM_STR);
+        $query->bindValue(':formation2', $formation2, PDO::PARAM_STR);
+        $query->bindValue(':informations', $informations, PDO::PARAM_STR);
+        $query->bindValue(':created_at', $created_at, PDO::PARAM_STR);
 
         $query->execute();
 

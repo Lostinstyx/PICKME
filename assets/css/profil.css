@@ -19,12 +19,27 @@
 .infoProfil {
     width: 50%;
     float: left;
+padding-left: 15%;
+}
+
+.infoProfilCv {
+    width: 50%;
+    float: right;
+}
+
+.infoProfilCv ul li {
+    font-size: 1.5em;
+    line-height: 30px;
+}
+
+.infoProfilCv p {
+    font-size: 1.5em;
+    margin-top: 30px;
 }
 
 .infoProfil img {
     width: 50%;
     border-radius: 50%;
-    margin-top: 20px;
 }
 
 .ProfilInf {
